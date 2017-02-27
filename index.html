@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>dokieli: decentralised authoring, annotations and social notifications</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="https://dokie.li/media/css/lncs.css" media="all" rel="stylesheet" title="LNCS" />
+        <link href="https://dokie.li/media/css/acm.css" media="all" rel="stylesheet alternate" title="ACM" />
+        <link href="https://dokie.li/media/css/do.css" media="all" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" />
+        <script src="https://dokie.li/scripts/simplerdf.js"></script>
+        <script src="https://dokie.li/scripts/medium-editor.min.js"></script>
+        <script src="https://dokie.li/scripts/medium-editor-tables.min.js"></script>
+        <script src="https://dokie.li/scripts/do.js"></script>
+    </head>
+
+    <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
+        <main>
+            <article about="" typeof="schema:ScholarlyArticle">
+                <h1 property="schema:name">dokieli: decentralised authoring, annotations and social notifications</h1>
+
+                <div id="authors">
+                    <dl id="author-name">
+                        <dt>Authors</dt>
+                        <dd id="Sarven-Capadisli" inlist="" rel="bibo:authorList" resource="http://csarven.ca/#i"><span about="" rel="schema:creator schema:publisher schema:author"><a about="http://csarven.ca/#i" href="http://csarven.ca/" property="schema:name" rel="schema:url" typeof="schema:Person">Sarven Capadisli</a></span><sup><a about="http://csarven.ca/#i" href="#University-of-Bonn" rel="schema:memberOf" resource="http://dbpedia.org/resource/University_of_Bonn">1</a></sup><sup><a href="#email-Sarven-Capadisli">✊</a></sup></dd>
+
+                        <dd id="Amy-Guy" inlist="" rel="bibo:authorList" resource="https://rhiaro.co.uk/#me"><span about="" rel="schema:author"><a about="https://rhiaro.co.uk/#me" href="https://rhiaro.co.uk/" property="schema:name" rel="schema:url" typeof="schema:Person">Amy Guy</a></span><sup><a about="https://rhiaro.co.uk/#me" href="#University-of-Edinburgh" rel="schema:memberOf" resource="http://dbpedia.org/resource/University_of_Edinburgh">2</a></sup><sup><a href="#email-Amy-Guy">🐦</a></sup></dd>
+
+                        <dd id="Ruben-Verborgh" inlist="" rel="bibo:authorList" resource="https://ruben.verborgh.org/profile/#me"><span about="" rel="schema:author"><a about="https://ruben.verborgh.org/profile/#me" href="https://ruben.verborgh.org/" property="schema:name" rel="schema:url" typeof="schema:Person">Ruben Verborgh</a></span><sup><a about="https://ruben.verborgh.org/profile/#me" href="#Ghent-University" rel="schema:memberOf" resource="http://dbpedia.org/resource/Ghent_University">3</a></sup><sup><a href="#email-Ruben-Verborgh">🔍</a></sup></dd>
+
+                        <dd id="Christoph-Lange" inlist="" rel="bibo:authorList" resource="http://eis.iai.uni-bonn.de/ChristophLange"><span about="" rel="schema:author"><a about="http://eis.iai.uni-bonn.de/ChristophLange" href="https://langec.wordpress.com/about/" property="schema:name" rel="schema:url" typeof="schema:Person">Christoph Lange</a></span><sup><a about="http://eis.iai.uni-bonn.de/ChristophLange" href="#University-of-Bonn" rel="schema:memberOf" resource="http://dbpedia.org/resource/University_of_Bonn">1</a></sup><sup><a href="#email-Christoph-Lange">∫</a></sup></dd>
+
+                        <dd id="Sören-Auer" inlist="" rel="bibo:authorList" resource="http://eis.iai.uni-bonn.de/SoerenAuer"><span about="" rel="schema:author"><a about="http://eis.iai.uni-bonn.de/SoerenAuer" href="http://eis.iai.uni-bonn.de/SoerenAuer.html" property="schema:name" rel="schema:url" typeof="schema:Person">Sören Auer</a></span><sup><a about="http://eis.iai.uni-bonn.de/SoerenAuer" href="#University-of-Bonn" rel="schema:memberOf" resource="http://dbpedia.org/resource/University_of_Bonn">1</a></sup><sup><a href="#email-Sören-Auer">⚛</a></sup></dd>
+
+                        <dd id="Tim-Berners-Lee" inlist="" rel="bibo:authorList" resource="https://www.w3.org/People/Berners-Lee/card#i"><span about="" rel="schema:author"><a about="https://www.w3.org/People/Berners-Lee/card#i" href="https://www.w3.org/People/Berners-Lee/" property="schema:name" rel="schema:url" typeof="schema:Person">Tim Berners-Lee</a></span><sup><a about="https://www.w3.org/People/Berners-Lee/card#i" href="#MIT" rel="schema:memberOf" resource="http://dbpedia.org/resource/Massachusetts_Institute_of_Technology">4</a></sup><sup><a href="#email-Tim-Berners_lee">🕸</a></sup></dd>
+                    </dl>
+
+                    <ul id="author-org">
+                        <li id="University-of-Bonn"><sup>1</sup>Enterprise Information Systems Department, <a about="http://dbpedia.org/resource/University_of_Bonn" href="http://uni-bonn.de/" property="schema:name" rel="schema:url" typeof="schema:Organization">University of Bonn</a>,  Bonn, DE</li>
+                        <li id="University-of-Edinburgh"><sup>2</sup>School of Informatics, <a about="http://dbpedia.org/resource/University_of_Edinburgh" href="http://www.ed.ac.uk/" property="schema:name" rel="schema:url" typeof="schema:Organization">University of Edinburgh</a>, Edinburgh, UK</li>
+                        <li id="Ghent-University"><sup>3</sup>imec, <a about="http://dbpedia.org/resource/Ghent_University" href="http://www.ugent.be/" property="schema:name" rel="schema:url" typeof="schema:Organization">Ghent University</a>, Ghent, BE</li>
+                        <li id="MIT"><sup>4</sup>Decentralized Information Group, CSAIL, <a about="http://dbpedia.org/resource/Massachusetts_Institute_of_Technology" href="https://mit.edu/" property="schema:name" rel="schema:url" typeof="schema:Organization">MIT</a>, Cambridge, US</li>
+                    </ul>
+
+                    <ul id="author-email">
+                        <li id="email-Sarven-Capadisli"><sup>✊</sup><a about="http://csarven.ca/#i" href="mailto:info@csarven.ca" rel="schema:email">info@csarven.ca</a></li>
+                        <li id="email-Amy-Guy"><sup>🐦</sup><a about="https://rhiaro.co.uk/#me" href="mailto:amy@rhiaro.co.uk" rel="schema:email">amy@rhiaro.co.uk</a></li>
+                        <li id="email-Ruben-Verborgh"><sup>🔍</sup><a about="https://ruben.verborgh.org/profile/#me" href="mailto:ruben.verborgh@ugent.be" rel="schema:email">ruben.verborgh@ugent.be</a></li>
+                        <li id="email-Christoph-Lange"><sup>⚛</sup><a about="http://eis.iai.uni-bonn.de/ChristophLange" href="mailto:langec@cs.uni-bonn.de" rel="schema:email">langec@cs.uni-bonn.de</a></li>
+                        <li id="email-Sören-Auer"><sup>∫</sup><a about="http://eis.iai.uni-bonn.de/SoerenAuer" href="mailto:auer@cs.uni-bonn.de" rel="schema:email">auer@cs.uni-bonn.de</a></li>
+                        <li id="email-Tim-Berners-Lee"><sup>🕸</sup><a about="https://www.w3.org/People/Berners-Lee/card#i" href="mailto:timbl@w3.org" rel="schema:email">timbl@w3.org</a></li>
+                    </ul>
+                </div>
+
+                <dl id="document-identifier">
+                    <dt>Identifier</dt>
+                    <dd><a href="http://csarven.ca/dokieli-rww" rel="owl:sameAs">http://csarven.ca/dokieli-rww</a></dd>
+                </dl>
+
+                <dl id="document-inbox">
+                    <dt>Notifications Inbox</dt>
+                    <dd><a href="https://linkedresearch.org/inbox/csarven.ca/dokieli-rww/" rel="ldp:inbox">dokieli-rww</a></dd>
+                </dl>
+
+                <dl id="document-in-reply-to">
+                    <dt>In Reply To</dt>
+                    <dd><a href="http://icwe2017.webengineering.org/#application" rel="sioc:reply_of">ICWE2017 Call for Application Papers</a></dd>
+                </dl>
+
+                <dl id="document-published">
+                    <dt>Published</dt>
+                    <dd><time content="2017-02-27T00:00:00Z" datatype="xsd:dateTime" datetime="2017-02-27T00:00:00Z" property="schema:datePublished">2017-02-27</time></dd>
+                </dl>
+
+                <dl id="document-modified">
+                    <dt>Modified</dt>
+                    <dd><time content="2017-02-27T00:00:00Z" datatype="xsd:dateTime" datetime="2017-02-27T00:00:00Z" property="schema:dateModified">2017-02-27</time></dd>
+                </dl>
+
+                <dl id="document-license">
+                    <dt>License</dt>
+                    <dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license" title="Creative Commons Attribution 4.0 Unported">CC BY 4.0</a></dd>
+                </dl>
+
+                <div id="content">
+                    <section id="abstract">
+                        <h2>Abstract</h2>
+                        <div datatype="rdf:HTML" property="schema:abstract">
+                            <p>.. This article itself is a dokieli instance, available to interact with at its canonical URI: <a href="http://csarven.ca/dokieli-rww">http://csarven.ca/dokieli-rww</a>.</p>
+                        </div>
+                    </section>
+
+                    <section id="keywords">
+                        <h2>Keywords</h2>
+                        <div>
+                            <ul rel="schema:about">
+                                <li><a href="https://en.wikipedia.org/wiki/Decentralization" resource="http://dbpedia.org/resource/Decentralization">Decentralisation</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Human-computer_interaction" resource="http://dbpedia.org/resource/Human-computer_interaction">Human-computer interaction</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Linked_Data" resource="http://dbpedia.org/resource/Linked_Data">Linked Data</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Semantic_publishing" resource="http://dbpedia.org/resource/Semantic_publishing">Semantic publishing</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Social_machine" resource="http://dbpedia.org/resource/Social_machine">Social machine</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Social_web" resource="http://dbpedia.org/resource/Social_web">Social web</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Web_science" resource="http://dbpedia.org/resource/Web_science">Web Science</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+
+                    <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
+                        <h2 property="schema:name">Introduction</h2>
+                        <div datatype="rdf:HTML" property="schema:description" resource="#introduction" typeof="deo:Introduction">
+                        </div>
+                    </section>
+
+                    <section id="problem-space" inlist="" rel="schema:hasPart" resource="#problem-space">
+                        <h2 property="schema:name">Problem space</h2>
+                        <div about="#problem-space" datatype="rdf:HTML" property="schema:description" typeof="deo:ProblemStatement">
+                        </div>
+                    </section>
+
+                    <section id="related-work" inlist="" rel="schema:hasPart" resource="#related-work">
+                        <h2 property="schema:name">Related Work</h2>
+                        <div datatype="rdf:HTML" property="schema:description">
+                        </div>
+                    </section>
+
+                    <section id="architecture" inlist="" rel="schema:hasPart" resource="#architecture">
+                        <h2 property="schema:name">Architecture</h2>
+                        <div datatype="rdf:HTML" property="schema:description">
+                        </div>
+                    </section>
+
+                    <section id="implementation" inlist="" rel="schema:hasPart" resource="#implementation">
+                        <h2 property="schema:name">Implementation</h2>
+                        <div about="#implementation" datatype="rdf:HTML" property="schema:description" typeof="deo:Results">
+                        </div>
+                    </section>
+
+                    <section id="analysis-and-evaluation" inlist="" rel="schema:hasPart" resource="#analysis-and-evaluation">
+                        <h2 property="schema:name">Analysis and Evaluation</h2>
+                        <div datatype="rdf:HTML" property="schema:description" resource="#analysis-and-evaluation" typeof="deo:Evaluation">
+                        </div>
+                    </section>
+
+                    <section id="conclusions" inlist="" rel="schema:hasPart" resource="#conclusions">
+                        <h2 property="schema:name">Conclusions</h2>
+                        <div about="#conclusions" datatype="rdf:HTML" property="schema:description" typeof="deo:Conclusion">
+                        </div>
+                    </section>
+
+                    <section id="acknowledgements" inlist="" rel="schema:hasPart" resource="#acknowledgements">
+                        <h2 property="schema:name">Acknowledgements</h2>
+                        <div about="#acknowledgements" datatype="rdf:HTML" property="schema:description" typeof="deo:Acknowledgements">
+                            <p>Special thanks to our colleagues at <span about="" id="funding-recipient" prefix="scoro: http://purl.org/spar/scoro/" rel="scoro:funding-recipient"><a about="http://dbpedia.org/resource/Massachusetts_Institute_of_Technology" href="https://mit.edu/" property="schema:name" rel="schema:url" typeof="schema:Organization">MIT</a></span>/<a href="https://www.w3.org/">W3C</a>; <a href="https://deiu.me/profile">Andrei Sambra</a>, <a href="https://www.w3.org/People/Sandro/">Sandro Hawke</a>, <a href="http://nicola.io/">Nicola Greco</a>, <a href="http://www.computingjoy.com/">Dmitri Zagidulin</a>, as well as <a href="http://bblfish.net/">Henry Story</a> and <a href="https://melvincarvalho.com/#me">Melvin Carvalho</a>. We are also thankful to collaborate with colleagues at <a href="http://qcri.org.qa/">QCRI</a>. This research was supported in part by <span about="" id="funder" prefix="scoro: http://purl.org/spar/scoro/" rel="scoro:funder"><a about="http://dbpedia.org/Qatar_Computing_Research_Institute" href="http://qcri.org.qa/" property="schema:name" rel="schema:url" typeof="schema:Organization">Qatar Computing Research Institute</a></span>, HBKU through the <a href="http://crosscloud.org/">Crosscloud</a> project. <a href="http://kingsley.idehen.net/">Kingsley Kidehen</a> and <a href="https://www.openlinksw.com/">OpenLink Software</a> for their support and contributions to the browser extension. Last but not least, the contributors to the dokieli code, issues, and discussion.</p>
+                        </div>
+                    </section>
+
+                    <section id="references">
+                        <h2>References</h2>
+                        <div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
