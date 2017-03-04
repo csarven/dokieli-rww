@@ -87,7 +87,7 @@
                     <section id="abstract">
                         <h2>Abstract</h2>
                         <div datatype="rdf:HTML" property="schema:abstract">
-                            <p> .. This article itself is a dokieli instance, available to interact with at its canonical URI: <a href="http://csarven.ca/dokieli-rww">http://csarven.ca/dokieli-rww</a>.</p>
+                            <p>dokieli enables the Write dimension of the Read-Write Web. This article itself is a dokieli instance, available to interact with at its canonical URI: <a href="http://csarven.ca/dokieli-rww">http://csarven.ca/dokieli-rww</a>.</p>
                         </div>
                     </section>
 
@@ -107,9 +107,9 @@
                     </section>
 
 <pre class="highlight">
-Use UK (or CA) English spelling
-Where applicable, express design decisions/intentions using terminology from <a href="http://aligned.cs.ox.ac.uk/ont/dio.html">DIO</a>
-Key themes: decentralisation, data ownership/interoperability/Web standards,
+* Use UK (or CA) English spelling
+* Where applicable, express design decisions/intentions using terminology from <a href="http://aligned.cs.ox.ac.uk/ont/dio.html">DIO</a>
+* Key themes: decentralisation, data ownership/interoperability/Web standards,
 ReadWriteWeb, semantic/interactive articles, progressive enhancement
 </pre>
 
@@ -133,7 +133,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p class="todo">Add different approaches, not more examples</p>
 
-                            <p class="todo">Summarise/cite <a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content: A Systematic Literature Review</a>. Reuse its Quality Attributes as well as other possible dimensions to compare/situate dokieli.</p>
+                            <p class="todo">Summarise<cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content: A Systematic Literature Review</a></cite>. Reuse its Quality Attributes as well as other possible dimensions to compare/situate dokieli.</p>
 
                             <p>Tackle them on dimensions like: decentralisation, profile and data control/ownership, interoperability, cost/expertise required to use.</p>
                         </div>
@@ -148,6 +148,63 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     <section id="implementation" inlist="" rel="schema:hasPart" resource="#implementation">
                         <h2 property="schema:name">Implementation</h2>
                         <div about="#implementation" datatype="rdf:HTML" property="schema:description" typeof="deo:Results">
+                            <section id="structure-and-semantics" inlist="" rel="schema:hasPart" resource="#structure-and-semantics">
+                                <h3 property="schema:name">Structure and Semantics</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p class="todo">Mention which vocabularies it uses out of the box and why/to what purpose</p>
+
+                                    <p class="todo">Mention the type of operations? Performs only structurally and semantically valid operations.</p>
+                                </div>
+                            </section>
+
+                            <section id="web-browser-extension" inlist="" rel="schema:hasPart" resource="#web-browser-extension">
+                                <h3 property="schema:name">Single-Page Application</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p class="todo">How it kind of can operate like a single-page application..</p>
+                                </div>
+                            </section>
+
+                            <section id="web-browser-extension" inlist="" rel="schema:hasPart" resource="#web-browser-extension">
+                                <h3 property="schema:name">Web Browser Extension</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p class="todo">Talk about how the core is used with a thin wrapper for the Web browser. Having all the same possibilities of a single-page application but available for virtually on any HTML URL. Maybe remphasise its output being still valid operations even if the document it is running it on is malformed</p>
+                                </div>
+                            </section>
+
+                            <section id="interactions">
+                                <h3>Interactions</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p class="todo">Explain what these do and how they fulfill some requirements?</p>
+
+                                    <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
+                                        <video id="video-dokieli-annotation" inlist="" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-annotation.jpg">
+                                            <source about="#video-dokieli-annotation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-annotation.webm" typeof="fabio:Film" src="https://dokie.li/media/video/dokieli-annotation.webm" type="video/webm" />
+                                        </video>
+                                        <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
+                                    </figure>
+
+                                    <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
+                                        <video id="video-dokieli-share" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-share.jpg">
+                                            <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm"  typeof="fabio:Film" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" />
+                                        </video>
+                                        <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
+                                    </figure>
+
+                                    <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
+                                        <video controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" width="800" about="" rel="schema:hasPart">
+                                            <source about="#video-dokieli-citation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-citation.webm" src="https://dokie.li/media/video/dokieli-citation.webm" type="video/webm" typeof="fabio:Film" />
+                                        </video>
+                                        <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
+                                    </figure>
+
+                                    <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
+                                        <video controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" about="" rel="schema:hasPart" width="800">
+                                            <source about="#video-dokieli-sparqlines" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-sparqlines.webm" src="https://dokie.li/media/video/dokieli-sparqlines.webm" type="video/webm" typeof="fabio:Film" />
+                                        </video>
+                                        <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
+                                    </figure>
+                                </div>
+                            </section>
                         </div>
                     </section>
 
