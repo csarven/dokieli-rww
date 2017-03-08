@@ -211,7 +211,15 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                             <p class="todo">Explain how we will know / how we can test / whether (and to what extent) we have been successful</p>
                             <p class="todo">Maybe the discussion about scope even fits here?</p>
 
-                            <p class="todo">The intentions of dokieli is to improve user's interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectaton is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorization rules are expected to be handled by their preferred tooling and services. .. in scope: addingdomain-specific semantics, verification of content/authors, data integrity</p>
+                            <p class="todo">Reuse/phrase http://csarven.ca/dokieli#social-and-technical-impact ? Especially: <q>Our work is towards encouraging an ecosystem of applications which are decoupled from user data, discouraging vendor lock-in as services must compete for user attention by providing value rather than hoarding information.</q></p>
+
+                            <p class="todo">http://csarven.ca/dokieli#fault-tolerant and related:</p>
+
+                            <p class="todo"><q><a href="http://csarven.ca/dokieli#architecture">The architecture we have chosen enables this knowledge to be as widely accessible as possible; the capabilities of dokieli are designed such that they are enabled progressively and individually, according to the user’s needs and technical resources at the time</a></q> -- progressive enhanced is mentioned a number of times in the original /dokieli article. Just picked this version for now. Revision needed</p>
+
+                            <p>We adopt the <q>pay as you go</q> technique towards the design of user interactions and data read-write activities. The aim is to lower the barrier for entry to read, create and participate. <span class="todo">[Perhaps point to the paragraph on <a href="#annotations-and-notifications">annotations and notifications</a>] For example, users are able to store their annotations at their personal storage if they like, or if they don't have one or don't wish to store themselves, they may be able to use a public annotation services if offered by the article.</span></p>
+
+                            <p class="todo">[in/out of scope cleanup] The intentions of dokieli is to improve user's interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectaton is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorization rules are expected to be handled by their preferred tooling and services. .. in scope: addingdomain-specific semantics, verification of content/authors, data integrity</p>
                         </div>
                     </section>
 
@@ -236,6 +244,8 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                         <div about="#design" datatype="rdf:HTML" property="schema:description" typeof="deo:Results">
                             <p class="todo">Ruben's alternative take: first explain what the content looks like (regular HTML) and that dokieli is just “dropped in”; second (and foremost) explain how decentralized authoring on top of it works (LDP); third, annotations (LDN); then, perhaps, a section with semantics. What I would drop is: SPA, extension; these are explained in one sentence in the first subsection.</p>
                             <p>Problems and intentions... Try to align with DIO</p>
+
+                            <p class="todo">http://csarven.ca/dokieli#distribution (or more specifically about http://csarven.ca/dokieli#default-ui and http://csarven.ca/dokieli#self-replicating since http://csarven.ca/dokieli#fault-tolerant can go under <a href="#principles">principles</a>?)</p>
 
                             <section id="standardised-data-exchange" inlist="" rel="schema:hasPart" resource="#structure-and-semantics">
                                 <h3 property="schema:name">Standardised Data Exchange</h3>
@@ -289,6 +299,8 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
 
                                     <p class="todo">For a 'print' version, does it makes sense to express this as videos being showcased? or should this be turned inside out and talk about core interactions, and then just point to the figure/video</p>
 
+                                    <p class="todo">This section can also be expressed from the point of use cases?</p>
+
                                     <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
 
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
@@ -298,7 +310,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
 
-                                    <p>A core feature to facilitate the collaboration is the possibility to annotate arbitrary parts of a Web document.
+                                    <p id="annotations-and-notifications">A core feature to facilitate the collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest for instance, where a context menu is presented to input their annotations along with the choice to select a license e.g., Creative Commons, for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
                                     Once the annotation is submitted in the user interface, dokieli proceeds with three operations: 1) annotation is requested to be saved at user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that, before the annotation gets to be saved and gets its own URL, 2) if the article or any fragment has its own inbox, dokieli sends a notification indicating that an annotation was made, where it can be accessed, with accompanying metadata like who created it, when, its license etc., 3) the annotation is fetched from the personal storage to ensure that it really exists before it is integrated back with the article e.g., in marginalia. If the article has a reference to a public annotation service, the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy on the annotation on their server, or if a user does not have a personal storage, they can still use this option to engage with the article.
@@ -378,6 +390,8 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                             <p class="todo">Challenge: incentives</p>
                             <p class="todo">We should keep the aim on interoperability, not create yet another silo</p>
                             <p class="todo">End on meaning for social machines: we <em>are</em> the machine, we should have our own spaces; they should get connected</p>
+
+                            <p about="" id="epilogue" rel="schema:hasPart"><span about="#epilogue" property="schema:description" typeof="deo:Epilogue">There is a growing list of dokieli <a href="https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild">articles in the wild</a>. We invite you to try dokieli yourself right now! Annotate this article at http://csarven.ca/dokieli-rww, or spawn a new or a copy that you can edit yourself. <em>Make it so!</em></span></p>
                         </div>
                     </section>
 
