@@ -286,7 +286,10 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                 <h3>Interactions</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">Explain what these do and how they fulfill some requirements?</p>
-									<p>The following videos showcase the key functionality of dokieli and illustrate, how a distributed social network can be spun around dokieli documents.</p>
+
+                                    <p class="todo">For a 'print' version, does it makes sense to express this as videos being showcased? or should this be turned inside out and talk about core interactions, and then just point to the figure/video</p>
+
+                                    <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
 
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
                                         <video id="video-dokieli-annotation" inlist="" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-annotation.jpg">
@@ -295,14 +298,11 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
 
-									<p>A core feature to facilitate the collaboration is the possibility to attach rich semantically stractured annotations to relevant parts of a Web document.
-									Readers can select a relevant part of the dokieli document, after which a context menu appears allowing to attach annotations, ratings.
-									A user has to be authenticated with his WebID.
-									In addition to the annotation text, a license for the annotation can be selected.
-									Also, the storage for the annotation in a personal inbox or an external annoation service can be chosen.
-									Annotations are shown in the margins of the document (depending on the stylesheet actually used in the current view).
-									</p>
-
+                                    <p>A core feature to facilitate the collaboration is the possibility to annotate arbitrary parts of a Web document.
+                                    Users can select an entity or a span of text of interest for instance, where a context menu is presented to input their annotations along with the choice to select a license e.g., Creative Commons, for their contribution.
+                                    If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
+                                    Once the annotation is submitted in the user interface, dokieli proceeds with three operations: 1) annotation is requested to be saved at user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that, before the annotation gets to be saved and gets its own URL, 2) if the article or any fragment has its own inbox, dokieli sends a notification indicating that an annotation was made, where it can be accessed, with accompanying metadata like who created it, when, its license etc., 3) the annotation is fetched from the personal storage to ensure that it really exists before it is integrated back with the article e.g., in marginalia. If the article has a reference to a public annotation service, the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy on the annotation on their server, or if a user does not have a personal storage, they can still use this option to engage with the article.
+                                    </p>
 
                                     <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
                                         <video id="video-dokieli-share" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-share.jpg">
