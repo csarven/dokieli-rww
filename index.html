@@ -158,7 +158,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                 While the Web was originally conceived as a decentralised platform
                                 where every organisation and individual can participate,
                                 it became increasingly centralised
-                                with <a href="https://news.netcraft.com/archives/category/web-server-survey/">less than 1% of servers serving more than 99% of content</a>.
+                                with <a href="https://news.netcraft.com/archives/category/web-server-survey/">less than 1% of the servers serving more than 99% of the content</a>.
                                 The main reason for this is rooted in technology:
                                 it is currently much easier and efficient to author, manage, publish,
                                 and search large amounts of similarly structured content using a centralised platform.
@@ -166,6 +166,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                 are centralised authoring, publishing, and search platforms
                                 for encyclopedic articles, videos or social network content respectively.
                             </p>
+                <p class="todo">CL: In what way does Wikipedia not respect <em>ownership</em>?  It's central but has an open content license and stores the history of all revisions.  But, yes, there can only be one “current” version of an article, and that's what the majority prefers.</p>
                             <p>
                                 However, independence of centralised platforms is a necessity
                                 for ownership of published ideas,
@@ -179,7 +180,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                 After all,
                                 there is a continued tension between unrestricted publication rights on the one hand,
                                 and a guarantee of balanced, verified information on the other.
-                                In a fully Decentralized setting, each source is filterless
+                                In a fully decentralized setting, each source is filterless
                                 and responsible for its own quality and reputation,
                                 while others are free to selectively (dis-)trust certain sources
                                 using any mechanism they desire.
@@ -221,10 +222,10 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
 
                             <p class="todo"><q><a href="http://csarven.ca/dokieli#architecture">The architecture we have chosen enables this knowledge to be as widely accessible as possible; the capabilities of dokieli are designed such that they are enabled progressively and individually, according to the user’s needs and technical resources at the time</a></q> -- progressive enhanced is mentioned a number of times in the original /dokieli article. Just picked this version for now. Revision needed</p>
 
-                            <p>We adopt the <q>pay as you go</q> technique towards the design of user interactions and data read-write activities. The aim is to lower the barrier for entry to read, create and participate. <span class="todo">[Perhaps point to the paragraph on <a href="#annotations-and-notifications">annotations and notifications</a>] For example, users are able to store their annotations at their personal storage if they like, or if they don't have one or don't wish to store themselves, they may be able to use a public annotation services if offered by the article.</span></p>
+                            <p>We adopt the <q>pay as you go</q> technique towards the design of user interactions and data read-write activities. The aim is to lower the barrier for entry to read, create and participate. <span class="todo">[Perhaps point to the paragraph on <a href="#annotations-and-notifications">annotations and notifications</a>] For example, users are able to store their annotations at their personal storage if they like, or if they do not have one or do not wish to store themselves<span class="todo">CL: All this sounds quite negative.  Isn't it also, positively, possible that a user wants to <em>share</em> his annotation with others?</span>, they may be able to use a public annotation services if offered by the article.</span></p>
 
                             <h3>Determining the scope</h3>
-                            <p class="todo">[in/out of scope cleanup] The intentions of dokieli is to improve user's interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
+                            <p class="todo">[in/out of scope cleanup] Dokieli intends to improve users' interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
                         </div>
                     </section>
 
@@ -233,12 +234,14 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                         <div datatype="rdf:HTML" property="schema:description">
                             <p class="outline" style="background:#999;font-style:italic">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
 
-                            <p class="todo">Potential relations to: Amaya (re: RW), Federated Wikis (re: copy, remix), Google Docs (re: desktop->Web, centralised), Genius/Hypothes.is (re: annotate any URL, centralised), Any CMS/WordPress (re: personalisation, centralised, extensibility), sea of editors/annotators (substance.io, loomp, RDFaCE, WordLift, Authorea).</p>
+                            <p class="todo">Potential relations to: Amaya (re: RW), Federated Wikis (re: copy, remix), Google Docs (re: desktop->Web, centralised), Genius/Hypothes.is (re: annotate any URL, centralised), Any CMS/WordPress (re: personalisation, centralised, extensibility), sea of editors/annotators (substance.io, loomp, RDFaCE, WordLift, Authorea).<br/>
+                            CL: Not sure if RDFaCE fits here.  It's just the editing widget, not a fully featured application.  In itself, it is neither central nor decentral.</p>
 
                             <p class="todo">Add different approaches, not more examples</p>
 
                             <p class="todo">Summarise<cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content: A Systematic Literature Review</a></cite>. Reuse its Quality Attributes as well as other possible dimensions to compare/situate dokieli.</p>
-                            <p class="todo">(Ruben): actually, this might not be <em>that</em> relevant; the semantics are not the core point of this paper; we can point to, but shouldn't do much more.</p>
+                            <p class="todo">(Ruben): actually, this might not be <em>that</em> relevant; the semantics are not the core point of this paper; we can point to, but shouldn't do much more.<br/>
+                            Right, but what may be worth mentioning: decentral editing also means that each author can choose their own semantics (e.g. their own vocabulary to annotate RDF), and then such decentral documents can link to each other and their schemas can also be mapped to each other, whereas in centralised platforms this is (if they support semantics at all) often prescribed, either technically enforced, or encouraged by social convention.</p>
                             <p>Tackle them on dimensions like: decentralisation, profile and data control/ownership, interoperability, cost/expertise required to use.</p>
 
                             <h3>Centralised authoring and annotation platforms</h3>
