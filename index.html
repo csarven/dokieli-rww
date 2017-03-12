@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
         <meta charset="utf-8" />
         <title>dokieli: decentralised authoring, annotations and social notifications</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -18,7 +17,7 @@
         <main>
             <article about="" typeof="schema:ScholarlyArticle">
                 <h1 property="schema:name">Dokieli: Decentralised Authoring, Annotations and Social Notifications</h1>
-                <p class="todo">consider removing “dokieli” from title to emphasise the principles over the implementation<br/>
+                <p class="todo">consider removing “dokieli” from title to emphasise the principles over the implementation<br />
                 CL: for me it's OK. The tool is now widely known by its name, and it can be considered as the reference implementation of the principles.</p>
 
                 <div id="authors">
@@ -139,20 +138,19 @@
                             </ul>
                         </div>
                     </section>
-
-<pre class="highlight">
-* Use UK (or CA) English spelling
+<pre class="highlight">* Use UK (or CA) English spelling
 * Where applicable, express design decisions/intentions using terminology from <a href="http://aligned.cs.ox.ac.uk/ont/dio.html">DIO</a>
 * Key themes: decentralisation, data ownership/interoperability/Web standards,
 ReadWriteWeb, semantic/interactive articles, progressive enhancement
-* Okay to cite a paywalled article, but all links should point to resources
-where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
-</pre>
+* Okay to cite a paywalled article by name, but all identifiers or links for it
+ should use resources where their content can be accessed in full e.g., if it
+ the preprint version is available use that over a DOI that might be behind a
+ paywall</pre>
 
 
                     <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
                         <h2 property="schema:name">Introduction</h2>
-                        <p class="outline" style="background:#999;font-style:italic">In this section, we establish why decentralisation is important, why it is currently missing, and what we're going to do about it.</p>
+                        <p class="outline">In this section, we establish why decentralisation is important, why it is currently missing, and what we're going to do about it.</p>
                         <div datatype="rdf:HTML" property="schema:description" resource="#introduction" typeof="deo:Introduction">
                             <p>
                                 While the Web was originally conceived as a decentralised platform
@@ -211,9 +209,9 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                     <section id="principles" inlist="" rel="schema:hasPart" resource="#requirements">
                         <h2 property="schema:name">Requirements analysis</h2>
                         <div about="#problem-space" datatype="rdf:HTML" property="schema:description" typeof="deo:ProblemStatement">
-                            <p class="outline" style="background:#999;font-style:italic">In this section, we explain the principles and aspects that a solution should have, providing a way for us to test at the end whether we've built the right thing.</p>
+                            <p class="outline">In this section, we explain the principles and aspects that a solution should have, providing a way for us to test at the end whether we've built the right thing.</p>
                             <h3>Principles and standards</h3>
-                            <p class="outline" style="background:#999;font-style:italic">We can really go for itemized principles here, for instance with a definition list even.</p>
+                            <p class="outline">We can really go for itemized principles here, for instance with a definition list even.</p>
                             <p class="todo">Explain the set of principles we need, the standards that are relevant, the components we need, without focus on dokieli</p>
                             <p class="todo">Explain how we will know / how we can test / whether (and to what extent) we have been successful</p>
                             <p class="todo">Reuse/phrase http://csarven.ca/dokieli#social-and-technical-impact ? Especially: <q>Our work is towards encouraging an ecosystem of applications which are decoupled from user data, discouraging vendor lock-in as services must compete for user attention by providing value rather than hoarding information.</q></p>
@@ -232,26 +230,26 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                     <section id="related-work" inlist="" rel="schema:hasPart" resource="#related-work">
                         <h2 property="schema:name">Related Work</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <p class="outline" style="background:#999;font-style:italic">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
+                            <p class="outline">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
 
-                            <p class="todo">Potential relations to: Amaya (re: RW), Federated Wikis (re: copy, remix), Google Docs (re: desktop->Web, centralised), Genius/Hypothes.is (re: annotate any URL, centralised), Any CMS/WordPress (re: personalisation, centralised, extensibility), sea of editors/annotators (substance.io, loomp, RDFaCE, WordLift, Authorea).<br/>
+                            <p class="todo">Potential relations to: Amaya (re: RW), Federated Wikis (re: copy, remix), Google Docs (re: desktop-&gt;Web, centralised), Genius/Hypothes.is (re: annotate any URL, centralised), Any CMS/WordPress (re: personalisation, centralised, extensibility), sea of editors/annotators (substance.io, loomp, RDFaCE, WordLift, Authorea).<br />
                             CL: Not sure if RDFaCE fits here.  It's just the editing widget, not a fully featured application.  In itself, it is neither central nor decentral.</p>
 
                             <p class="todo">Add different approaches, not more examples</p>
 
                             <p class="todo">Summarise<cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content: A Systematic Literature Review</a></cite>. Reuse its Quality Attributes as well as other possible dimensions to compare/situate dokieli.</p>
-                            <p class="todo">(Ruben): actually, this might not be <em>that</em> relevant; the semantics are not the core point of this paper; we can point to, but shouldn't do much more.<br/>
+                            <p class="todo">(Ruben): actually, this might not be <em>that</em> relevant; the semantics are not the core point of this paper; we can point to, but shouldn't do much more.<br />
                             Right, but what may be worth mentioning: decentral editing also means that each author can choose their own semantics (e.g. their own vocabulary to annotate RDF), and then such decentral documents can link to each other and their schemas can also be mapped to each other, whereas in centralised platforms this is (if they support semantics at all) often prescribed, either technically enforced, or encouraged by social convention.</p>
                             <p>Tackle them on dimensions like: decentralisation, profile and data control/ownership, interoperability, cost/expertise required to use.</p>
 
                             <h3>Centralised authoring and annotation platforms</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Briefly summarise existing popular platforms, showing the advantages and disadvantages of centralisation.</p>
+                            <p class="outline">Briefly summarise existing popular platforms, showing the advantages and disadvantages of centralisation.</p>
 
                             <h3>Decentralised authoring</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Compare decentralised authoring tools. What do they do right, what are they missing?</p>
+                            <p class="outline">Compare decentralised authoring tools. What do they do right, what are they missing?</p>
 
                             <h3>Decentralised annotation</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Compare decentralised annotation tools. What do they do right, what are they missing?</p>
+                            <p class="outline">Compare decentralised annotation tools. What do they do right, what are they missing?</p>
 
                         </div>
                     </section>
@@ -260,13 +258,13 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                         <h2 property="schema:name">Architecture and technologies</h2>
                         <div about="#design" datatype="rdf:HTML" property="schema:description" typeof="deo:Results">
                             <h3>Architectural overview</h3>
-                            <p class="outline" style="background:#999;font-style:italic">The main nodes, actors, components and their roles</p>
-                            <p class="outline" style="background:#999;font-style:italic">The figure should make clear why and how the system is decentralised, and how we work around the limits of centralisation (notifications)</p>
+                            <p class="outline">The main nodes, actors, components and their roles</p>
+                            <p class="outline">The figure should make clear why and how the system is decentralised, and how we work around the limits of centralisation (notifications)</p>
 
-                            <p class="outline" style="background:#999;font-style:italic">Also list the assumptions: users are authenticated, have their own storage, etc.</p>
+                            <p class="outline">Also list the assumptions: users are authenticated, have their own storage, etc.</p>
 
                             <h3>Creating and publishing documents</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Part A) What will the document look like? How is it different compared to existing documents? What technologies does it use, and why are these independent of dokieli?</p>
+                            <p class="outline">Part A) What will the document look like? How is it different compared to existing documents? What technologies does it use, and why are these independent of dokieli?</p>
 
                             <p>dokieli's HTML is generated in a way that is strictly focused on structure, semantics, accessibility, and reusability of the underlying content. Presentational and behavioural components are left to CSS and JavaScript respectively. <span class="todo">CL: Instead of “without the absence” do you mean “in absence”?</span> This is so that without the absence of the CSS and JavaScript, the information remains to be accessible and readable in full even if the document is served from a different location.</p>
 
@@ -274,19 +272,19 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
 
                                     <p class="todo">Mention which vocabularies it uses out of the box and why/to what purpose</p>
 
-                            <p class="outline" style="background:#999;font-style:italic">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
+                            <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
 
                             <h3>Social interactions and annotations</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Part A) What do they look like? How are they stored and published?</p>
+                            <p class="outline">Part A) What do they look like? How are they stored and published?</p>
 
-                            <p class="outline" style="background:#999;font-style:italic">Part B) How are they stored and published?</p>
+                            <p class="outline">Part B) How are they stored and published?</p>
 
                             <p class="todo">Ruben removed the paragraph below, as he proposes to split this into two parts. First, there is this section about annotations (what they are and how they are stored). After that, there is the next subsection about notifications, i.e. how the decentralised system is connected. (The deleted paragraph intertwines both things.)</p>
                             <p><del>Users can make their contributions and have them preserved in different ways: authors which control their own articles, parties that have authority over an article's notification inbox, as well as external annotators e.g., reviewers, commenters. dokieli enables different users to voice themselves without interfering or imposing centralised mechanisms e.g., editorial systems. For example, when a user annotates an article, the annotation is stored at their personal online storage. A notification is sent to the article's inbox to inform the consumers of that inbox about that annotation. A typical consumption is where the annotation is shown as marginalia in the article. If for instance, the owners of the inbox (which may or may not be the authors of the article), find the annotation inappropriate, they can remove the notification itself and thereby removing its exposure through the inbox. Since the annotation is controlled independently by its author at their own Web space they preserve the right to retain it. dokieli uses Linked Data Notifications to help with the discovery of <q>voices</q> while each contributor retaining their own respective rights over the entities they create on the Web.</del></p>
 
 
                             <h3>Notifications</h3>
-                            <p class="outline" style="background:#999;font-style:italic">Explain for both documents and annotations how others in the decentralised network will know about them.</p>
+                            <p class="outline">Explain for both documents and annotations how others in the decentralised network will know about them.</p>
 
                             <h3>(Unsorted)</h3>
                             <p class="todo">Mention the type of operations? Performs only structurally and semantically valid operations.</p>
@@ -328,8 +326,8 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                     <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
 
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
-                                        <video id="video-dokieli-annotation" inlist="" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-annotation.jpg">
-                                            <source about="#video-dokieli-annotation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-annotation.webm" typeof="fabio:Film" src="https://dokie.li/media/video/dokieli-annotation.webm" type="video/webm" />
+                                        <video controls="controls" id="video-dokieli-annotation" inlist="" poster="https://dokie.li/media/images/dokieli-annotation.jpg" preload="none" rel="schema:hasPart" width="800">
+                                            <source about="#video-dokieli-annotation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-annotation.webm" src="https://dokie.li/media/video/dokieli-annotation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
@@ -341,8 +339,8 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                                     </p>
 
                                     <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
-                                        <video id="video-dokieli-share" rel="schema:hasPart" preload="none" controls="controls" width="800" poster="https://dokie.li/media/images/dokieli-share.jpg">
-                                            <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm"  typeof="fabio:Film" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" />
+                                        <video controls="controls" id="video-dokieli-share" poster="https://dokie.li/media/images/dokieli-share.jpg" preload="none" rel="schema:hasPart" width="800">
+                                            <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
                                     </figure>
@@ -353,7 +351,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
 									</p>
 
                                     <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
-                                        <video controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" width="800" about="" rel="schema:hasPart">
+                                        <video about="" controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-citation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-citation.webm" src="https://dokie.li/media/video/dokieli-citation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
@@ -368,7 +366,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
 									</p>
 
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
-                                        <video controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" about="" rel="schema:hasPart" width="800">
+                                        <video about="" controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-sparqlines" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-sparqlines.webm" src="https://dokie.li/media/video/dokieli-sparqlines.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
@@ -423,7 +421,7 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                         </div>
                     </section>
 
-                    <section id="acknowledgements" inlist="" rel="schema:hasPart" prefix="scoro: http://purl.org/spar/scoro/" resource="#acknowledgements">
+                    <section id="acknowledgements" inlist="" prefix="scoro: http://purl.org/spar/scoro/" rel="schema:hasPart" resource="#acknowledgements">
                         <h2 property="schema:name">Acknowledgements</h2>
                         <div about="#acknowledgements" datatype="rdf:HTML" property="schema:description" typeof="deo:Acknowledgements">
                             <p>Special thanks to our colleagues at <span about="" id="funding-recipient" rel="scoro:funding-recipient"><a about="http://dbpedia.org/resource/Massachusetts_Institute_of_Technology" href="https://mit.edu/" property="schema:name" rel="schema:url" typeof="schema:Organization">MIT</a></span>/<a href="https://www.w3.org/">W3C</a>; <a href="http://nicola.io/">Nicola Greco</a>, <a href="http://www.computingjoy.com/">Dmitri Zagidulin</a>, <a href="https://deiu.me/profile">Andrei Sambra</a>, <a href="https://www.w3.org/People/Sandro/">Sandro Hawke</a>, as well as <a href="http://bblfish.net/">Henry Story</a> and <a href="https://melvincarvalho.com/#me">Melvin Carvalho</a> for their contributions. We are also thankful to collaborate with colleagues at <a href="http://qcri.org.qa/">QCRI</a>. This research was supported in part by <span about="" id="funder" rel="scoro:funder"><a about="http://dbpedia.org/Qatar_Computing_Research_Institute" href="http://qcri.org.qa/" property="schema:name" rel="schema:url" typeof="schema:Organization">Qatar Computing Research Institute</a></span>, <a href="https://www.hbku.edu.qa/">HBKU</a> through the <a href="http://crosscloud.org/">Crosscloud</a> project from 2015-10 to 2016-09. <a href="http://kingsley.idehen.net/">Kingsley Idehen</a> and <a href="https://www.openlinksw.com/">OpenLink Software</a> for their support and contributions to the browser extension. Last but not least, the contributors to the dokieli code, issues, and discussion.</p>
@@ -438,24 +436,19 @@ where their content can be accessed in full e.g. preprint &gt;&gt; paywall page
                 </div>
             </article>
         </main>
-    </body>
-</html>
 <!-- Emacs spell-checking configuration (Christoph)
 Local Variables:
 ispell-local-dictionary: "british"
 End:
 -->
-
 <!--  LocalWords:  DOCTYPE dokieli Sarven Capadisli Verborgh Christoph Auer -->
 <!--  LocalWords:  Sören Berners Informatics imec Decentralized CSAIL -->
 <!--  LocalWords:  rww ISWC DIO ReadWriteWeb filterless itemized de -->
 <!--  LocalWords:  storages Amaya RW personalisation io loomp RDFaCE -->
 <!--  LocalWords:  WordLift Authorea html Presentational TriG LD -->
-<!--  LocalWords:  deterministically ui WebID CiTO endnote Sparqlines
- -->
-<!--  LocalWords:  sparkline semstats ESWC csarven linkedresearch LDN
- -->
-<!--  LocalWords:  Greco Zagidulin Sambra Sandro Hawke Carvalho QCRI
- -->
-<!--  LocalWords:  HBKU Crosscloud Kingsley Idehen OpenLink
- -->
+<!--  LocalWords:  deterministically ui WebID CiTO endnote Sparqlines -->
+<!--  LocalWords:  sparkline semstats ESWC csarven linkedresearch LDN -->
+<!--  LocalWords:  Greco Zagidulin Sambra Sandro Hawke Carvalho QCRI -->
+<!--  LocalWords:  HBKU Crosscloud Kingsley Idehen OpenLink -->
+    </body>
+</html>
