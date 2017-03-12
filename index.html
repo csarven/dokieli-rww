@@ -17,7 +17,7 @@
     <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
         <main>
             <article about="" typeof="schema:ScholarlyArticle">
-                 <h1 property="schema:name">Decentralised Authoring, Annotations and Social Notifications Towards a Read-Write-Web</h1>
+                <h1 property="schema:name">Decentralised Authoring, Annotations and Social Notifications Towards a Read-Write-Web</h1>
 
                 <div id="authors">
                     <dl id="author-name">
@@ -65,7 +65,7 @@
                 <dl id="document-in-reply-to">
                     <dt>In Reply To</dt>
                     <dd><a href="https://linkedresearch.org/calls" rel="sioc:reply_of">Call for Linked Research</a></dd>
-                    <dd><a href="http://iswc2017.semanticweb.org/calls/call-for-in-use-track-papers/" rel="sioc:reply_of">ISWC2017 Call for In-Use</a></dd>
+                    <dd><a href="http://icwe2017.webengineering.org/#application" rel="sioc:reply_of">ICWE2017 Call for Application Papers</a></dd>
                 </dl>
 
                 <dl id="document-published">
@@ -75,7 +75,7 @@
 
                 <dl id="document-modified">
                     <dt>Modified</dt>
-                    <dd><time content="2017-03-05T00:00:00Z" datatype="xsd:dateTime" datetime="2017-03-05T00:00:00Z" property="schema:dateModified">2017-03-05</time></dd>
+                    <dd><time content="2017-03-12T00:00:00Z" datatype="xsd:dateTime" datetime="2017-03-12T00:00:00Z" property="schema:dateModified">2017-03-12</time></dd>
                 </dl>
 
                 <dl id="document-license">
@@ -137,6 +137,7 @@
                             </ul>
                         </div>
                     </section>
+
 <pre class="highlight">* Use UK (or CA) English spelling
 * Where applicable, express design decisions/intentions using terminology from <a href="http://aligned.cs.ox.ac.uk/ont/dio.html">DIO</a>
 * Key themes: decentralisation, data ownership/interoperability/Web standards,
@@ -297,14 +298,14 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     <section id="implementation" inlist="" rel="schema:hasPart" resource="#implementation">
                         <h2 property="schema:name">Implementation</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <section id="single-page-application" inlist="" rel="schema:hasPart" resource="#deployment">
+                            <section id="components" inlist="" rel="schema:hasPart" resource="#components">
                                 <h3 property="schema:name">Components</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">scripts, styles, …</p>
                                 </div>
                             </section>
 
-                            <section id="single-page-application" inlist="" rel="schema:hasPart" resource="#deployment">
+                            <section id="deployment" inlist="" rel="schema:hasPart" resource="#deployment">
                                 <h3 property="schema:name">Deployment</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">How it behaves like a single-page application. Thin-client.</p>
@@ -313,7 +314,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                 </div>
                             </section>
 
-                            <section id="interactions">
+                            <section id="interactions" inlist="" rel="schema:hasPart" resource="#interactions">
                                 <h3>Interactions</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">Explain what these do and how they fulfil some requirements?</p>
@@ -344,10 +345,10 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
                                     </figure>
 
-									<p>A key aspect of creating content on the Web is sharing with friends, colleagues or co-workers.
-									After authenticating with a WebID, dokieli documents can be shared with respective contacts, which are suggested from the contact list of people linked in some way to the WebID of the document author.
-									dokieli indicates once sharing messages have been posted to the inbox of the respective contacts.
-									</p>
+                                    <p>A key aspect of creating content on the Web is sharing with friends, colleagues or co-workers.
+                                    After authenticating with a WebID, dokieli documents can be shared with respective contacts, which are suggested from the contact list of people linked in some way to the WebID of the document author.
+                                    dokieli indicates once sharing messages have been posted to the inbox of the respective contacts.
+                                    </p>
 
                                     <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
                                         <video about="" controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" rel="schema:hasPart" width="800">
@@ -356,13 +357,13 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
                                     </figure>
 
-									<p>In addition to sharing as social linking, rich semantic links can also be established between dokieli documents itself.
-									For that purpose, the <span class="todo">CL: I don't understand the phrase “text fragment becomes the link text”.</span>text fragment becoming the link text can be selected in the document.
-									Via the context menu, a reference using a specific semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) can be selected.
-									Link types are suggested from SPAR/CiTO and schema.org/citation ontologies.
-									dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference.
-									Furthermore, the linked document is notified (thus allowing bi-directional linking) about the reference via its notifications inbox<span class="todo">CL: When we link to non-Dokieli documents out there, it is quite likely that they don't have an inbox.  1. What happens in such cases?  2. It might be helpful that for some of these advanced web standard we say how widely they have already been adopted.</span>.
-									</p>
+                                    <p>In addition to sharing as social linking, rich semantic links can also be established between dokieli documents itself.
+                                    For that purpose, the <span class="todo">CL: I don't understand the phrase “text fragment becomes the link text”.</span>text fragment becoming the link text can be selected in the document.
+                                    Via the context menu, a reference using a specific semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) can be selected.
+                                    Link types are suggested from SPAR/CiTO and schema.org/citation ontologies.
+                                    dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference.
+                                    Furthermore, the linked document is notified (thus allowing bi-directional linking) about the reference via its notifications inbox<span class="todo">CL: When we link to non-Dokieli documents out there, it is quite likely that they don't have an inbox.  1. What happens in such cases?  2. It might be helpful that for some of these advanced web standard we say how widely they have already been adopted.</span>.
+                                    </p>
 
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
                                         <video about="" controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" rel="schema:hasPart" width="800">
@@ -371,29 +372,29 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
                                     </figure>
 
-									<p>Dokieli documents although providing a static view are dynamic in nature.
-									One particular highlight in this regard (in addition to the integration of videos) is the embedding of dynamically created diagrams and charts.
-									For example, linked SPARQL queries and inline diagrams (called sparklines) generated from these can be integrated.
-									After selecting the link anchor text, the dokieli context menu allows to search in registered SPARQL endpoints for respective queries using the keywords from the link anchor text.
-									The author can select from a list of suggested queries, after which a link to the SPARQL endpoint is integrated along with the sparkline inline diagram.
-									</p>
+                                    <p>Dokieli documents although providing a static view are dynamic in nature.
+                                    One particular highlight in this regard (in addition to the integration of videos) is the embedding of dynamically created diagrams and charts.
+                                    For example, linked SPARQL queries and inline diagrams (called sparklines) generated from these can be integrated.
+                                    After selecting the link anchor text, the dokieli context menu allows to search in registered SPARQL endpoints for respective queries using the keywords from the link anchor text.
+                                    The author can select from a list of suggested queries, after which a link to the SPARQL endpoint is integrated along with the sparkline inline diagram.
+                                    </p>
                                 </div>
                             </section>
                         </div>
                     </section>
 
                     <section id="usage-in-the-wild" inlist="" rel="schema:hasPart" resource="#usage-in-the-wild">
-                      <h2 property="schema:name">Usage in the Wild</h2>
-                      <p class="todo">CL: I wouldn't characterise <em>all</em> these as “in the wild”.  When publishers and conferences use dokieli, this is not an in-the-wild decision of an individual author, but it is more of an institutionalised adoption.</p>
+                        <h2 property="schema:name">Usage in the Wild</h2>
+                        <p class="todo">CL: I wouldn't characterise <em>all</em> these as “in the wild”.  When publishers and conferences use dokieli, this is not an in-the-wild decision of an individual author, but it is more of an institutionalised adoption.</p>
                         <div datatype="rdf:HTML" property="schema:description">
                             <p class="todo">CEUR-WS.org proceedings generated with ceur-make</p>
                             <p class="todo">semstats.org and for call for contributions</p>
                             <p class="todo">https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild</p>
                             <p class="todo">https://www.w3.org/TR/annotation-html/</p>
-                            <p class="todo">Suggested at ISWC, ESWC submissions?</p>
+                            <p class="todo">Suggested at WWW, ISWC, ESWC submissions?</p>
                             <p class="todo">https://www.w3.org/TR/ldn/</p>
                             <p class="todo">csarven.ca?, linkedresearch.org site, LDN Editor's Draft, LDN tests?</p>
-                            <p class="todo">CL: What's interesting about csarven.ca?  I'd mention it only if it used a lot of interesting dokieli features that aren't used elsewhere.  Or if other users commented more than at other dokieli-enabled sides.</p>
+                            <p class="todo">CL: What's interesting about csarven.ca?  I'd mention it only if it used a lot of interesting dokieli features that aren't used elsewhere.  Or if other users commented more than at other dokieli-enabled sides. SC: That particular angle is okay with me. The question mark was moreso how extensively do we want to talk about the usage in the wild.</p>
                         </div>
                     </section>
 
