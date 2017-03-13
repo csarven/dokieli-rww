@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pim: <http://www.w3.org/ns/pim/space#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix as: <https://www.w3.org/ns/activitystreams#> .
+@prefix schema: <http://schema.org/> .
+
+#schema:Article rdfs:label "Article"@en .
+#ldp:Container rdfs:label "Container"@en .
+#oa:Annotation rdfs:label "Annotation"@en .
+#as:Announce rdfs:label "Announce"@en .
+#foaf:Person rdfs:label "Person"@en .
+
+<http://example.com/article>
+  a schema:Article
+  ; ldp:inbox <http://example.net/inbox/>
+  ; schema:author <http://example.me/#i>
+  .
+
+<http://example.net/inbox/>
+  a ldp:Container
+  ; ldp:contains <http://example.net/inbox/notification>
+  .
+
+<http://example.net/inbox/notification>
+  a as:Announce ;
+  ; as:inReplyTo <http://example.org/annotation>
+# ; schema:license <https://creativecommons.org/publicdomain/zero/1.0/>
+  ; as:actor <http://example.foo/#i>
+  .
+
+<http://example.org/annotation>
+  a oa:Annotation ;
+#  ; schema:license <https://creativecommons.org/licenses/by/4.0/>
+  ; schema:creator <http://example.foo/#i>
+#  ; oa:hasTarget <http://example.com/article#statement>
+  ; oa:hasTarget <http://example.com/article>
+  .
+
+<http://example.me/#i>
+  a foaf:Person
+  ; pim:storage <http://example.io/>
+  ; ldp:inbox <http://example.me/inbox/>
+  .
+
+<http://example.foo/#i>
+  a foaf:Person
+  ; foaf:knows
+    <http://example.me/#i>
+#    , <http://example.info/#i>
+  ; ldp:inbox <http://example.foo/inbox/>
+  .
+
+#<http://example.info/#i>
+#  ; a foaf:Person
+#  ldp:inbox <http://example.info/inbox/>
+#  .
