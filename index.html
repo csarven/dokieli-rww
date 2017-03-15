@@ -295,13 +295,14 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p>While dokieli can potentially be read from any server or local filesystem, its write operations to external HTTP resources require JavaScript to be enabled in the user-agent. This moves the burden from servers (i.e., offering HTML forms and processing of the form submission) to the client.</p>
 
-                            <p id="write-operations">Currently, dokieli uses the HTTP POST, PUT, and DELETE methods for its write-operations given that their affordances are clear i.e., responses to the request indicate if, where, and how the resources may be accessible (<span class="todo">This is in contrast to SPARQL Update operations, which do not necessarily mean that the operation is reflected on the resolveable URLs... is this too much detail? can be it condensed?</span>). HTTP POST is used to fulfill actions like sending a annotation to a public service, or a notification to remote inboxes. In these cases, the receivers decides on their final retrievable URLs. HTTP PUT is used for document-centric actions like: <em>new</em>, <em>save</em> and <em>save as</em>, <em>reply</em>, as well as for user's to save their own annotations at a storage space in which they are authorized against. HTTP DELETE is used to request the removal of annotations for instance, provided that they are authorized. <span class="todo">dokieli currently does not do HTTP PATCH becuse it needs something like <cite>XML Patch</cite> supported by a server (e.g., <a href="https://github.com/solid/node-solid-server/issues/414">Solid issue</a>)</span></p>
-
-
                             <p class="todo">Mention which vocabularies it uses out of the box and why/to what purpose</p>
 
                             <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
-
+                            <p class="todo">Is the following break-down auth/authz, read/write okay?></p>
+                            <p id="authentication" class="todo"></p>
+                            <p id="authorization" class="todo"></p>
+                            <p id="read-operations" class="todo"></p>
+                            <p id="write-operations">Currently, dokieli uses the HTTP POST, PUT, and DELETE methods for its write-operations given that their affordances are clear i.e., responses to the request indicate if, where, and how the resources may be accessible (<span class="todo">This is in contrast to SPARQL Update operations, which do not necessarily mean that the operation is reflected on the resolveable URLs... is this too much detail? can be it condensed?</span>). HTTP POST is used to fulfill actions like sending an annotation to a public service, or a notification to remote inboxes. In these cases, the receivers decides on their final retrievable URLs. HTTP PUT is used for document-centric actions like: <em>new</em>, <em>save</em> and <em>save as</em>, <em>reply</em>, as well as for user's to save their own annotations at a storage space in which they are authorized against. HTTP DELETE is used to request the removal of annotations for instance, provided that they are authorized. <span class="todo">dokieli currently does not do HTTP PATCH becuse it needs something like <cite>XML Patch</cite> supported by a server (e.g., <a href="https://github.com/solid/node-solid-server/issues/414">Solid issue</a>)</span></p>
 
 
 
