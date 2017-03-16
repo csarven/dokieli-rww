@@ -97,22 +97,22 @@
                                 individual authors still lack convenient tools to write and publish documents themselves,
                                 and to engage in social interactions with documents of others.
                                 <!-- TASK: What was undertaken to address the need         -->
-                                We present Dokieli, a decentralised, browser-based editing and annotation platform
+                                We present dokieli, a decentralised, browser-based editing and annotation platform
                                 with built-in support for social interactions,
                                 on which people retain the ownership and storage of their data.
-                                The resulting “living” documents are interoperable and independent of Dokieli
+                                The resulting “living” documents are interoperable and independent of dokieli
                                 since they follow standards and best practices,
                                 such as HTML+RDFa for a fine-grained semantic structure,
                                 Linked Data Platform for personal data storage,
                                 and Linked Data Notifications for updates.
                                 <!-- OBJECT: What the present document does or covers      -->
-                                This article describes Dokieli’s architecture and implementation,
+                                This article describes dokieli’s architecture and implementation,
                                 <!-- FINDINGS: What the work done yielded or revealed      -->
                                 proving that the current technology
                                 allows for advanced document authoring and interaction
                                 without a single point of control.
                                 <!-- CONCLUSION :What the findings mean for the audience   -->
-                                Dokieli thus acts as a fully decentralised, user-owned social machine for Web documents,
+                                dokieli thus acts as a fully decentralised, user-owned social machine for Web documents,
                                 owned solely by its users,
                                 thereby offering a powerful alternative
                                 to centralised content management, blogging and other social platforms.
@@ -220,11 +220,13 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p class="todo"><strong>Data storage independent of services</strong> (choose your own store / choose another store / the services are separate) <q>ecosystem of applications which are decoupled from user data</q></p>
 
-                            <p class="todo"><strong>Permissionless publication</strong> (for both documents and annotations)</p>
+                            <p class="todo"><strong>Permissionless publication</strong> (for both documents and annotations) -- SC: I don't understand this.</p>
 
-                            <p class="todo"><strong>Anyone can say anything about anything</strong> ([de]referenceability)</p>
+                            <p class="todo"><strong>Anyone can say anything about anything</strong> ([de]referenceability -- SC: I don't understand this bit)</p>
 
-                            <p class="todo"><strong>Dependency on standards, not implementations</strong> (the fact that Dokieli is a tool, but that it content lives beyond it) <q>discouraging vendor lock-in as services must compete for user attention by providing value rather than hoarding information</q></p>
+                            <p class="todo"><strong>Dependency on standards, not implementations</strong> (the fact that dokieli is a tool, but that it content lives beyond it) <q>discouraging vendor lock-in as services must compete for user attention by providing value rather than hoarding information.</q></p>
+
+                            <p class="todo">We need a name for a class of applications which meet this: <q><a href="https://solid.mit.edu/">Reusing existing data: Developers will be able to easily innovate by creating new apps or improving current apps, all while reusing existing data that was created by other apps.</a></q> .. asked at <a href="https://gitter.im/solid/chat?at=58ca629ff7f7d48104215a50">Solid chat</a>. will come back to this. In the meantime, where woudl this go? is it part of "dependency on standards, not implementations" above? Basically we want to say that the application that we envision wants to decouples itself from the data so that other applications can use it.</p>
 
                             <p class="todo"><strong>Separation of concerns</strong>: By adopting the <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers: all content and base functionality can be accessible to basic Web browsers and other user-agent types; consumed through different media and devices, and; unobtrusive interactions while enhance the interface, do not hinder core usability and access to data.</p>
                             <p class="todo"><q><a href="http://csarven.ca/dokieli#architecture">The architecture we have chosen enables this knowledge to be as widely accessible as possible; the capabilities of dokieli are designed such that they are enabled progressively and individually, according to the user’s needs and technical resources at the time</a></q> -- progressive enhanced is mentioned a number of times in the original /dokieli article. Just picked this version for now. Revision needed</p>
@@ -238,7 +240,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                             <p>We adopt the <q>pay as you go</q> technique towards the design of user interactions and data read-write activities. The aim is to lower the barrier for entry to read, create and participate. <span class="todo">[Perhaps point to the paragraph on <a href="#annotations-and-notifications">annotations and notifications</a>] For example, users are able to store their annotations at their personal storage if they like, or if they do not have one or do not wish to store themselves<span class="todo">CL: All this sounds quite negative.  Isn't it also, positively, possible that a user wants to <em>share</em> his annotation with others?</span>, they may be able to use a public annotation services if offered by the article.</span></p>
 
                             <h3>Determining the scope</h3>
-                            <p class="todo">[in/out of scope cleanup] Dokieli intends to improve users' interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
+                            <p class="todo">[in/out of scope cleanup] dokieli intends to improve users' interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
                         </div>
                     </section>
 
@@ -403,7 +405,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                     Via the context menu, a reference using a specific semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) can be selected.
                                     Link types are suggested from SPAR/CiTO and schema.org/citation ontologies.
                                     dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference.
-                                    Furthermore, the linked document is notified (thus allowing bi-directional linking) about the reference via its notifications inbox<span class="todo">CL: When we link to non-Dokieli documents out there, it is quite likely that they don't have an inbox.  1. What happens in such cases?  2. It might be helpful that for some of these advanced web standard we say how widely they have already been adopted.</span>.
+                                    Furthermore, the linked document is notified (thus allowing bi-directional linking) about the reference via its notifications inbox<span class="todo">CL: When we link to non-dokieli documents out there, it is quite likely that they don't have an inbox.  1. What happens in such cases?  2. It might be helpful that for some of these advanced web standard we say how widely they have already been adopted.</span>.
                                     </p>
 
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
@@ -413,7 +415,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
                                     </figure>
 
-                                    <p>Dokieli documents although providing a static view are dynamic in nature.
+                                    <p>dokieli documents although providing a static view are dynamic in nature.
                                     One particular highlight in this regard (in addition to the integration of videos) is the embedding of dynamically created diagrams and charts.
                                     For example, linked SPARQL queries and inline diagrams (called sparklines) generated from these can be integrated.
                                     After selecting the link anchor text, the dokieli context menu allows to search in registered SPARQL endpoints for respective queries using the keywords from the link anchor text.
