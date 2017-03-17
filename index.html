@@ -152,6 +152,8 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                     <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
                         <h2 property="schema:name">Introduction</h2>
+                        <p>
+                        </p>
                         <p class="outline">In this section, we establish why decentralisation is important, why it is currently missing, and what we're going to do about it.</p>
 
                         <p class="todo">In introduction or elsewhere, can we have another angle at (de)centralised approaches? For example, the differences between vendor, data, and application lock-ins.</p>
@@ -213,9 +215,8 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     <section id="requirements-analysis" inlist="" rel="schema:hasPart" resource="#requirements-analysis">
                         <h2 property="schema:name">Requirements</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <p>In this section, we explain the principles and aspects that an approach for decentralized authoring, annotation and notifications should have, providing a way to test specific approaches to the extend they fulfill the requirements. <span class="fixme">The wording should be such that there is some spectrum to this, and not a binary hit-miss. Otherwise, it is self-fulling i.e., we are just describing dokieli principles, but not a general list of principles that can be picked up. After all, we are pushing the argument that other applications should be built in a way that can work/interoperate with dokieli... and that dokieli is not the only answer here.</span></p>
+                            <p class="outline">In this section, we explain the principles and aspects that an approach for decentralized authoring, annotation and notifications should have, providing a way to test specific approaches to the extend they fulfill the requirements. <span class="fixme">The wording should be such that there is some spectrum to this, and not a binary hit-miss. Otherwise, it is self-fulling i.e., we are just describing dokieli principles, but not a general list of principles that can be picked up. After all, we are pushing the argument that other applications should be built in a way that can work/interoperate with dokieli... and that dokieli is not the only answer here.</span></p>
 
-                            <h3 id="principles">Principles and standards</h3>
                             <p>The following principles and standards are particularly relevant for decentralized authoring.</p>
 
                             <dl>
@@ -238,10 +239,6 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                 <dt>Web of Trust</dt>
                                 <dd>The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity.</dd>
                             </dl>
-
-
-                            <h3>Determining the scope</h3>
-                            <p class="fixme">[in/out of scope cleanup .... this is a bit out of place<span class="todo">CL: not sure what the previous comment means, but I agree that a section such as this one helps: saying what are <em>not</em> our requirements, and why they are not.</span>] dokieli intends to improve users' interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, profile management, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
                         </div>
                     </section>
 
@@ -355,6 +352,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                 <h3 property="schema:name">Components</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p>dokieli's components include <strong>data</strong> (for structure and semantics), <strong>stylesheets</strong> (for presentation) and <strong>scripts</strong> (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources being <em>self-descriptive</em> to increase their reuse, and contain relations to related external resources to foster <em>follow-your-nose</em> type of exploration. Several stylesheets to provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli's JavaScript includes: a library for editing (<cite><a href="https://github.com/yabwe/medium-editor">MediumEditor</a></cite>) in its <em>authoring environment</em>; features to <em>fetch and display statistical data</em> from SPARQL endpoints (<cite><a href="http://csarven.ca/sparqlines-sparql-to-sparkline">Sparqlines</a></cite>); retrieval of profile information, as well as means to <em>sign in</em> with <cite><a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">WebID Authentication over TLS</a></cite>; <em>authorisations</em> for write-operations (access-control level settings on the server matching WebID and personal certificates); creation and consumption of <cite><a href="https://www.w3.org/TR/annotation-model/">Web Annotations</a></cite> and <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite>); and fetching information from remote articles when adding a citation.</p>
+                            <p class="fixme">[in/out of scope cleanup] dokieli intends to improve users' interactions and enable an environment in which they control their own contributions, whether they are the authors of a document, annotators, or consumers of the information. In order for the underlying mechanisms to work in concert, dokieli is only intended to address the read-write aspects of the interactions by production, consumption, or notification of data via decentralised means. Therefore, the creation and maintenance of user profiles are not handled by dokieli, rather the expectation is that, users accomplish them using other applications. Similarly, creation and control of personal storages, profile management, as well as authentication and authorisation rules are expected to be handled by their preferred tooling and services. .. in scope: adding domain-specific semantics, verification of content/authors, data integrity</p>
                                 </div>
                             </section>
 
