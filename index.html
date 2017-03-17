@@ -222,8 +222,8 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                         </div>
                     </section>
 
-                    <section id="requirements-analysis" inlist="" rel="schema:hasPart" resource="#requirements-analysis">
-                        <h2 property="schema:name">Requirements</h2>
+                    <section id="principles" inlist="" rel="schema:hasPart" resource="#principles">
+                        <h2 property="schema:name">Principles</h2>
                         <div datatype="rdf:HTML" property="schema:description">
                             <p>
                                 This section lists principles and aspects
@@ -480,19 +480,49 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                         </div>
                     </section>
 
-                    <section id="discussion" inlist="" rel="schema:hasPart" resource="#discussion">
-                        <h2 property="schema:name">Discussion</h2>
-                        <div datatype="rdf:HTML" property="schema:description">
-                            <p class="todo">Explain why we meet the criteria introduced in the beginning</p>
-                            <p class="todo">Explain why dokieli is just one implementation, how documents are independent of dokieli</p>
-                            <p class="todo">CL: I would also explain how the usability and usefulness of dokieli could be evaluated.  E.g. by giving authors realistic tasks to accomplish, or by letting readers interact with a prepared document.</p>
-                        </div>
-                    </section>
-
                     <section id="conclusions" inlist="" rel="schema:hasPart" resource="#conclusions">
                         <h2 property="schema:name">Conclusions</h2>
                         <div about="#conclusions" datatype="rdf:HTML" property="schema:description" typeof="deo:Conclusion">
-                            <p class="todo">We provide a true native Web way of working</p>
+                            <p>
+                                The Web’s design stands out because of
+                                its deliberate absence of centralised control,
+                                both for technical reasons of scalability
+                                as well as a societal need for freedom of expression.
+                                A challenge in such large-scale decentralised networks
+                                is how different but related publications can be integrated together,
+                                even if they are authored and published by different parties.
+                                The traditional solution of centralising their publication,
+                                as practiced by the majority of authoring networks today,
+                                demands authors to give up small or bigger parts of their control
+                                in exchange for technical simplicity.
+                            </p>
+                            <p>
+                                On the one hand, dokieli shows
+                                it is possible to build a social machine
+                                wherein people interact with each other
+                                without the need of centralised coordination.
+                                Users can choose storage space for their content
+                                independently of the applications to edit and view that content.
+                                The whole is connected statically through links
+                                and dynamically through Linked Data Notifications.
+                                This is a proof for the viability of a decentralized authoring
+                                and annotation environment built with existing Web standards.
+                            </p>
+                            <p>
+                                On the other hand, dokieli’s use of standards
+                                shows that dokieli itself is only one means to an end:
+                                once the document has been created,
+                                it lives on as an independent Web citizen.
+                                The social machine consists of people and documents,
+                                connected by Web standards,
+                                with dokieli acting as just one possible catalyst.
+                                Different Web applications can incorporate any of dokieli’s functions
+                                and implement the principles to varying extents.
+                                Since the data is loosely coupled to the application,
+                                we avoid the <em>walled garden</em> problem
+                                of many current social platforms today.
+                            </p>
+
                             <p class="todo">Challenge: work with the limitations in Web standards and browser implementations, deciding scope</p>
                             <p>There are of course also <a href="https://github.com/linkeddata/dokieli/issues/152">social implications</a> of using a dokieli-style architecture: How do we enable and encourage positive behaviour? Some concerns in that regard include for example:</p>
                             <ul>
@@ -502,9 +532,6 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                   <span class="todo">CL: You mean the expertise or reputation of the author of an annotation?  Is this within the scope of dokieli?  I'd argue it's up to the application consuming the article whether or not it wants to search the Web of Data for the author's identity and draw conclusions from the data thus found.</span>How can domain expertise or reputation be factored in?</li>
                             </ul>
                             <p>However, it is also a question to what extent can or should these be solved within dokieli?</p>
-                            <p class="todo">We should keep the aim on interoperability, not create yet another silo</p>
-                            <p class="todo">End on meaning for social machines: we <em>are</em> the machine, we should have our own spaces; they should get connected</p>
-
                             <p class="todo">Where/how should we mention author/annotator (data) verification/signatures? We only need to mention them as being important challenges, and that and some possible approach (don't necessarily have to name them individually) can be adopted by dokieli b/c of it being playing in the same tech/standards stack with the options out there e.g., JSON-LD Signatures</p>
 
                             <p about="" id="epilogue" rel="schema:hasPart"><span about="#epilogue" property="schema:description" typeof="deo:Epilogue">We invite you to try dokieli yourself right now! Annotate this article at http://csarven.ca/dokieli-rww, or spawn a new or a copy that you can edit yourself. <em>Make it so!</em></span></p>
