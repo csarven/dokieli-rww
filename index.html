@@ -258,25 +258,27 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                         <div datatype="rdf:HTML" property="schema:description">
                             <p class="outline">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
 
-                            <p class="todo">Potential relations to: Amaya (re: RW), Federated Wikis (re: copy, remix), Google Docs (re: desktop-&gt;Web, centralised), Genius/Hypothes.is (re: annotate any URL, centralised), Any CMS/WordPress (re: personalisation, centralised, extensibility), sea of editors/annotators (substance.io, loomp, RDFaCE, WordLift, Authorea).<br />
-                            CL: Not sure if RDFaCE fits here.  It's just the editing widget, not a fully featured application.  In itself, it is neither central nor decentral.</p>
-
-                            <p class="todo">Add different approaches, not more examples</p>
-
                             <p class="todo">Summarise<cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content: A Systematic Literature Review</a></cite>. Reuse its Quality Attributes as well as other possible dimensions to compare/situate dokieli.</p>
                             <p class="todo">(Ruben): actually, this might not be <em>that</em> relevant; the semantics are not the core point of this paper; we can point to, but shouldn't do much more.<br />
                             Right, but what may be worth mentioning: decentral editing also means that each author can choose their own semantics (e.g. their own vocabulary to annotate RDF), and then such decentral documents can link to each other and their schemas can also be mapped to each other, whereas in centralised platforms this is (if they support semantics at all) often prescribed, either technically enforced, or encouraged by social convention.</p>
+
                             <p>Tackle them on dimensions like: decentralisation, profile and data control/ownership, interoperability, cost/expertise required to use.</p>
 
                             <h3>Centralised authoring and annotation platforms</h3>
                             <p class="outline">Briefly summarise existing popular platforms, showing the advantages and disadvantages of centralisation.</p>
+                            <p id="googledocs-medium-authorea"><cite><a href="https://docs.google.com/">Google Docs</a></cite>, <cite><a href="https://medium.com/">Medium</a></cite>, and <cite><a href="https://www.authorea.com/">Authorea</a></cite> are Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.</p>
+
+                            <p id="hypothesis"><cite><a href="https://hypothes.is/">Hypothesis</a></cite> makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.</p>
+
+                            <p id="wordpress-wordlift"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others' articles, however they are typically under the hosting site's database. <a href="http://wordlift.it/">WordLift</a> [<a class="ref" href="#ref-8">8</a>] is a WordPress plugin for semantic editing and annotations which uses an API to enhance users' own articles with JSON-LD.</p>
 
                             <h3>Decentralised authoring</h3>
                             <p class="outline">Compare decentralised authoring tools.  Which of our requirements do they meet, what are they missing?</p>
+                            <p>Federated Wiki, substance.io</p>
 
                             <h3>Decentralised annotation</h3>
                             <p class="outline">Compare decentralised annotation tools.  Which of our requirements do they meet, what are they missing?</p>
-
+                            <p>Amaya</p>
                         </div>
                     </section>
 
