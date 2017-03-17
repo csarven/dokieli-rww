@@ -303,14 +303,6 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p>When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu <em>export</em> function (or the browser's <em>save as</em>).</p> 
 
-                            <h3>Publishing documents</h3>
-
-                            <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
-                            
-                            <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli's write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
-                            
-                            <p>dokieli implements the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform</a> (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implmenent the server portion of the protocol can be used to store and edit dokieli documents directly. An <code>HTTP PUT</code> request to a URL is used to create a <em>new</em> document, to clone an existing one with <em>save as</em>, to <em>save</em> changes, and so that readers of a document can create their own document in <em>reply</em>. All of these operations are available through the dokieli menu.</p>
-
                             <h3>Consuming documents</h3>
 
                             <p>Documents published on Web servers are retreived as an ordinary webpage, using an HTTP GET. Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
@@ -323,7 +315,13 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p id="authorization" class="todo"></p>
 
+                            <h3>Publishing documents</h3>
 
+                            <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
+                            
+                            <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli's write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
+                            
+                            <p>dokieli implements the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform</a> (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implmenent the server portion of the protocol can be used to store and edit dokieli documents directly. An <code>HTTP PUT</code> request to a URL is used to create a <em>new</em> document, to clone an existing one with <em>save as</em>, to <em>save</em> changes, and so that readers of a document can create their own document in <em>reply</em>. All of these operations are available through the dokieli menu.</p>
 
                             <h3>Social interactions and annotations</h3>
                             <p class="outline">Part A) What do they look like? </p>
