@@ -377,11 +377,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                 <h3>Interactions</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">Explain what these do and how they fulfil some requirements?</p>
-
-                                    <p class="todo">For a 'print' version, does it makes sense to express this as videos being showcased? or should this be turned inside out and talk about core interactions, and then just point to the figure/video</p>
-
-                                    <p class="todo">This section can also be expressed from the point of use cases?</p>
-
+<!--
                                     <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
 
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
@@ -390,32 +386,36 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
-
+ -->
                                     <p id="annotations-and-notifications">A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, where a context menu is presented to input their annotations along with the choice to select a license e.g., Creative Commons, for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
                                       Once the annotation is submitted in the user interface, dokieli proceeds with three operations: 1) annotation is requested to be saved at the user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation gets to be saved and gets its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, when, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (i.e., a writeable space adhering to <cite><a href="https://www.w3.org/TR/annotation-protocol/">Web Annotation Protocol</a></cite>), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy on the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
                                     </p>
 
+
+<!--
                                     <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
                                         <video controls="controls" id="video-dokieli-share" poster="https://dokie.li/media/images/dokieli-share.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
                                     </figure>
-
+ -->
                                     <p class="fixme">A key aspect of creating content on the Web is sharing with friends, colleagues or co-workers.
                                     After authenticating with a WebID, dokieli documents can be shared with respective contacts, which are suggested from the contact list of people linked in some way to the WebID of the document author.
                                     dokieli indicates once sharing messages have been posted to the inbox of the respective contacts.
                                     </p>
 
+
+<!--
                                     <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
                                         <video about="" controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-citation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-citation.webm" src="https://dokie.li/media/video/dokieli-citation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
                                     </figure>
-
+ -->
                                     <p class="fixme">In addition to sharing as social linking, rich semantic links can also be established between dokieli documents themselves.
                                     For that purpose, the <span class="todo">CL: I don't understand the phrase “text fragment becomes the link text”.</span>text fragment becoming the link text can be selected in the document.
                                     Via the context menu, a reference using a specific semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) can be selected.
@@ -424,13 +424,15 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                     Furthermore, the linked document is notified (thus allowing bi-directional linking) about the reference via its notifications inbox<span class="todo">CL: When we link to non-dokieli documents out there, it is quite likely that they don't have an inbox.  1. What happens in such cases?  2. It might be helpful that for some of these advanced web standard we say how widely they have already been adopted.</span>.
                                     </p>
 
+
+<!--
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
                                         <video about="" controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-sparqlines" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-sparqlines.webm" src="https://dokie.li/media/video/dokieli-sparqlines.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
                                     </figure>
-
+ -->
                                     <p class="fixme">dokieli documents, although providing a static view, are dynamic in nature.
                                     One particular highlight in this regard (in addition to the integration of videos) is the embedding of dynamically created diagrams and charts.
                                     For example, linked SPARQL queries and inline diagrams (called sparklines) generated from these can be integrated.
