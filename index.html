@@ -225,26 +225,27 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     <section id="requirements-analysis" inlist="" rel="schema:hasPart" resource="#requirements-analysis">
                         <h2 property="schema:name">Requirements</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <p class="outline">In this section, we explain the principles and aspects that an approach for decentralized authoring, annotation and notifications should have, providing a way to test specific approaches to the extend they fulfill the requirements. <span class="fixme">The wording should be such that there is some spectrum to this, and not a binary hit-miss. Otherwise, it is self-fulling i.e., we are just describing dokieli principles, but not a general list of principles that can be picked up. After all, we are pushing the argument that other applications should be built in a way that can work/interoperate with dokieli... and that dokieli is not the only answer here.</span></p>
-
-                            <p>The following principles and standards are particularly relevant for decentralized authoring.</p>
-
+                            <p>
+                                This section lists principles and aspects
+                                that should be present to a certain extent
+                                into decentralized approaches for authoring, annotation and notifications.
+                            </p>
                             <dl>
                                 <dt>Data storage independent of service providers</dt>
-                                <dd>Users should have the freedom to choose where they store their data and who is allowed to access it.
+                                <dd>Users should have a choice in where they store their data and who is allowed to access it.
 								To some extend this feature is called “data sovereignty” (e.g. by the <a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">Industrial Data Space initiative</a>).</p></dd>
 
                                 <dt>Compliance with Web standards and protocols</dt>
-                                <dd>The decoupling of the application logic from the data will allow users to avoid vendor lock-ins, and seamlessly switch between applications and personal data storage servers. This is prudent to application's behaviour, as well as endpoints it is able communicate with, e.g., avoiding proprietary APIs. Thereby the design of the application focuses on well-defined Web standards and protocols, e.g., IETF RFC, W3C Recommendations, as opposed to individual software implementations to achieve maximum interoperability.</dd>
+                                <dd>By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a <em>vendor lock-in</em>. To achieve maximum interoperability, the application prefers well-defined Web standards and protocols over individual software implementations.</dd>
 
                                 <dt>Separation of concerns</dt>
-                                <dd>The <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible to basic Web browsers and other user-agent types; consumed through different media and devices; and unobtrusive interactive features while enhancing the interface, do not hinder core usability and access to data.</dd>
+                                <dd>A <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices.</dd>
 
                                 <dt>Accessibility</dt>
-                                <dd>In order to lower the barrier for entry all forms of participation, enhanced functionality of the application should be accessible to users based on the capabilities of their user-agents, storage availability, network access, or personal and preferences.</dd>
+                                <dd>To lower the barrier for entry all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences.</dd>
 
                                 <dt>Anyone can say anything about anything</dt>
-                                <dd>A distributed authoring appraoch should follow the open-world principle (as also applied in many Semantic Web standards, e.g. <a href="https://www.w3.org/TR/2002/WD-rdf-concepts-20020829/#xtocid48014">RDF</a>), where any author can say anything about anything. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to priorly published content. To some extend, this requirement (and the absense of predefined authoritative source, centralized identifier mints or publication clearinghouses) also helps to ensure freedom of expression in general.</dd>
+                                <dd>Applications should follow the open-world principle, where any author can say anything about anything. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to priorly published content.</dd>
 
                                 <dt>Web of Trust</dt>
                                 <dd>The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity.</dd>
