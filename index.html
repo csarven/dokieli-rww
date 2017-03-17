@@ -17,7 +17,7 @@
     <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
         <main>
             <article about="" typeof="schema:ScholarlyArticle">
-                <h1 property="schema:name">Decentralised Authoring, Annotations and Social Notifications Towards a Read-Write-Web</h1>
+                <h1 property="schema:name">Decentralised Authoring, Annotations and Notifications for a Read-Write-Web</h1>
 
                 <div id="authors">
                     <dl id="author-name">
@@ -140,7 +140,7 @@
                         </div>
                     </section>
 
-<pre class="highlight">* Use UK (or CA) English spelling
+<pre class="highlight" style="display:none">* Use UK (or CA) English spelling
 * Where applicable, express design decisions/intentions using terminology from <a href="http://aligned.cs.ox.ac.uk/ont/dio.html">DIO</a>
 * Key themes: decentralisation, data ownership/interoperability/Web standards,
 ReadWriteWeb, semantic/interactive articles, progressive enhancement
@@ -211,22 +211,20 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     </section>
 
                     <section id="requirements-analysis" inlist="" rel="schema:hasPart" resource="#requirements-analysis">
-                        <h2 property="schema:name">Requirements analysis</h2>
+                        <h2 property="schema:name">Requirements</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <p class="fixme">SC: This section has a lot less going on than "requirements analysis".. perhaps just "requirements"? Is there anything else here other than a subsection on "principles and standards"?</p>
-                            <p class="outline">In this section, we explain the principles and aspects that a solution should have, providing a way for us to test at the end whether we've built the right thing. <span class="fixme">The wording should be such that there is some spectrum to this, and not a binary hit-miss. Otherwise, it is self-fulling i.e., we are just describing dokieli principles, but not a general list of principles that can be picked up. After all, we are pushing the argument that other applications should be built in a way that can work/interoperate with dokieli... and that dokieli is not the only answer here.</span></p>
+                            <p>In this section, we explain the principles and aspects that an approach for decentralized authoring, annotation and notifications should have, providing a way to test specific approaches to the extend they fulfill the requirements. <span class="fixme">The wording should be such that there is some spectrum to this, and not a binary hit-miss. Otherwise, it is self-fulling i.e., we are just describing dokieli principles, but not a general list of principles that can be picked up. After all, we are pushing the argument that other applications should be built in a way that can work/interoperate with dokieli... and that dokieli is not the only answer here.</span></p>
 
                             <h3 id="principles">Principles and standards</h3>
-                            <p class="outline">We can really go for itemized principles here, for instance with a definition list even.<br/>
-                            CL: Bullet points are fine, but still the section needs at least one sentence of introductory text.</p>
-                            <p class="todo">Explain the set of principles we need, the standards that are relevant, the components we need, without focus on dokieli</p>
+                            <p>The following principles and standards are particularly relevant for decentralized authoring.</p>
 
                             <dl>
                                 <dt>Data storage independent of service providers</dt>
-                                <dd>Users should have the freedom to choose where they store their data and who is allowed to access.<p class="todo">The Industrial Data Space initiative calls this feature “data sovereignty”; we could also consider this term.</p></dd>
+                                <dd>Users should have the freedom to choose where they store their data and who is allowed to access it.
+								To some extend this feature is called “data sovereignty” (e.g. by the <a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">Industrial Data Space initiative</a>).</p></dd>
 
                                 <dt>Compliance with Web standards and protocols</dt>
-                                <dd>The decoupling of the application logic from the data it produces will allow users to avoid vendor lock-ins, and seamlessly switch between applications and personal data storage servers. This is prudent to application's behaviour, as well as endpoints it is able communicate with, e.g., avoiding proprietary APIs. Thereby the design of the application focuses on well-defined Web standards and protocols, e.g., IETF RFC, W3C Recommendations, as opposed to individual software implementations to achieve maximum interoperability.</dd>
+                                <dd>The decoupling of the application logic from the data will allow users to avoid vendor lock-ins, and seamlessly switch between applications and personal data storage servers. This is prudent to application's behaviour, as well as endpoints it is able communicate with, e.g., avoiding proprietary APIs. Thereby the design of the application focuses on well-defined Web standards and protocols, e.g., IETF RFC, W3C Recommendations, as opposed to individual software implementations to achieve maximum interoperability.</dd>
 
                                 <dt>Separation of concerns</dt>
                                 <dd>The <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible to basic Web browsers and other user-agent types; consumed through different media and devices; and unobtrusive interactive features while enhancing the interface, do not hinder core usability and access to data.</dd>
@@ -235,10 +233,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                                 <dd>In order to lower the barrier for entry all forms of participation, enhanced functionality of the application should be accessible to users based on the capabilities of their user-agents, storage availability, network access, or personal and preferences.</dd>
 
                                 <dt>Anyone can say anything about anything</dt>
-                                <dd class="todo">([de]referenceability -- I'm not sure in what way this related to this principle).</dd>
-
-                                <dt>Freedom of expression</dt>
-                                <dd class="todo">I think this is a bit too close to above principle. If they can be distinct, okay.</dd>
+                                <dd>A distributed authoring appraoch should follow the open-world principle, where any author can say anything about anything. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to priorly published content. To some extend, this requirement (and the absense of predefined authoritative source, centralized identifier mints or publication clearinghouses) also helps to ensure freedom of expression in general.</dd>
 
                                 <dt>Web of Trust</dt>
                                 <dd>The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity.</dd>
