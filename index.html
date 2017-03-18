@@ -295,18 +295,18 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p>Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications to the attention of people and documents based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.</p>
 
-                            <p>Figure 1 depicting typical centralised and decentralised architectures.</p>
+                            <p>Figure 1 depicts the contrast between typical centralised and decentralised architectures.</p>
 
                             <figure id="figure-centralised-decentralised" rel="schema:hasPart" resource="#figure-centralised-decentralised">
                                 <img alt="" rel="schema:image" src="media/images/decentralised.svg" width="80%" />
                                 <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
                             </figure>
 
-                            <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. It is independent from specific server-side software, proprietary APIs or the requirement to have an account. Users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations where they prefer, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across servers. Figure 2 depicting main nodes that dokieli works within a decentralised environment.</p>
+                            <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. It is independent from specific server-side software, proprietary APIs or the requirement to have an account. Users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations where they prefer, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture.</p>
 
                             <figure id="figure-dokieli-architecture" rel="schema:hasPart" resource="#figure-dokieli-architecture">
                                 <img alt="" rel="schema:image" src="media/images/architecture.png" width="100%" />
-                                <figcaption property="schema:name">dokieli's architecture</figcaption>
+                                <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
                             </figure>
 
                             <p class="outline">Also list the assumptions: users are authenticated, have their own storage, etc.</p>
@@ -324,7 +324,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <h3>Consuming documents</h3>
 
-                            <p>Documents for example in HTML+RDFa while being both human and machine-readable can be retrieved from Web servers with a single HTTP GET request. Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
+                            <p>Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
 
                             <p>dokieli's approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
 
