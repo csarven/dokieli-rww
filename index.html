@@ -272,6 +272,8 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p id="wordpress"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others' articles, however they are typically under the hosting site's database.</p>
 
+                            <p id="loomp-rdface"><cite>Loomp</cite> [<a class="ref" href="#ref-6">6</a>] is a semantic content authoring tool. Loomp can be self-hosted, and uses a server-side triplestore.</p>
+
                             <h3>Decentralised authoring</h3>
                             <p class="outline">Compare decentralised authoring tools.  Which of our requirements do they meet, what are they missing?</p>
                             <p>Federated Wiki, substance.io</p>
@@ -286,15 +288,20 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                         <h2 property="schema:name">Architecture and technologies</h2>
                         <div datatype="rdf:HTML" property="schema:description">
                             <h3>Architectural overview</h3>
-                            <p class="outline">The main nodes, actors, components and their roles</p>
-                            <p class="outline">The figure should make clear why and how the system is decentralised, and how we work around the limits of centralisation (notifications)</p>
 
                             <p>Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications to the attention of people and documents based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.</p>
 
-                            <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. It is independent from specific server-side software, proprietary APIs or the requirement to have an account. Users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations where they prefer, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across servers.</p>
+                            <p>Figure 1 depicting typical centralised and decentralised architectures.</p>
+
+                            <figure id="figure-centralised-decentralised" rel="schema:hasPart" resource="#figure-centralised-decentralised">
+                                <img alt="" rel="schema:image" src="media/images/decentralised.svg" width="80%" />
+                                <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
+                            </figure>
+
+                            <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. It is independent from specific server-side software, proprietary APIs or the requirement to have an account. Users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations where they prefer, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across servers. Figure 2 depicting main nodes that dokieli works within a decentralised environment.</p>
 
                             <figure id="figure-dokieli-architecture" rel="schema:hasPart" resource="#figure-dokieli-architecture">
-                                <img src="media/images/architecture.png" alt="" width="100%" />
+                                <img alt="" rel="schema:image" src="media/images/architecture.png" width="100%" />
                                 <figcaption property="schema:name">dokieli's architecture</figcaption>
                             </figure>
 
@@ -317,7 +324,7 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
 
                             <p>dokieli's approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
 
-                            <p>dokieli uses the following vocabularies within a document: <span class="todo">CL: Is there a reason that some links are surrounded by "cite" tags and thus appear in italic, whereas others are not?  Looks inconsistent in any case.</span><cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a>/<a href="http://www.w3.org/ns/auth/acl">ACL</a> for access control, <a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <a href="http://www.w3.org/ns/prov">PROV Ontology</a> for provenance, and its awareness of the <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli's UI.</p>
+                            <p>dokieli uses the following vocabularies within a document: <cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <cite><a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a></cite>/<cite><a href="http://www.w3.org/ns/auth/acl">ACL</a></cite> for access control, <cite><a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a></cite> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <cite><a href="http://www.w3.org/ns/prov">PROV Ontology</a></cite> for provenance, and its awareness of the <cite><a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a></cite> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli's UI.</p>
                             
                             <p id="authentication" class="todo">Authentication</p>
 
