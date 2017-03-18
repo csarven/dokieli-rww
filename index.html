@@ -288,7 +288,7 @@ margin-bottom: 0.4em;
 
                                 <span id="libreoffice-online">Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. <cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite>, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document's interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.</span>
 
-                                <span>The <cite><a href="http://fed.wiki.org/">Smallest Federated Wiki</a></cite> pages to be forked and maintain personal copies.</span>
+                                <span id="smallest-federated-wiki">The <cite><a href="http://fed.wiki.org/">Smallest Federated Wiki</a></cite> pages to be forked and maintain personal copies.</span>
 
                                 <!-- <span>substance.io.</span> -->
 
@@ -318,7 +318,7 @@ margin-bottom: 0.4em;
 
                                     <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the <span id="#default-ui">default UI</span> of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.</p>
 
-                                    <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture, where nodes are under different domains and authority.</p>
+                                    <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> (<cite><a href="https://www.w3.org/TR/ldn/">W3C Proposed Recommendation</a></cite>), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture, where nodes are under different domains and authority.</p>
 
                                     <figure id="figure-dokieli-architecture-relations" rel="schema:hasPart" resource="#figure-dokieli-architecture-relations">
                                         <img alt="" rel="schema:image" src="media/images/dokieli-architecture-relations.png" width="100%" />
@@ -594,13 +594,27 @@ margin-bottom: 0.4em;
 
 <li>Jennifer Golbeck, J.: Parsia, B., Hendler, J.: <cite>Trust Networks on the Semantic Web</cite>, Volume 2782 of the book series LNCS, 2003, <a href="http://sir-lab.usc.edu/cs586/20151readings/w13-1.pdf">http://sir-lab.usc.edu/cs586/20151readings/w13-1.pdf</a></li>
 
-<li>Khalili, A., Auer, S.: <cite>User interfaces for semantic authoring of textual content: A systematic literature review</cite>, Web Semantics, Volume 22, pages 1–18 (2013), <a href="http://www.sciencedirect.com/science/article/pii/S1570826813000498">http://www.sciencedirect.com/science/article/pii/S1570826813000498</a></li>
+<li>Khalili, A., Auer, S.: <cite>User interfaces for semantic authoring of textual content: A systematic literature review</cite>, Web Semantics, Volume 22, pages 1–18 (2013), <a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf</a></li>
+
+<li>Capadisli, S., Guy, A., Lange, C., Auer, S., Deiu, A., Berners-Lee, T.: <cite>Linked Data Notifications: a resource-centric communication protocol</cite>, In Proceedings of the 14th ESWC conference. Accepted for publication. <a href="http://csarven.ca/linked-data-notifications">http://csarven.ca/linked-data-notifications</a></li>
+
+<li>Capadisli, S., Guy, A.: <cite>Linked Data Notifications</cite>, W3C Proposed Recommendation, 2017, <a href="https://www.w3.org/TR/ldn/">https://www.w3.org/TR/ldn/</a></li>
+
+<li>Graff, E., Silli, L.: <cite>Polyglot Markup: A robust profile of the HTML5 vocabulary</cite>, W3C Working Group Note, 2015, <a href="https://www.w3.org/TR/html-polyglot/">https://www.w3.org/TR/html-polyglot/</a></li>
+
+<li>Capadisli, S.: <cite>Sparqlines: SPARQL to Sparkline</cite>, ISWC SemStats, 2016, <a href="http://csarven.ca/sparqlines-sparql-to-sparkline">http://csarven.ca/sparqlines-sparql-to-sparkline</a></li>
+
+<li>Story, H., Corlosquet, S., Sambra, A.: <cite>WebID Authentication over TLS</cite>, W3C Editor's Draft, 2014<a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">https://www.w3.org/2005/Incubator/webid/spec/tls/</a></li>
+
+<li>Sanderson, R., Ciccarese, P., Young, B.: <cite>Web Annotation Data Model</cite>, W3C Recommendation, 2017, <a href="https://www.w3.org/TR/annotation-model/">https://www.w3.org/TR/annotation-model/</a></li>
+
+<li>Sanderson, R.: <cite>Web Annotation Protocol</cite>, W3C Recommendation, 2017, <a href="https://www.w3.org/TR/annotation-protocol/">https://www.w3.org/TR/annotation-protocol/</a></li>
+
+<li>Cole, T., Capadisli, S., Young, B., Herman, I.: <cite>Embedding Web Annotations in HTML</cite>, W3C Working Group Note, 2017, <a href="https://www.w3.org/TR/annotation-html/">https://www.w3.org/TR/annotation-html/</a></li>
+
+<li>Sanderson, R., Ciccarese, P., Young, B.: <cite>Web Annotation Vocabulary</cite>, W3C Recommendation, 2017, <a href="https://www.w3.org/TR/annotation-vocab/">https://www.w3.org/TR/annotation-vocab/</a></li>
 
 
-
-<li id="">Capadisli, S., Guy, A.: <cite>Linked Data Notifications</cite>, W3C Proposed Recommendation, 2017, <a rel="schema:citation" href="https://www.w3.org/TR/ldn/">https://www.w3.org/TR/ldn/</a></li>
-
-<li id="">Capadisli, S., Guy, A., Lange, C., Auer, S., Deiu, A., Berners-Lee, T.: <cite>Linked Data Notifications: a resource-centric communication protocol</cite>, In Proceedings of the 14th ESWC conference. Accepted for publication. <a href="http://csarven.ca/linked-data-notifications">http://csarven.ca/linked-data-notifications</a></li>
                             </ol>
                         </div>
                     </section>
