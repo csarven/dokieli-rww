@@ -248,29 +248,30 @@
                         <div datatype="rdf:HTML" property="schema:description">
                             <p class="outline">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
 
-                            <p>Systematic literature review on semantic authoring [<a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf" title=""></a>] which is relevant to our work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.</p>
+                            <p>A systematic literature review on semantic authoring [<a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf" title=""></a>] gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.</p>
 
                             <section id="centralised-authoring-annotation-systems" inlist="" rel="schema:hasPart" resource="#centralised-authoring-annotation-systems">
-                                <h3 property="schema:name">Centralised authoring and annotation platforms</h3>
+                                <h4 property="schema:name">Centralised authoring and annotation platforms</h4>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="outline">Briefly summarise existing popular platforms, showing the advantages and disadvantages of centralisation.</p>
 
-                                    <p id="googledocs-medium-authorea"><cite><a href="https://docs.google.com/">Google Docs</a></cite>, <cite><a href="https://medium.com/">Medium</a></cite>, and <cite><a href="https://www.authorea.com/">Authorea</a></cite> are Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.</p>
+                                    <span id="googledocs-medium-authorea"><cite><a href="https://docs.google.com/">Google Docs</a></cite>, <cite><a href="https://medium.com/">Medium</a></cite>, and <cite><a href="https://www.authorea.com/">Authorea</a></cite> are examples of Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.</span>
 
-                                    <p id="hypothesis"><cite><a href="https://hypothes.is/">Hypothesis</a></cite> makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.</p>
+                                    <span id="hypothesis"><cite><a href="https://hypothes.is/">Hypothesis</a></cite> makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.</span>
 
-                                    <p id="wordpress"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others' articles, however they are typically under the hosting site's database.</p>
-
+                                    <span id="wordpress"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others' articles, however they are typically under the hosting site's database.</span>
+<!--
                                     <p id="loomp-rdface"><cite>Loomp</cite> [<a class="ref" href="#ref-6">6</a>] is a semantic content authoring tool. Loomp can be self-hosted, and uses a server-side triplestore.</p>
-                                </div>
+//-->
+									</div>
                             </section>
 
                             <section id="decentralised-authoring-annotation-systems" inlist="" rel="schema:hasPart" resource="#decentralised-authoring-annotation-systems">
-                                <h3 property="schema:name">Decentralised authoring and annotation systems</h3>
+                                <h4 property="schema:name">Decentralised authoring and annotation systems</h4>
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="outline">Compare decentralised authoring and annotation tools.  Which of our requirements do they meet, what are they missing?</p>
 
-                                    <p><cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite> allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document's interface consists of image tiles which are sent from the server and rendered in the browser.</p>
+                                    <p>Some authoring and publishing systems already go into a decentralized direction. However, they only realize a relatively small subset of the principles outlined in the last section. <cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite>, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document's interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.</p>
 
                                     <p>The <cite><a href="http://fed.wiki.org/">Smallest Federated Wiki</a></cite> pages to be forked and maintain personal copies</p>
 
