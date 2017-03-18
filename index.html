@@ -21,7 +21,6 @@
             #content dd {
                 margin-bottom: .25em;
             }
-			#content .outline, .todo, .fixme {display:none}
 
 @media print {
 body{
@@ -169,8 +168,6 @@ margin-bottom: 0.4em;
 
                     <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
                         <h2 property="schema:name">Introduction</h2>
-                        <p class="outline">In this section, we establish why decentralisation is important, why it is currently missing, and what we're going to do about it.</p>
-
                         <div datatype="rdf:HTML" property="schema:description" resource="#introduction" typeof="deo:Introduction">
                             <p>
                                 While the Web was originally conceived as a decentralised platform
@@ -220,10 +217,8 @@ margin-bottom: 0.4em;
                                 we need to develop technologies to simplify the decentralised authoring, management,
                                 exploration, and search of Web content.
                             </p>
-                            <p class="todo">Something. AMY SOCIAL AMY MACHINE AMY. Something.</p>
-                            <p>In this article we present the principles and architecture for a fully distributed authoring and publishing system in Sections 2 and 4 respectively.
-							We describe the dokieli implementation of this architecture as well as an overview on its current adoption in Section 5 before we conclude with an outlook on challenges and future work in Section 6.
-							</p>
+
+                            <p>In this article we present the principles and architecture for a fully distributed authoring and publishing system in Sections 2 and 4 respectively. We describe the dokieli implementation of this architecture as well as an overview on its current adoption in Section 5 before we conclude with an outlook on challenges and future work in Section 6.</p>
                         </div>
                     </section>
 
@@ -236,10 +231,10 @@ margin-bottom: 0.4em;
                                 should be designed. These principles are derived from current literature
                                 on decentralisation, and Web development best practices.
                             </p>
+
                             <dl>
                                 <dt>Data storage independent of service providers</dt>
-                                <dd>Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it.
-								The <cite><a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">Industrial Data Space</a></cite> initiative calls this <q>data sovereignty</q>.</dd>
+                                <dd>Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The <cite><a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">Industrial Data Space</a></cite> initiative calls this <q>data sovereignty</q>.</dd>
 
                                 <dt>Interoperability</dt>
                                 <dd>By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a <em>vendor lock-in</em>. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in <cite><a href="https://www.w3.org/DesignIssues/CloudStorage.html">Socially-aware Cloud Storage</a></cite>.</dd>
@@ -262,15 +257,13 @@ margin-bottom: 0.4em;
                     <section id="related-work" inlist="" rel="schema:hasPart" resource="#related-work">
                         <h2 property="schema:name">Related Work</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <p class="outline">Given the principles above, identify the main areas we need to build on. What has been done for (de)centralised authoring? For (de)centralised annotation? Etc. Maybe first focus on complete systems (Wikis etc.) and which parts they do or do not implement. Maybe a table with check marks.</p>
-
                             <p><cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content</a></cite> gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.</p>
 
                             <p>
                                 <strong>Centralised authoring and annotation platforms</strong>:
                                 <span id="googledocs-medium-authorea"><cite><a href="https://docs.google.com/">Google Docs</a></cite>, <cite><a href="https://medium.com/">Medium</a></cite>, and <cite><a href="https://www.authorea.com/">Authorea</a></cite> are examples of Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.</span>
 
-                                <span id="wordpress"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others' articles, however they are typically under the hosting site's database.</span>
+                                <span id="wordpress"><cite><a href="https://wordpress.org/">WordPress</a></cite> is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others’ articles, however they are typically under the hosting site’s database.</span>
 
                                 <span id="hypothesis"><cite><a href="https://hypothes.is/">Hypothesis</a></cite> makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.</span>
 
@@ -285,8 +278,7 @@ margin-bottom: 0.4em;
 
                             <p>
                                 <strong>Decentralised authoring and annotation systems</strong>:
-
-                                <span id="libreoffice-online">Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. <cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite>, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document's interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.</span>
+                                <span id="libreoffice-online">Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. <cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite>, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document’s interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.</span>
 
                                 <span id="smallest-federated-wiki">The <cite><a href="http://fed.wiki.org/">Smallest Federated Wiki</a></cite> pages to be forked and maintain personal copies.</span>
 
@@ -318,11 +310,11 @@ margin-bottom: 0.4em;
 
                                     <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the <span id="#default-ui">default UI</span> of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.</p>
 
-                                    <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> (<cite><a href="https://www.w3.org/TR/ldn/">W3C Proposed Recommendation</a></cite>), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture, where nodes are under different domains and authority.</p>
+                                    <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> (<cite><a href="https://www.w3.org/TR/ldn/">W3C Proposed Recommendation</a></cite>), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.</p>
 
                                     <figure id="figure-dokieli-architecture-relations" rel="schema:hasPart" resource="#figure-dokieli-architecture-relations">
                                         <img alt="" rel="schema:image" src="media/images/dokieli-architecture-relations.png" width="100%" />
-                                        <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
+                                        <figcaption property="schema:name">Entities and relations within dokieli’s architecture</figcaption>
                                     </figure>
 
                                     <p id="self-replicating">dokieli is <em>self-replicating</em>, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button.</p>
@@ -332,36 +324,33 @@ margin-bottom: 0.4em;
                             <section id="creating-documents" inlist="" rel="schema:hasPart" resource="#creating-documents">
                                 <h3 property="schema:name">Creating documents</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p class="outline">Part A) What will the document look like? How is it different compared to existing documents? What technologies does it use, and why are these independent of dokieli?</p>
-
                                     <p>Documents use HTML5 <cite><a href="https://www.w3.org/TR/html-polyglot/">Polyglot Markup</a></cite> to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. 
-                                    Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article's text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML <code>&lt;script&gt;</code> elements.
+                                    Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article’s text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML <code>&lt;script&gt;</code> elements.
                                     </p>
 
-                                    <p>The appearance of documents is determined with CSS3. Different stylesheets can be applied to the same HTML structure so that a document can be presented flexibly, in the most appropriate way for a particular circumstance. Stylesheets can be switched from either dokieli's menu or through Web browser with native controls, for example from a two-column layout required by an academic journal to a design in keeping with the author's blog.</p>
+                                    <p>The appearance of documents is determined with CSS3. Different stylesheets can be applied to the same HTML structure so that a document can be presented flexibly, in the most appropriate way for a particular circumstance. Stylesheets can be switched from either dokieli’s menu or through Web browser with native controls, for example from a two-column layout required by an academic journal to a design in keeping with the author’s blog.</p>
 
-                                    <p>When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu <em>export</em> function (or the browser's <em>save as</em>).</p> 
+                                    <p>When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu <em>export</em> function (or the browser’s <em>save as</em>).</p>
                                 </div>
                             </section>
+
                             <section id="consuming-documents" inlist="" rel="schema:hasPart" resource="#consuming-documents">
                                 <h3 property="schema:name">Consuming documents</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p>Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
+                                    <p>Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent’s abilities.</p>
 
-                                    <p>dokieli's approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
+                                    <p>dokieli’s approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
 
                                     <p>dokieli is able to authenticate users via WebID-TLS if they provide a WebID. This enables further functionality: the user can use dokieli to access protected resources and write to non-public data storage containers if their WebID is authorised to do so. For authenticated users leaving annotations on other documents dokieli fetches their name and display picture from their online profile if available, to display alongside their comment.</p> 
 
-                                    <p>dokieli uses the following vocabularies as standard: <cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <cite><a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a></cite>/<cite><a href="http://www.w3.org/ns/auth/acl">ACL</a></cite> for access control, <cite><a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a></cite> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> for social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <cite><a href="http://www.w3.org/ns/prov">PROV Ontology</a></cite> for provenance, and the <cite><a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a></cite> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli's UI.</p>
+                                    <p>dokieli uses the following vocabularies as standard: <cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <cite><a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a></cite>/<cite><a href="http://www.w3.org/ns/auth/acl">ACL</a></cite> for access control, <cite><a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a></cite> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> for social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <cite><a href="http://www.w3.org/ns/prov">PROV Ontology</a></cite> for provenance, and the <cite><a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a></cite> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli’s UI.</p>
                                 </div>
                             </section>
 
                             <section id="publishing-documents" inlist="" rel="schema:hasPart" resource="#publishing-documents">
                                 <h3 property="schema:name">Publishing documents</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
-                                    
-                                    <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli's write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
+                                    <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli’s write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
                                     
                                     <p>dokieli implements the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform</a> (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implement the server portion of the protocol can be used to store and edit dokieli documents directly. An <code>HTTP PUT</code> request to a URL is used to create a <em>new</em> document, to clone an existing one with <em>save as</em>, to <em>save</em> changes, and so that readers of a document can create their own document in <em>reply</em>. All of these operations are available through the dokieli menu.</p>
                                 </div>
@@ -370,9 +359,6 @@ margin-bottom: 0.4em;
                             <section id="social-interactions-and-annotations" inlist="" rel="schema:hasPart" resource="#social-interactions-and-annotations">
                                 <h3 property="schema:name">Social interactions and annotations</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p class="outline">Part A) What do they look like? </p>
-                                    <p class="outline">Part B) How are they stored and published?</p>
-
                                     <p>Interactions with a document take the form of: a comment or (dis)like about the document as a whole, or an comment or (dis)like of a selection of text, i.e. an annotation. In both cases, the dokieli menu presents an input to the commenter, and then, adding additional semantic markup where necessary, sends the data off for appropriate storage so it can be retrieved and re-displayed on future document loads.</p>
 
                                     <p>Document authors can point to a storage service (using the Web Annotations <code>annotationService</code> property) which lets readers without their own personal storage comment nonetheless. Readers who have a preferred storage location against which they can authenticate are able to direct dokieli to store their input there instead (or in addition). Conforming to LDP, dokieli allows users to remove their annotations with an <code>HTTP DELETE</code> operation. In this way, dokieli does not impose a centralised mechanism for social interactions, and allows users to effectively 'own' their comments, annotations, and reviews, in their own space..</p>
@@ -384,8 +370,6 @@ margin-bottom: 0.4em;
                             <section id="notifications" inlist="" rel="schema:hasPart" resource="#notifications">
                                 <h3 property="schema:name">Notifications</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p class="outline">Explain for both documents and annotations how others in the decentralised network will know about them.</p>
-
                                     <p>When readers interact with a document, the author is notified by means of the <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> (LDN) protocol. A notification, composed of the data from the interaction or annotation, is sent to the <em>inbox</em> advertised by the document or arbitrary parts, thereof. This inbox may be on the same server as the document itself, or may be elsewhere. dokieli subsequently reads this inbox to display interactions and annotations on the document.</p>
 
                                     <p>As the <em>author</em> of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, <em>without</em> needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.</p>
@@ -402,9 +386,9 @@ margin-bottom: 0.4em;
                             <section id="components" inlist="" rel="schema:hasPart" resource="#components">
                                 <h3 property="schema:name">Components</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p>dokieli's components include <strong>data</strong> (for structure and semantics), <strong>stylesheets</strong> (for presentation) and <strong>scripts</strong> (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are <em>self-descriptive</em> to increase their reuse, and contain relations to related external resources to foster <em>follow-your-nose</em> type of exploration.</p>
+                                    <p>dokieli’s components include <strong>data</strong> (for structure and semantics), <strong>stylesheets</strong> (for presentation) and <strong>scripts</strong> (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are <em>self-descriptive</em> to increase their reuse, and contain relations to related external resources to foster <em>follow-your-nose</em> type of exploration.</p>
 
-                                    <p>Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli's JavaScript includes: a library for editing (<cite><a href="https://github.com/yabwe/medium-editor">MediumEditor</a></cite>) in its <em>authoring environment</em>; features to <em>fetch and display statistical data</em> from SPARQL endpoints (<cite><a href="http://csarven.ca/sparqlines-sparql-to-sparkline">Sparqlines</a></cite>); retrieval of profile information, as well as means to <em>sign in</em> with <cite><a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">WebID Authentication over TLS</a></cite>; functionality for write-operations, which includes checking <em>authorisation</em> against access-control level settings on the server with the authenticated user's WebID and personal certificate; creation and consumption of <cite><a href="https://www.w3.org/TR/annotation-model/">Web Annotations</a></cite> and <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite>; and fetching information from remote articles when adding a citation.</p>
+                                    <p>Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (<cite><a href="https://github.com/yabwe/medium-editor">MediumEditor</a></cite>) in its <em>authoring environment</em>; features to <em>fetch and display statistical data</em> from SPARQL endpoints (<cite><a href="http://csarven.ca/sparqlines-sparql-to-sparkline">Sparqlines</a></cite>); retrieval of profile information, as well as means to <em>sign in</em> with <cite><a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">WebID Authentication over TLS</a></cite>; functionality for write-operations, which includes checking <em>authorisation</em> against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of <cite><a href="https://www.w3.org/TR/annotation-model/">Web Annotations</a></cite> and <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite>; and fetching information from remote articles when adding a citation.</p>
 
                                     <p id="scope">The scope of dokieli includes documents and the interactions around them. The creation and maintenance of user profiles, personal storage spaces, and access control rules are not managed by dokieli; since they are all standard mechanisms, users are expected to be able to accomplish this using other specialised applications.</p>
                                 </div>
@@ -415,16 +399,16 @@ margin-bottom: 0.4em;
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p>dokieli employs two complementary deployment approaches: <em>single-page application</em> and <em>Web browser extension</em>.</p>
 
-                                    <p id="single-page-application">dokieli's presentational and behavioural code layers can be included in Web pages in order to trigger them as active single-page applications. It is a smart client that allows different kinds of articles e.g., academic, blog posts, news, to be authored and annotated from within Web browsers, without necessarily having them deployed from a server, i.e., it can be used offline or on localhost. dokieli internally handles its content and well-formed structural and semantic representation based on user's interactivity. Articles, profiles and their contact information, notifications, annotations with different motivations, for instance, can be read and written ubiquitously to any Web space with standard LDP and access control mechanisms.</p>
+                                    <p id="single-page-application">dokieli’s presentational and behavioural code layers can be included in Web pages in order to trigger them as active single-page applications. It is a smart client that allows different kinds of articles e.g., academic, blog posts, news, to be authored and annotated from within Web browsers, without necessarily having them deployed from a server, i.e., it can be used offline or on localhost. dokieli internally handles its content and well-formed structural and semantic representation based on user’s interactivity. Articles, profiles and their contact information, notifications, annotations with different motivations, for instance, can be read and written ubiquitously to any Web space with standard LDP and access control mechanisms.</p>
 
-                                    <p id="web-browser-extension">The Web browser extension is a thin wrapper around dokieli's core code in order to embed itself in any HTML-based Web page on the Web. It inherits all of the features of a single-page application. While HTML based documents on the Web vary in their quality, dokieli's write operations generate well-formed HTML+RDFa. One of the primary utilities for the extension is to have a consistent interface for annotating (comment, bookmark, like) any text selection on a Web page, as well as sharing parts of pages with ones contacts via notifications, without having a service dependency or being limited by the Web page's UI.</p>
+                                    <p id="web-browser-extension">The Web browser extension is a thin wrapper around dokieli’s core code in order to embed itself in any HTML-based Web page on the Web. It inherits all of the features of a single-page application. While HTML based documents on the Web vary in their quality, dokieli’s write operations generate well-formed HTML+RDFa. One of the primary utilities for the extension is to have a consistent interface for annotating (comment, bookmark, like) any text selection on a Web page, as well as sharing parts of pages with ones contacts via notifications, without having a service dependency or being limited by the Web page’s UI.</p>
                                 </div>
                             </section>
 
                             <section id="interactions" inlist="" rel="schema:hasPart" resource="#interactions">
                                 <h3>Interactions</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p>Screencasts for the following use-cases showcase dokieli's social features where users interact by creating and sharing information, available at https://dokie.li/</p>
+                                    <p>Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information, available at https://dokie.li/</p>
 
                                     <div class="figure-column-2">
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
@@ -445,11 +429,11 @@ margin-bottom: 0.4em;
                                     <p id="annotations"><strong>Annotations</strong>: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
-                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to <cite><a href="https://www.w3.org/TR/annotation-protocol/">Web Annotation Protocol</a></cite>), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
+                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to <cite><a href="https://www.w3.org/TR/annotation-protocol/">Web Annotation Protocol</a></cite>), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
                                     </p>
 
                                     <p id="sharing"><strong>Social Sharing</strong>: A key aspect of the Social Web is sharing with others.
-                                    After (optionally) authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered from the user's WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains Activity Streams 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
+                                    After (optionally) authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered from the user’s WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains Activity Streams 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
                                     </p>
 
                                     <div class="figure-column-2">
@@ -475,23 +459,21 @@ margin-bottom: 0.4em;
                                     <p id="statistical-data-and-diagrams"><strong>Statistical Data and Diagrams</strong>: Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.</p>
                                 </div>
                             </section>
+
+                            <section id="adoption" inlist="" rel="schema:hasPart" resource="#adoption">
+                                <h3 property="schema:name">Adoption</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p>The W3C Working Group Note <cite><a href="https://www.w3.org/TR/annotation-html/">Embedding Web Annotations in HTML</a></cite> includes examples from dokieli’s use of the Web Annotation data <cite><a href="https://www.w3.org/TR/annotation-model/">Model</a></cite> and <cite><a href="https://www.w3.org/TR/annotation-vocab/">Vocabulary</a></cite> with motivations for example for <q>Lightweight, decentralised Annotation Tools</q>.
+                                    The <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> specifications use dokieli’s HTML+RDFa template, and the <a href="https://linkedresearch.org/ldn/">Editor’s Draft</a> showcase dokieli as a consumer of LDN and Web Annotations. The LDN <a href="https://linkedresearch.org/ldn/tests/">tests suite</a> also uses dokieli’s templates and stylesheets.</p>
+
+                                    <p>The academic workshop <cite><a href="http://semstats.org/">SemStats</a></cite> series use dokieli in its Website templates, including the call for contributions. <cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli’s HTML+RDFa template, e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.
+                                    We list a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its <cite><a href="https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild">examples in the wild</a></cite>. The conference series: WWW, (e.g., <a href="http://events.linkeddata.org/ldow2017/">LDOW</a> and <a href="http://sociam.org/wow2017/">WOW</a>), <a href="iswc2017.semanticweb.org/calls/html-submission-guide/">ISWC</a>, and <a href="http://2017.eswc-conferences.org/call-papers">ESWC</a> propose dokieli as one tooling in which authors can use to make their contributions to the calls with.</p>
+
+                                    <p>The <cite><a href="https://linkedresearch.org/">Linked Research</a></cite> website uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
+                                    <a href="http://csarven.ca/">csarven.ca</a> uses dokieli in full, where some articles (like this article) offer pointers to a public annotation service in which users may wish to use for their annotations. Articles also dynamically embed annotations from personal storage spaces.</p>
+                                </div>
+                            </section>
                         </div>
-
-						<section id="adoption" inlist="" rel="schema:hasPart" resource="#adoption">
-                        <h3 property="schema:name">Adoption</h3>
-                        <div datatype="rdf:HTML" property="schema:description">
-                            <p>The W3C Working Group Note <cite><a href="https://www.w3.org/TR/annotation-html/">Embedding Web Annotations in HTML</a></cite> includes examples from dokieli's use of the Web Annotation data <cite><a href="https://www.w3.org/TR/annotation-model/">Model</a></cite> and <cite><a href="https://www.w3.org/TR/annotation-vocab/">Vocabulary</a></cite> with motivations for example for <q>Lightweight, decentralised Annotation Tools</q>.
-                            The <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> specifications use dokieli's HTML+RDFa template, and the <a href="https://linkedresearch.org/ldn/">Editor's Draft</a> showcase dokieli as a consumer of LDN and Web Annotations. The LDN <a href="https://linkedresearch.org/ldn/tests/">tests suite</a> also uses dokieli's templates and stylesheets.</p>
-
-                            <p>The academic workshop <cite><a href="http://semstats.org/">SemStats</a></cite> series use dokieli in its Website templates, including the call for contributions.
-							<cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli's HTML+RDFa template, e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.
-                            We list a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its <cite><a href="https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild">examples in the wild</a></cite>.
-							The conference series: WWW, (e.g., <a href="http://events.linkeddata.org/ldow2017/">LDOW</a> and <a href="http://sociam.org/wow2017/">WOW</a>), <a href="iswc2017.semanticweb.org/calls/html-submission-guide/">ISWC</a>, and <a href="http://2017.eswc-conferences.org/call-papers">ESWC</a> propose dokieli as one tooling in which authors can use to make their contributions to the calls with.</p>
-
-                            <p>The <cite><a href="https://linkedresearch.org/">Linked Research</a></cite> website uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
-                            <a href="http://csarven.ca/">csarven.ca</a> uses dokieli in full, where some articles (like this article) offer pointers to a public annotation service in which users may wish to use for their annotations. Articles also dynamically embed annotations from personal storage spaces.</p>
-                        </div>
-						</section>
                     </section>
 
                     <section id="conclusions" inlist="" rel="schema:hasPart" resource="#conclusions">
@@ -604,7 +586,7 @@ margin-bottom: 0.4em;
 
 <li>Capadisli, S.: <cite>Sparqlines: SPARQL to Sparkline</cite>, ISWC SemStats, 2016, <a href="http://csarven.ca/sparqlines-sparql-to-sparkline">http://csarven.ca/sparqlines-sparql-to-sparkline</a></li>
 
-<li>Story, H., Corlosquet, S., Sambra, A.: <cite>WebID Authentication over TLS</cite>, W3C Editor's Draft, 2014<a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">https://www.w3.org/2005/Incubator/webid/spec/tls/</a></li>
+<li>Story, H., Corlosquet, S., Sambra, A.: <cite>WebID Authentication over TLS</cite>, W3C Editor’s Draft, 2014<a href="https://www.w3.org/2005/Incubator/webid/spec/tls/">https://www.w3.org/2005/Incubator/webid/spec/tls/</a></li>
 
 <li>Sanderson, R., Ciccarese, P., Young, B.: <cite>Web Annotation Data Model</cite>, W3C Recommendation, 2017, <a href="https://www.w3.org/TR/annotation-model/">https://www.w3.org/TR/annotation-model/</a></li>
 
@@ -613,31 +595,11 @@ margin-bottom: 0.4em;
 <li>Cole, T., Capadisli, S., Young, B., Herman, I.: <cite>Embedding Web Annotations in HTML</cite>, W3C Working Group Note, 2017, <a href="https://www.w3.org/TR/annotation-html/">https://www.w3.org/TR/annotation-html/</a></li>
 
 <li>Sanderson, R., Ciccarese, P., Young, B.: <cite>Web Annotation Vocabulary</cite>, W3C Recommendation, 2017, <a href="https://www.w3.org/TR/annotation-vocab/">https://www.w3.org/TR/annotation-vocab/</a></li>
-
-
                             </ol>
                         </div>
                     </section>
                 </div>
             </article>
         </main>
-<!-- Emacs spell-checking configuration (Christoph)
-Local Variables:
-ispell-local-dictionary: "british"
-End:
--->
-<!--  LocalWords:  DOCTYPE dokieli Sarven Capadisli Verborgh Christoph Auer -->
-<!--  LocalWords:  Sören Berners Informatics imec Decentralised CSAIL -->
-<!--  LocalWords:  rww ISWC DIO ReadWriteWeb filterless itemized de -->
-<!--  LocalWords:  storages Amaya RW personalisation io loomp RDFaCE -->
-<!--  LocalWords:  WordLift Authorea html Presentational TriG LD -->
-<!--  LocalWords:  deterministically ui WebID CiTO endnote Sparqlines -->
-<!--  LocalWords:  sparkline semstats ESWC csarven linkedresearch LDN -->
-<!--  LocalWords:  Greco Zagidulin Sambra Sandro Hawke Carvalho QCRI -->
-<!--  LocalWords:  HBKU Crosscloud Kingsley Idehen OpenLink ICWE -->
-<!--  LocalWords:  DOI IETF presentational referenceability WebIDs WS -->
-<!--  LocalWords:  LDP WebAccessControl ACL ActivityStreams TLS CEUR -->
-<!--  LocalWords:  MediumEditor localhost SemStats ceur LDOW -->
-<!--  LocalWords:  pseudonymity -->
     </body>
 </html>
