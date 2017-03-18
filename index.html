@@ -262,7 +262,7 @@
 
                                 <span id="pundit"><cite><a href="http://thepund.it/">Pundit</a></cite> is a set of tools that allow web annotation with highlights, comments and semantic annotations. It is similar to hypothes.is in its architecture and deployment, i.e., annotations made through the pundit client require it to be saved on its corresponding annotations server.</span>
 <!--
-                                <p id="loomp-rdface"><cite>Loomp</cite> [<a class="ref" href="#ref-6">6</a>] is a semantic content authoring tool. Loomp can be self-hosted, and uses a server-side triplestore.</p>
+                                <p id="loomp"><cite>Loomp</cite> [<a class="ref" href="#ref-6">6</a>] is a semantic content authoring tool. Loomp can be self-hosted, and uses a server-side triplestore.</p>
 //-->
 
 <!-- https://jetpad.net/ -->
@@ -281,17 +281,17 @@
                                 <span id="amaya"><cite><a href="https://www.w3.org/Amaya/">Amaya</a> is a desktop Web editor application (to create and update documents) as well as a lightweight browser that was (1993) developed by W3C to provide a framework to test its technologies.</span>
                             </p>
 
-                            <p class="fixme">Decentral editing also means that each author can choose their own semantics (e.g. their own vocabulary to annotate RDF), and then such decentralised documents can link to each other and their schemas can also be mapped to each other, whereas in centralised platforms this is (if they support semantics at all) often prescribed, either technically enforced, or encouraged by social convention.</p>
+                            <p>The tools which provide good collaborative editing UIs appear to do so at the expense of data ownership and interoperability; those which promote creation and publication of data in open reusable formats are lacking facilities for linking discourse and conversation to concepts published.</p>
 
-                            <p class="fixme">The tools which provide good collaborative editing UIs appear to do so at the expense of data ownership and interoperability; those which promote creation and publication of data in open reusable formats are lacking facilities for linking discourse and conversation to concepts published.</p>
-
-                            <p class="fixme">What follows is a proposed architecture for bridging this gap which has a low setup cost.</p>
+                            <p>Decentralised creations also mean that each author can choose their own semantics (e.g. their own vocabulary to annotate RDF), and then such decentralised documents can link to each other and their schemas can also be mapped to each other, whereas in centralised platforms this is (if they support semantics at all) often prescribed, either technically enforced, or encouraged by social convention.</p>
                         </div>
                     </section>
 
                     <section id="architecture-and-technologies" inlist="" rel="schema:hasPart" resource="#architecture-and-technologies">
                         <h2 property="schema:name">Architecture and technologies</h2>
                         <div datatype="rdf:HTML" property="schema:description">
+                            <p class="fixme">In this section we discuss an architecture to bridge the gaps in existing work for a decentralised authoring and semantic annotation client-side application, which decouples itself from data and specific server requirements.</p>
+
                             <section id="architectural-overview" inlist="" rel="schema:hasPart" resource="#architectural-overview">
                                 <h3 property="schema:name">Architectural overview</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
