@@ -22,6 +22,20 @@
                 margin-bottom: .25em;
             }
 			#content .outline, .todo, .fixme {display:none}
+
+@media print {
+body{
+width:132mm !important;
+}
+h2 {
+margin-top: 1.1em;
+margin-bottom: 0.5em;
+}
+h3 {
+margin-top: 1.3em;
+margin-bottom: 0.4em;
+}
+}
         </style>
     </head>
 
@@ -231,7 +245,7 @@
                                 <dd>By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a <em>vendor lock-in</em>. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in <cite><a href="https://www.w3.org/DesignIssues/CloudStorage.html">Socially-aware Cloud Storage</a></cite>.</dd>
 
                                 <dt>Separation of concerns</dt>
-                                <dd>A <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in <cite><a href="http://www.peachpit.com/articles/article.aspx?p=1586457">A Case for Designing with Progressive Enhancement</a></cite>).</dd>
+                                <dd>A <em>progressive enhancement</em> strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in <cite><a href="http://hesketh.com/publications/progressive_enhancement_and_the_future_of_web_design.html">Progressive Enhancement and the Future of Web Design</a></cite>).</dd>
 
                                 <dt>Accessibility</dt>
                                 <dd>To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).</dd>
@@ -297,8 +311,8 @@
 
                                     <p>Figure 1 depicts the contrast between typical centralised and decentralised architectures.</p>
 
-                                    <figure id="figure-centralised-decentralised" rel="schema:hasPart" resource="#figure-centralised-decentralised">
-                                        <img alt="" rel="schema:image" src="media/images/decentralised.svg" width="80%" />
+                                    <figure id="figure-centralised-decentralised-architectures" rel="schema:hasPart" resource="#figure-centralised-decentralised-architectures">
+                                        <img alt="" rel="schema:image" src="media/images/centralised-decentralised-architectures.svg" width="80%" />
                                         <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
                                     </figure>
 
@@ -306,8 +320,8 @@
 
                                     <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture, where nodes are under different domains and authority.</p>
 
-                                    <figure id="figure-dokieli-architecture" rel="schema:hasPart" resource="#figure-dokieli-architecture">
-                                        <img alt="" rel="schema:image" src="media/images/architecture.png" width="100%" />
+                                    <figure id="figure-dokieli-architecture-relations" rel="schema:hasPart" resource="#figure-dokieli-architecture-relations">
+                                        <img alt="" rel="schema:image" src="media/images/dokieli-architecture-relations.png" width="100%" />
                                         <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
                                     </figure>
 
@@ -565,6 +579,22 @@
                     <section id="references">
                         <h2>References</h2>
                         <div>
+                            <ol>
+<li>Otto, B., Auer, S., Cirullies, J., Jürjens, J., Menz, N., Schon, J., Wenzel, S.: <cite>Industrial Data Space: Digital Souvereignity Over Data</cite>, Technical Report, 2016, <a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data</a></li>
+
+<li>Berners-Lee, T.: <cite>Socially-aware Cloud Storage</cite>, 2009, <a href="https://www.w3.org/DesignIssues/CloudStorage.html">https://www.w3.org/DesignIssues/CloudStorage.html</a></li>
+
+<li>Champeon, S.: <cite>Progressive Enhancement and the Future of Web Design</cite>, 2003, <a href="http://hesketh.com/publications/progressive_enhancement_and_the_future_of_web_design.html">http://hesketh.com/publications/progressive_enhancement_and_the_future_of_web_design.html</li></li>
+
+<li>Koivunen, M-R., Eric Miller, E.: <cite>W3C Semantic Web Activity</cite>, 2001, <a href="https://www.w3.org/2001/12/semweb-fin/w3csw">https://www.w3.org/2001/12/semweb-fin/w3csw</a></li>
+
+<li>Golbeck, J.: <cite>Weaving a Web of Trust</cite>, 2008, <a href="https://pdfs.semanticscholar.org/5e37/daf945094ea9c9df127e06b05282e03e39bd.pdf">https://pdfs.semanticscholar.org/5e37/daf945094ea9c9df127e06b05282e03e39bd.pdf</cite></li>
+
+
+<li id="">Capadisli, S., Guy, A.: <cite>Linked Data Notifications</cite>, W3C Proposed Recommendation, 2017, <a rel="schema:citation" href="https://www.w3.org/TR/ldn/">https://www.w3.org/TR/ldn/</a></li>
+
+<li id="">Capadisli, S., Guy, A., Lange, C., Auer, S., Deiu, A., Berners-Lee, T.: <cite>Linked Data Notifications: a resource-centric communication protocol</cite>, In Proceedings of the 14th ESWC conference. Accepted for publication. <a href="http://csarven.ca/linked-data-notifications">http://csarven.ca/linked-data-notifications</a></li>
+                            </ol>
                         </div>
                     </section>
                 </div>
