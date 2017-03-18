@@ -293,76 +293,103 @@ ReadWriteWeb, semantic/interactive articles, progressive enhancement
                     <section id="architecture-and-technologies" inlist="" rel="schema:hasPart" resource="#architecture-and-technologies">
                         <h2 property="schema:name">Architecture and technologies</h2>
                         <div datatype="rdf:HTML" property="schema:description">
-                            <h3>Architectural overview</h3>
 
-                            <p>Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.</p>
+                            <section id="architectural-overview" inlist="" rel="schema:hasPart" resource="#architectural-overview">
+                                <h3 property="schema:name">Architectural overview</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
+                                    <p>Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.</p>
 
-                            <p>Figure 1 depicts the contrast between typical centralised and decentralised architectures.</p>
+                                    <p>Figure 1 depicts the contrast between typical centralised and decentralised architectures.</p>
 
-                            <figure id="figure-centralised-decentralised" rel="schema:hasPart" resource="#figure-centralised-decentralised">
-                                <img alt="" rel="schema:image" src="media/images/decentralised.svg" width="80%" />
-                                <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
-                            </figure>
+                                    <figure id="figure-centralised-decentralised" rel="schema:hasPart" resource="#figure-centralised-decentralised">
+                                        <img alt="" rel="schema:image" src="media/images/decentralised.svg" width="80%" />
+                                        <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
+                                    </figure>
 
-                            <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the <span id="#default-ui">default ui</span> of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account. Users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations where they prefer, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture.</p>
+                                    <p>dokieli as a client-side application can be <a href="#deployment">deployed</a> on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the <span id="#default-ui">default ui</span> of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.</p>
 
-                            <figure id="figure-dokieli-architecture" rel="schema:hasPart" resource="#figure-dokieli-architecture">
-                                <img alt="" rel="schema:image" src="media/images/architecture.png" width="100%" />
-                                <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
-                            </figure>
+                                    <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> [<a href="#ref-LDN">LDN</a>], is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli's architecture.</p>
 
-                            <p id="self-replicating">dokieli is self-replicating, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button. There is no installation or setup process required to publish content. <span class="todo">Not sure if this should actually be in implementation? - AG</span></p>
+                                    <figure id="figure-dokieli-architecture" rel="schema:hasPart" resource="#figure-dokieli-architecture">
+                                        <img alt="" rel="schema:image" src="media/images/architecture.png" width="100%" />
+                                        <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
+                                    </figure>
 
-                            <p class="outline">Also list the assumptions: users are authenticated, have their own storage, etc.</p>
+                                    <p id="self-replicating">dokieli is self-replicating, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button. There is no installation or setup process required to publish content. <span class="todo">Not sure if this should actually be in implementation? - AG</span></p>
 
-                            <h3>Creating documents</h3>
-                            <p class="outline">Part A) What will the document look like? How is it different compared to existing documents? What technologies does it use, and why are these independent of dokieli?</p>
+                                    <!-- <p class="outline">Also list the assumptions: users are authenticated, have their own storage, etc.</p>  - I don't think this is relevant / or is covered elsewhere - AG -->
+                                </div>
+                            </section>
 
-                            <p>Documents use HTML5 <cite><a href="https://www.w3.org/TR/html-polyglot/">Polyglot Markup</a></cite> to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. 
-                            Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article's text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML <code>&lt;script&gt;</code> elements.
-                            </p>
+                            <section id="creating-documents" inlist="" rel="schema:hasPart" resource="#creating-documents">
+                                <h3 property="schema:name">Creating documents</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
 
-                            <p>The appearance of documents is determined with CSS3. Different stylesheets can be applied to the same HTML structure so that a document can be presented flexibly, in the most appropriate way for a particular circumstance. Stylesheets can be switched from either dokieli's menu or through Web browser with native controls, for example from a two-column layout required by an academic journal to a design inkeeping with the author's blog.</p>
+                                    <p class="outline">Part A) What will the document look like? How is it different compared to existing documents? What technologies does it use, and why are these independent of dokieli?</p>
 
-                            <p>When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu <em>export</em> function (or the browser's <em>save as</em>).</p> 
+                                    <p>Documents use HTML5 <cite><a href="https://www.w3.org/TR/html-polyglot/">Polyglot Markup</a></cite> to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. 
+                                    Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article's text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML <code>&lt;script&gt;</code> elements.
+                                    </p>
 
-                            <h3>Consuming documents</h3>
+                                    <p>The appearance of documents is determined with CSS3. Different stylesheets can be applied to the same HTML structure so that a document can be presented flexibly, in the most appropriate way for a particular circumstance. Stylesheets can be switched from either dokieli's menu or through Web browser with native controls, for example from a two-column layout required by an academic journal to a design inkeeping with the author's blog.</p>
 
-                            <p>Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
+                                    <p>When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu <em>export</em> function (or the browser's <em>save as</em>).</p> 
+                                </div>
+                            </section>
+                            <section id="consuming-documents" inlist="" rel="schema:hasPart" resource="#consuming-documents">
+                                <h3 property="schema:name">Consuming documents</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
 
-                            <p>dokieli's approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
+                                    <p>Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent's abilities.</p>
 
-                            <p>dokieli is able to authenticate users via WebID-TLS if they provide a WebID. This enables further functionality: the user can use dokieli to access protected resources and write to non-public data storage containers if their WebID is authorised to do so. For authenticated users leaving annotations on other documents dokieli fetches their name and display picture from their online profile if available, to display alongside their comment.</p> 
+                                    <p>dokieli's approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.</p>
 
-                            <p>dokieli uses the following vocabularies as standard: <cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <cite><a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a></cite>/<cite><a href="http://www.w3.org/ns/auth/acl">ACL</a></cite> for access control, <cite><a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a></cite> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> for social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <cite><a href="http://www.w3.org/ns/prov">PROV Ontology</a></cite> for provenance, and the <cite><a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a></cite> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli's UI.</p>
+                                    <p>dokieli is able to authenticate users via WebID-TLS if they provide a WebID. This enables further functionality: the user can use dokieli to access protected resources and write to non-public data storage containers if their WebID is authorised to do so. For authenticated users leaving annotations on other documents dokieli fetches their name and display picture from their online profile if available, to display alongside their comment.</p> 
 
-                            <h3>Publishing documents</h3>
+                                    <p>dokieli uses the following vocabularies as standard: <cite><a href="https://schema.org/">schema.org</a></cite> to describe the general-purpose relations about the document as well as profiles, the <cite><a href="http://purl.org/spar">SPAR Ontologies</a></cite> for scholarly articles and referencing, <cite><a href="http://www.w3.org/ns/oa">Web Annotations</a></cite> for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), <cite><a href="http://www.w3.org/ns/ldp">LDP</a></cite> for personal storage management, <cite><a href="https://www.w3.org/wiki/WebAccessControl">WebAccessControl</a></cite>/<cite><a href="http://www.w3.org/ns/auth/acl">ACL</a></cite> for access control, <cite><a href="http://www.w3.org/ns/ldp#inbox">LDN Inbox</a></cite> and <cite><a href="https://www.w3.org/ns/activitystreams">ActivityStreams</a></cite> for social notifications, <cite><a href="https://creativecommons.org/ns">Creative Commons</a></cite> for rights and licensing, <cite><a href="http://www.w3.org/ns/prov">PROV Ontology</a></cite> for provenance, and the <cite><a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a></cite> to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli's UI.</p>
+                                </div>
+                            </section>
 
-                            <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
-                            
-                            <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli's write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
-                            
-                            <p>dokieli implements the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform</a> (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implement the server portion of the protocol can be used to store and edit dokieli documents directly. An <code>HTTP PUT</code> request to a URL is used to create a <em>new</em> document, to clone an existing one with <em>save as</em>, to <em>save</em> changes, and so that readers of a document can create their own document in <em>reply</em>. All of these operations are available through the dokieli menu.</p>
+                            <section id="publishing-documents" inlist="" rel="schema:hasPart" resource="#publishing-documents">
+                                <h3 property="schema:name">Publishing documents</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
 
-                            <h3>Social interactions and annotations</h3>
-                            <p class="outline">Part A) What do they look like? </p>
+                                    <p class="outline">Part B) How are these documents stored and published? (Probably trivial, but that's exactly why we need to mention it. Also important because we discuss annotations next, and their storage is more complicated.)</p>
+                                    
+                                    <p id="write-operations">Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli's write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a <q>smart client</q>.</p>
+                                    
+                                    <p>dokieli implements the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform</a> (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implement the server portion of the protocol can be used to store and edit dokieli documents directly. An <code>HTTP PUT</code> request to a URL is used to create a <em>new</em> document, to clone an existing one with <em>save as</em>, to <em>save</em> changes, and so that readers of a document can create their own document in <em>reply</em>. All of these operations are available through the dokieli menu.</p>
+                                </div>
+                            </section>
 
-                            <p class="outline">Part B) How are they stored and published?</p>
+                            <section id="social-interactions-and-annotations" inlist="" rel="schema:hasPart" resource="#social-interactions-and-annotations">
+                                <h3 property="schema:name">Social interactions and annotations</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
 
-                            <p>Interactions with a document take the form of: a comment or (dis)like about the document as a whole, or an comment or (dis)like of a selection of text, i.e. an annotation. In both cases, the dokieli menu presents an input to the commenter, and then, adding additional semantic markup where necessary, sends the data off for appropriate storage so it can be retrieved and re-displayed on future document loads.</p>
+                                    <p class="outline">Part A) What do they look like? </p>
 
-                            <p>Document authors can point to a storage service (using the Web Annotations <code>annotationService</code> property) which lets readers without their own personal storage comment nonetheless. Readers who have a preferred storage location against which they can authenticate are able to direct dokieli to store their input there instead (or in addition). Conforming to LDP, dokieli allows users to remove their annotations with an <code>HTTP DELETE</code> operation. In this way, dokieli does not impose a centralised mechanism for social interactions, and allows users to effectively 'own' their comments, annotations, and reviews, in their own space..</p>
+                                    <p class="outline">Part B) How are they stored and published?</p>
 
-                            <!-- <p class="todo">[Is this parargaph interest/useful? - No (AG)] dokieli currently does not use <code>HTTP PATCH</code> because servers with <cite><a href="https://tools.ietf.org/html/rfc5261">XML Patch</a></cite> capability in the Linked Data ecosystem are not well supported. <code>PATC H</code> can be useful towards statement level updates, thereby simpler <em>diffs</em> between versions</p> -->
+                                    <p>Interactions with a document take the form of: a comment or (dis)like about the document as a whole, or an comment or (dis)like of a selection of text, i.e. an annotation. In both cases, the dokieli menu presents an input to the commenter, and then, adding additional semantic markup where necessary, sends the data off for appropriate storage so it can be retrieved and re-displayed on future document loads.</p>
 
-                            <h3>Notifications</h3>
-                            <p class="outline">Explain for both documents and annotations how others in the decentralised network will know about them.</p>
+                                    <p>Document authors can point to a storage service (using the Web Annotations <code>annotationService</code> property) which lets readers without their own personal storage comment nonetheless. Readers who have a preferred storage location against which they can authenticate are able to direct dokieli to store their input there instead (or in addition). Conforming to LDP, dokieli allows users to remove their annotations with an <code>HTTP DELETE</code> operation. In this way, dokieli does not impose a centralised mechanism for social interactions, and allows users to effectively 'own' their comments, annotations, and reviews, in their own space..</p>
 
-                            <p>When readers interact with a document, the author is notified by means of the <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> (LDN) protocol. A notification, composed of the data from the interaction or annotation, is sent to the <em>inbox</em> advertised by the document or arbitrary parts, thereof. This inbox may be on the same server as the document itself, or may be elsewhere. dokieli subsequently reads this inbox to display interactions and annotations on the document.</p>
+                                    <!-- <p class="todo">[Is this parargaph interest/useful? - No (AG)] dokieli currently does not use <code>HTTP PATCH</code> because servers with <cite><a href="https://tools.ietf.org/html/rfc5261">XML Patch</a></cite> capability in the Linked Data ecosystem are not well supported. <code>PATC H</code> can be useful towards statement level updates, thereby simpler <em>diffs</em> between versions</p> -->
+                                </div>
+                            </section>
 
-                            <p>As the <em>author</em> of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, <em>without</em> needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.</p>
+                            <section id="notifications" inlist="" rel="schema:hasPart" resource="#notifications">
+                                <h3 property="schema:name">Notifications</h3>
+                                <div datatype="rdf:HTML" property="schema:description">
 
-                            <h3>(Unsorted)</h3>
+                                    <p class="outline">Explain for both documents and annotations how others in the decentralised network will know about them.</p>
+
+                                    <p>When readers interact with a document, the author is notified by means of the <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> (LDN) protocol. A notification, composed of the data from the interaction or annotation, is sent to the <em>inbox</em> advertised by the document or arbitrary parts, thereof. This inbox may be on the same server as the document itself, or may be elsewhere. dokieli subsequently reads this inbox to display interactions and annotations on the document.</p>
+
+                                    <p>As the <em>author</em> of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, <em>without</em> needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.</p>
+                                </div>
+                            </section>
+
                             <!-- <p class="todo">Mention the type of operations? Performs only structurally and semantically valid operations.</p> - I have no idea what this means (AG) -->
 
                             <p class="todo">Problems and intentions... Try to align with DIO</p>
