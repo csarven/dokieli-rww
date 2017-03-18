@@ -21,6 +21,7 @@
             #content dd {
                 margin-bottom: .25em;
             }
+			#content .outline, .todo, .fixme {display:none}
         </style>
     </head>
 
@@ -223,7 +224,7 @@
                             </p>
                             <dl>
                                 <dt>Data storage independent of service providers</dt>
-                                <dd>Users should have a choice in where they store their data and who is allowed to access it.
+                                <dd>Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it.
 								The <a href="https://www.researchgate.net/publication/299536747_Industrial_Data_Space_Digital_Souvereignity_Over_Data">Industrial Data Space initiative</a> calls this “data sovereignty”.</dd>
 
                                 <dt>Interoperability</dt>
@@ -388,11 +389,6 @@
                                     <p>As the <em>author</em> of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, <em>without</em> needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.</p>
                                 </div>
                             </section>
-
-                            <!-- <p class="todo">Mention the type of operations? Performs only structurally and semantically valid operations.</p> - I have no idea what this means (AG) -->
-
-                            <p class="todo">Problems and intentions... Try to align with DIO</p>
-
                         </div>
                     </section>
 
@@ -417,7 +413,7 @@
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p>dokieli employs two complementary deployment approaches: <em>single-page application</em> and <em>Web browser extension</em>.</p>
 
-                                    <p id="single-page-application">dokieli's presentational and behavioural code layers can be included in Web pages in order to trigger them as active single-page applications. It is a smart client that allows different kinds of articles e.g., academic, blog posts, news, to be authored and annotated from within Web browsers, without necessarily having them deployed from a server, i.e., it can be used offline or on localhost. dokieli internally handles its content and structural representation through its own UI<!-- [I don't know what this means - AG] , where the underlying data is dynamically exchanged between servers -->. Articles, profiles and their contact information, notifications, annotations with different motivations, for instance, can be read and written ubiquitously to any Web space with standard LDP and access control mechanisms.</p>
+                                    <p id="single-page-application">dokieli's presentational and behavioural code layers can be included in Web pages in order to trigger them as active single-page applications. It is a smart client that allows different kinds of articles e.g., academic, blog posts, news, to be authored and annotated from within Web browsers, without necessarily having them deployed from a server, i.e., it can be used offline or on localhost. dokieli internally handles its content and well-formed structural and semantic representation based on user's interactivity. Articles, profiles and their contact information, notifications, annotations with different motivations, for instance, can be read and written ubiquitously to any Web space with standard LDP and access control mechanisms.</p>
 
                                     <p id="web-browser-extension">The Web browser extension is a thin wrapper around dokieli's core code in order to embed itself in any HTML-based Web page on the Web. It inherits all of the features of a single-page application. While HTML based documents on the Web vary in their quality, dokieli's write operations generate well-formed HTML+RDFa. One of the primary utilities for the extension is to have a consistent interface for annotating (comment, bookmark, like) any text selection on a Web page, as well as sharing parts of pages with ones contacts via notifications, without having a service dependency or being limited by the Web page's UI.</p>
                                 </div>
@@ -428,65 +424,54 @@
                                 <div datatype="rdf:HTML" property="schema:description">
                                     <p class="todo">Explain what these do and how they fulfil some requirements?</p>
 
-                                    <p>Screencasts for the following use-cases are available at https://dokie.li/</p>
+                                    <p>Screencasts for the following use-cases showcase dokieli's social features where users interact by creating and sharing information, and available at https://dokie.li/</p>
 
-                                    <h4>Annotations</h4>
-<!--
-                                    <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
-
+                                    <div class="figure-column-2">
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
                                         <video controls="controls" id="video-dokieli-annotation" inlist="" poster="https://dokie.li/media/images/dokieli-annotation.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-annotation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-annotation.webm" src="https://dokie.li/media/video/dokieli-annotation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
- -->
-
-                                    <p id="annotations">A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
-                                    Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
-                                    If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
-                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to <cite><a href="https://www.w3.org/TR/annotation-protocol/">Web Annotation Protocol</a></cite>), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
-                                    </p>
-
-
-                                    <h4>Social Sharing</h4>
-<!--
                                     <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
                                         <video controls="controls" id="video-dokieli-share" poster="https://dokie.li/media/images/dokieli-share.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
                                     </figure>
- -->
-                                    <p id="sharing">A key aspect of the Social Web is sharing with others.
+                                    </div>
+
+                                    <p id="annotations"><strong>Annotations</strong>: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
+                                    Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
+                                    If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
+                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user's personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to <cite><a href="https://www.w3.org/TR/annotation-protocol/">Web Annotation Protocol</a></cite>), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
+                                    </p>
+
+                                    <p id="sharing"><strong>Social Sharing</strong>: A key aspect of the Social Web is sharing with others.
                                     After authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered by follow-your-nose from the user's WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains standard AS 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
                                     </p>
 
-
-                                    <h4>Inline Citations</h4>
-<!--
+                                    <div class="figure-column-2">
                                     <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
                                         <video about="" controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-citation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-citation.webm" src="https://dokie.li/media/video/dokieli-citation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
                                     </figure>
- -->
-                                    <p id="inline-citations">Rich semantic links can also be established between dokieli documents themselves.
-                                    The author selects a text fragment and inserts the URL of the document to be linked to as well as a semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) from the CiTO and schema.org ontologies. dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference. If the linked document advertises a standard LDN Inbox, a notification of the citation is sent as well, thus allowing bi-directional linking.
-                                    </p>
 
-
-                                    <h4>Statistical Data and Diagrams</h4>
-<!--
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
                                         <video about="" controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-sparqlines" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-sparqlines.webm" src="https://dokie.li/media/video/dokieli-sparqlines.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
                                     </figure>
- -->
-                                    <p id="statistical-data-and-diagrams">Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.</p>
+                                    </div>
+
+                                    <p id="inline-citations"><strong>Inline Citations</strong>: Rich semantic links can also be established between dokieli documents themselves.
+                                    The author selects a text fragment and inserts the URL of the document to be linked to as well as a semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) from the CiTO and schema.org ontologies. dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference. If the linked document advertises a standard LDN Inbox, a notification of the citation is sent as well, thus allowing bi-directional linking.
+                                    </p>
+
+                                    <p id="statistical-data-and-diagrams"><strong>Statistical Data and Diagrams</strong>: Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.</p>
                                 </div>
                             </section>
                         </div>
@@ -519,10 +504,10 @@
                             <p>
                                 The Web’s design stands out because of
                                 its deliberate absence of centralised control,
-                                both for technical reasons of scalability
+                                both for technical reasons of scalability and resilience
                                 as well as a societal need for freedom of expression.
                                 A challenge in such large-scale decentralised networks
-                                is how different but related publications can be integrated together,
+                                is how different but related publications can be semantically interlinked and integrated,
                                 even if they are authored and published by different parties.
                                 The traditional solution of centralising their publication,
                                 as practiced by the majority of authoring networks today,
