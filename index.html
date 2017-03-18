@@ -28,7 +28,7 @@
     <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
         <main>
             <article about="" typeof="schema:ScholarlyArticle">
-                <h1 property="schema:name">Decentralised Authoring, Annotations and Notifications for a Read-Write-Web</h1>
+                <h1 property="schema:name">Decentralised Authoring, Annotations and Notifications for a Read-Write-Web with dokieli</h1>
 
                 <div id="authors">
                     <dl id="author-name">
@@ -426,7 +426,7 @@
                                     <p>Screencasts for the following use-cases are available at https://dokie.li/</p>
 
                                     <h4>Annotations</h4>
-<!--
+
                                     <p>The following videos showcase some of dokieli's social features where users interact by creating and sharing information.</p>
 
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
@@ -435,7 +435,6 @@
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-annotation.webm">Video</a> of dokieli Web Annotation</figcaption>
                                     </figure>
- -->
 
                                     <p id="annotations">A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
@@ -445,42 +444,42 @@
 
 
                                     <h4>Social Sharing</h4>
-<!--
+
                                     <figure id="figure-dokieli-share" inlist="" rel="schema:hasPart" resource="#figure-dokieli-share">
                                         <video controls="controls" id="video-dokieli-share" poster="https://dokie.li/media/images/dokieli-share.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-share" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-share.webm" src="https://dokie.li/media/video/dokieli-share.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-share.webm">Video</a> of dokieli Share</figcaption>
                                     </figure>
- -->
+
                                     <p id="sharing">A key aspect of the Social Web is sharing with others.
                                     After authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered by follow-your-nose from the user's WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains standard AS 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
                                     </p>
 
 
                                     <h4>Inline Citations</h4>
-<!--
+
                                     <figure id="figure-dokieli-citation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-citation">
                                         <video about="" controls="controls" id="video-dokieli-citation" poster="https://dokie.li/media/images/dokieli-citation.jpg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-citation" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-citation.webm" src="https://dokie.li/media/video/dokieli-citation.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-citation.webm">Video</a> of semantic inline citations</figcaption>
                                     </figure>
- -->
+
                                     <p id="inline-citations">Rich semantic links can also be established between dokieli documents themselves.
                                     The author selects a text fragment and inserts the URL of the document to be linked to as well as a semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) from the CiTO and schema.org ontologies. dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference. If the linked document advertises a standard LDN Inbox, a notification of the citation is sent as well, thus allowing bi-directional linking.
                                     </p>
 
 
                                     <h4>Statistical Data and Diagrams</h4>
-<!--
+
                                     <figure id="figure-dokieli-sparqlines" rel="schema:hasPart" resource="#figure-dokieli-sparqlines">
                                         <video about="" controls="controls" id="video-dokieli-sparqlines" poster="https://dokie.li/media/images/GDP-per-capita-growth--annual---.svg" preload="none" rel="schema:hasPart" width="800">
                                             <source about="#video-dokieli-sparqlines" rel="schema:hasPart" resource="https://dokie.li/media/video/dokieli-sparqlines.webm" src="https://dokie.li/media/video/dokieli-sparqlines.webm" type="video/webm" typeof="fabio:Film" />
                                         </video>
                                         <figcaption property="schema:name"><a href="https://dokie.li/media/video/dokieli-sparqlines.webm">Video</a> of Sparqlines interaction in dokieli</figcaption>
                                     </figure>
- -->
+
                                     <p id="statistical-data-and-diagrams">Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.</p>
                                 </div>
                             </section>
@@ -553,7 +552,7 @@
                             <p>
                                 A couple of important socio-technical challenges remain.
                                 Resources might want to indicate in a granular way
-                                which actions they support and/or encourage,
+                                which actions they support or encourage,
                                 such as liking, bookmarking, or sharing,
                                 and perhaps conditions about which notifications should be sent
                                 when any of these events take place.
@@ -575,8 +574,8 @@
                                 (even though some peer to peer alternatives exist).
                                 Services like top-down annotations or automated entity marking
                                 can improve the discoverability of a publication,
-                                yet the question how to offer these
-                                without being exclusively tied to certain servers.
+                                yet the question, how to offer these
+                                without being exclusively tied to certain servers, needs to be still solved.
                             </p>
 
                             <p about="" id="epilogue" rel="schema:hasPart"><span about="#epilogue" property="schema:description" typeof="deo:Epilogue">We invite you to try dokieli yourself right now! Annotate this article at http://csarven.ca/dokieli-rww, or spawn a new or a copy that you can edit yourself. <em>Make it so!</em></span></p>
