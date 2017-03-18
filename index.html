@@ -12,30 +12,6 @@
         <script src="https://dokie.li/scripts/medium-editor.min.js"></script>
         <script src="https://dokie.li/scripts/medium-editor-tables.min.js"></script>
         <script src="https://dokie.li/scripts/do.js"></script>
-        <style>
-            #content dt {
-                float: left;
-                clear: left;
-                margin: 0 1em 0 0;
-            }
-            #content dd {
-                margin-bottom: .25em;
-            }
-
-@media print {
-body{
-width:132mm !important;
-}
-h2 {
-margin-top: 1.1em;
-margin-bottom: 0.5em;
-}
-h3 {
-margin-top: 1.3em;
-margin-bottom: 0.4em;
-}
-}
-        </style>
     </head>
 
     <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
@@ -75,7 +51,7 @@ margin-bottom: 0.4em;
                         <li id="email-Tim-Berners-Lee"><sup>🕸</sup><a about="https://www.w3.org/People/Berners-Lee/card#i" href="mailto:timbl@w3.org" rel="schema:email">timbl@w3.org</a></li>
                     </ul>
                 </div>
-<!--
+
                 <dl id="document-identifier">
                     <dt>Identifier</dt>
                     <dd><a href="http://csarven.ca/dokieli-rww" rel="owl:sameAs">http://csarven.ca/dokieli-rww</a></dd>
@@ -99,14 +75,14 @@ margin-bottom: 0.4em;
 
                 <dl id="document-modified">
                     <dt>Modified</dt>
-                    <dd><time content="2017-03-12T00:00:00Z" datatype="xsd:dateTime" datetime="2017-03-12T00:00:00Z" property="schema:dateModified">2017-03-12</time></dd>
+                    <dd><time content="2017-03-12T00:00:00Z" datatype="xsd:dateTime" datetime="2017-03-12T00:00:00Z" property="schema:dateModified">2017-03-18</time></dd>
                 </dl>
 
                 <dl id="document-license">
                     <dt>License</dt>
                     <dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license" title="Creative Commons Attribution 4.0 Unported">CC BY 4.0</a></dd>
                 </dl>
--->
+
                 <div id="content">
                     <section id="abstract">
                         <h2>Abstract</h2>
@@ -146,8 +122,6 @@ margin-bottom: 0.4em;
                                 Such an environment provides the right technological conditions
                                 for independent publication of scientific articles, news,
                                 and other works that benefit from diverse voices and open interactions.
-                                <!-- MUST NOT remove URL. MAY adjust sentence -->
-                                To experience the described features please open this document in your Web browser under its canonical URI: <a href="http://csarven.ca/dokieli-rww">http://csarven.ca/dokieli-rww</a>
                             </p>
                         </div>
                     </section>
@@ -304,7 +278,7 @@ margin-bottom: 0.4em;
                                     <p>Figure 1 depicts the contrast between typical centralised and decentralised architectures.</p>
 
                                     <figure id="figure-centralised-decentralised-architectures" rel="schema:hasPart" resource="#figure-centralised-decentralised-architectures">
-                                        <img alt="" rel="schema:image" src="media/images/centralised-decentralised-architectures.svg" width="80%" />
+                                        <img alt="" rel="schema:image" src="http://csarven.ca/media/images/articles/centralised-decentralised-architectures.svg" width="80%" />
                                         <figcaption property="schema:name">Typical centralised and decentralised architectures</figcaption>
                                     </figure>
 
@@ -313,7 +287,7 @@ margin-bottom: 0.4em;
                                     <p>On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, <cite><a href="http://csarven.ca/linked-data-notifications">Linked Data Notifications</a></cite> (<cite><a href="https://www.w3.org/TR/ldn/">W3C Proposed Recommendation</a></cite>), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.</p>
 
                                     <figure id="figure-dokieli-architecture-relations" rel="schema:hasPart" resource="#figure-dokieli-architecture-relations">
-                                        <img alt="" rel="schema:image" src="media/images/dokieli-architecture-relations.png" width="100%" />
+                                        <img alt="" rel="schema:image" src="http://csarven.ca/media/images/articles/dokieli-architecture-relations.png" width="100%" />
                                         <figcaption property="schema:name">Entities and relations within dokieli’s architecture</figcaption>
                                     </figure>
 
@@ -547,7 +521,7 @@ margin-bottom: 0.4em;
                                 without being tied to certain servers needs to be still solved.
                             </p>
 
-                            <p about="" id="epilogue" rel="schema:hasPart"><span about="#epilogue" property="schema:description" typeof="deo:Epilogue">We invite you to try dokieli yourself right now! Annotate this article at http://csarven.ca/dokieli-rww, or spawn a new or a copy that you can edit yourself.</span></p>
+                            <p about="" id="epilogue" rel="schema:hasPart"><span about="#epilogue" property="schema:description" typeof="deo:Epilogue">We invite you to try dokieli yourself right now! Annotate this article or spawn a new or a copy that you can edit yourself.</span></p>
                         </div>
                     </section>
 
