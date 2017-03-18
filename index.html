@@ -153,11 +153,7 @@
 
                     <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
                         <h2 property="schema:name">Introduction</h2>
-                        <p>
-                        </p>
                         <p class="outline">In this section, we establish why decentralisation is important, why it is currently missing, and what we're going to do about it.</p>
-
-                        <p class="todo">In introduction or elsewhere, can we have another angle at (de)centralised approaches? For example, the differences between vendor, data, and application lock-ins.</p>
 
                         <div datatype="rdf:HTML" property="schema:description" resource="#introduction" typeof="deo:Introduction">
                             <p>
@@ -317,9 +313,7 @@
                                         <figcaption property="schema:name">Entities and relations within dokieli's architecture</figcaption>
                                     </figure>
 
-                                    <p id="self-replicating">dokieli is self-replicating, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button. There is no installation or setup process required to publish content. <span class="todo">Not sure if this should actually be in implementation? - AG</span></p>
-
-                                    <!-- <p class="outline">Also list the assumptions: users are authenticated, have their own storage, etc.</p>  - I don't think this is relevant / or is covered elsewhere - AG -->
+                                    <p id="self-replicating">dokieli is <em>self-replicating</em>, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button.</p>
                                 </div>
                             </section>
 
@@ -376,7 +370,7 @@
 
                                     <p>Document authors can point to a storage service (using the Web Annotations <code>annotationService</code> property) which lets readers without their own personal storage comment nonetheless. Readers who have a preferred storage location against which they can authenticate are able to direct dokieli to store their input there instead (or in addition). Conforming to LDP, dokieli allows users to remove their annotations with an <code>HTTP DELETE</code> operation. In this way, dokieli does not impose a centralised mechanism for social interactions, and allows users to effectively 'own' their comments, annotations, and reviews, in their own space..</p>
 
-                                    <!-- <p class="todo">[Is this parargaph interest/useful? - No (AG)] dokieli currently does not use <code>HTTP PATCH</code> because servers with <cite><a href="https://tools.ietf.org/html/rfc5261">XML Patch</a></cite> capability in the Linked Data ecosystem are not well supported. <code>PATC H</code> can be useful towards statement level updates, thereby simpler <em>diffs</em> between versions</p> -->
+                                    <!-- <p class="todo">[SC: Use this on master/HTML/Web] dokieli currently does not use <code>HTTP PATCH</code> because servers with <cite><a href="https://tools.ietf.org/html/rfc5261">XML Patch</a></cite> capability in the Linked Data ecosystem are not well supported. <code>PATC H</code> can be useful towards statement level updates, thereby simpler <em>diffs</em> between versions</p> -->
                                 </div>
                             </section>
 
@@ -424,9 +418,8 @@
                             <section id="interactions" inlist="" rel="schema:hasPart" resource="#interactions">
                                 <h3>Interactions</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p class="todo">Explain what these do and how they fulfil some requirements?</p>
+                                    <p>Screencasts for the following use-cases showcase dokieli's social features where users interact by creating and sharing information, available at https://dokie.li/</p>
 
-                                    <p>Screencasts for the following use-cases showcase dokieli's social features where users interact by creating and 
                                     <div class="figure-column-2">
                                     <figure id="figure-dokieli-annotation" inlist="" rel="schema:hasPart" resource="#figure-dokieli-annotation">
                                         <video controls="controls" id="video-dokieli-annotation" inlist="" poster="https://dokie.li/media/images/dokieli-annotation.jpg" preload="none" rel="schema:hasPart" width="800">
@@ -486,7 +479,7 @@
 
                             <p>The academic workshop <cite><a href="http://semstats.org/">SemStats</a></cite> series use dokieli in its Website templates, including the call for contributions.</p>
 
-                            <p><cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli's HTML+RDFa template<span class="fixme">bother to include an example? e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.</span></p>
+                            <p><cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli's HTML+RDFa template, e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.</p>
 
                             <p>There is a a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its <cite><a href="https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild">examples in the wild</a></cite>.</p>
 
