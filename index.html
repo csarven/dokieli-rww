@@ -148,7 +148,7 @@
                     <section id="introduction" inlist="" rel="schema:hasPart" resource="#introduction">
                         <h2 property="schema:name">Introduction</h2>
                         <div datatype="rdf:HTML" property="schema:description" resource="#introduction" typeof="deo:Introduction">
-                            <p>
+                            <p about="" rel="" typeof="deo:ProblemStatement">
                                 While the Web was originally conceived as a decentralised platform
                                 where every organisation and individual can participate,
                                 it became increasingly centralised
@@ -203,7 +203,7 @@
 
                     <section id="principles" inlist="" rel="schema:hasPart" resource="#principles">
                         <h2 property="schema:name">Principles</h2>
-                        <div datatype="rdf:HTML" property="schema:description">
+                        <div datatype="rdf:HTML" property="schema:description" resource="#principles" typeof="deo:Model">
                             <p>
                                 This describes the principles against which
                                 decentralised approaches for authoring, annotation and notifications
@@ -235,7 +235,7 @@
 
                     <section id="related-work" inlist="" rel="schema:hasPart" resource="#related-work">
                         <h2 property="schema:name">Related Work</h2>
-                        <div datatype="rdf:HTML" property="schema:description">
+                        <div datatype="rdf:HTML" property="schema:description" resource="#related-work" typeof="deo:RelatedWork">
                             <p><cite><a href="http://svn.aksw.org/papers/2011/JWS_SemanticContentAuthoring/public.pdf">User Interfaces for Semantic Authoring of Textual Content</a></cite> gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.</p>
 
                             <p>
@@ -247,12 +247,6 @@
                                 <span id="hypothesis"><cite><a href="https://hypothes.is/">Hypothesis</a></cite> makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.</span>
 
                                 <span id="pundit"><cite><a href="http://thepund.it/">Pundit</a></cite> is a set of tools that allow web annotation with highlights, comments and semantic annotations. It is similar to hypothes.is in its architecture and deployment, i.e., annotations made through the pundit client require it to be saved on its corresponding annotations server.</span>
-<!--
-                                <p id="loomp"><cite>Loomp</cite> [<a class="ref" href="#ref-6">6</a>] is a semantic content authoring tool. Loomp can be self-hosted, and uses a server-side triplestore.</p>
-//-->
-
-<!-- https://jetpad.net/ -->
-<!-- https://www.dropbox.com/ -->
                             </p>
 
                             <p>
@@ -260,8 +254,6 @@
                                 <span id="libreoffice-online">Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. <cite><a href="https://github.com/libreoffice/online">LibreOffice Online</a></cite>, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document’s interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.</span>
 
                                 <span id="smallest-federated-wiki">The <cite><a href="http://fed.wiki.org/">Smallest Federated Wiki</a></cite> pages to be forked and maintain personal copies.</span>
-
-                                <!-- <span>substance.io.</span> -->
 
                                 <span id="amaya"><cite><a href="https://www.w3.org/Amaya/">Amaya</a></cite> is a desktop Web editor application (to create and update documents) as well as a lightweight browser that was (1993) developed by W3C to provide a framework to test its technologies.</span>
                             </p>
@@ -271,8 +263,8 @@
                     </section>
 
                     <section id="architecture-and-technologies" inlist="" rel="schema:hasPart" resource="#architecture-and-technologies">
-                        <h2 property="schema:name">Architecture and technologies</h2>
-                        <div datatype="rdf:HTML" property="schema:description">
+                        <h2 property="schema:name">Architecture and Technologies</h2>
+                        <div datatype="rdf:HTML" property="schema:description" resource="#architecture-and-technologies" typeof="deo:Contribution">
                             <p>In this section we discuss an architecture to bridge the gaps in existing work for a decentralised authoring and semantic annotation client-side application, which decouples itself from data and specific server requirements.</p>
 
                             <section id="architectural-overview" inlist="" rel="schema:hasPart" resource="#architectural-overview">
@@ -361,7 +353,7 @@
 
                     <section id="implementation" inlist="" rel="schema:hasPart" resource="#implementation">
                         <h2 property="schema:name">Implementation</h2>
-                        <div datatype="rdf:HTML" property="schema:description">
+                        <div datatype="rdf:HTML" property="schema:description" resource="#implementation" typeof="deo:Results">
                             <p>dokieli is open source: <a href="https://github.com/linkeddata/dokieli">https://github.com/linkeddata/dokieli</a> and available to try at <a href="https://dokie.li/">https://dokie.li/</a> (or at any instance on the Web, see <cite><a href="#adoption">Adoption</a></cite>).</p>
 
                             <section id="components" inlist="" rel="schema:hasPart" resource="#components">
@@ -444,13 +436,13 @@
                             <section id="adoption" inlist="" rel="schema:hasPart" resource="#adoption">
                                 <h3 property="schema:name">Adoption</h3>
                                 <div datatype="rdf:HTML" property="schema:description">
-                                    <p>The W3C Working Group Note <cite><a href="https://www.w3.org/TR/annotation-html/">Embedding Web Annotations in HTML</a></cite> includes examples from dokieli’s use of the Web Annotation data <cite><a href="https://www.w3.org/TR/annotation-model/">Model</a></cite> and <cite><a href="https://www.w3.org/TR/annotation-vocab/">Vocabulary</a></cite> with motivations for example for <q>Lightweight, decentralised Annotation Tools</q>.
+                                    <p id="adoption-w3c-use">The W3C Working Group Note <cite><a href="https://www.w3.org/TR/annotation-html/">Embedding Web Annotations in HTML</a></cite> includes examples from dokieli’s use of the Web Annotation data <cite><a href="https://www.w3.org/TR/annotation-model/">Model</a></cite> and <cite><a href="https://www.w3.org/TR/annotation-vocab/">Vocabulary</a></cite> with motivations for example for <q>Lightweight, decentralised Annotation Tools</q>.
                                     The W3C <cite><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a></cite> specification uses dokieli’s HTML+RDFa template, and the <a href="https://linkedresearch.org/ldn/">Editor’s Draft</a> showcase dokieli as a consumer of LDN and Web Annotations. The LDN <a href="https://linkedresearch.org/ldn/tests/">test suite</a> also uses dokieli’s templates and stylesheets.</p>
 
-                                    <p>The academic workshop <cite><a href="http://semstats.org/">SemStats</a></cite> series use dokieli in its Website templates, including the call for contributions. <cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli’s HTML+RDFa template, e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.
+                                    <p id="adoption-academic">The academic workshop <cite><a href="http://semstats.org/">SemStats</a></cite> series use dokieli in its Website templates, including the call for contributions. <cite><a href="http://ceur-ws.org/">CEUR-WS.org</a></cite>, an <q>Online Proceedings for Scientific Conferences and Workshops</q> offers the tooling <cite><a href="https://github.com/ceurws/ceur-make">ceur-make</a></cite> to help organisers generate proceedings using dokieli’s HTML+RDFa template, e.g., <cite><a href="http://ceur-ws.org/Vol-1654/">SemStats 2016</a></cite>.
                                     We list a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its <cite><a href="https://github.com/linkeddata/dokieli/wiki#examples-in-the-wild">examples in the wild</a></cite>. The conference series: WWW (e.g., <a href="http://events.linkeddata.org/ldow2017/">LDOW</a> and <a href="http://sociam.org/wow2017/">WOW</a> workshops), <a href="iswc2017.semanticweb.org/calls/html-submission-guide/">ISWC</a>, and <a href="http://2017.eswc-conferences.org/call-papers">ESWC</a> propose dokieli as one tooling in which authors can use to make their contributions to the calls with.</p>
 
-                                    <p>The <cite><a href="https://linkedresearch.org/">Linked Research</a></cite> website uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
+                                    <p id="adoption-misc">The <cite><a href="https://linkedresearch.org/">Linked Research</a></cite> website uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
                                     <a href="http://csarven.ca/">csarven.ca</a> uses dokieli in full, where some articles (like this article) offer pointers to a public annotation service in which users may wish to use for their annotations. Articles also dynamically embed annotations from personal storage spaces.</p>
                                 </div>
                             </section>
