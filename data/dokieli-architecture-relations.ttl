@@ -26,7 +26,8 @@
 
 <http://example.net/inbox/notification>
   a as:Announce ;
-  ; as:inReplyTo <http://example.org/annotation>
+  ; as:object <http://example.org/annotation>
+  ; as:target <http://example.com/article>
 # ; schema:license <https://creativecommons.org/publicdomain/zero/1.0/>
   ; as:actor <http://example.foo/#i>
   .
