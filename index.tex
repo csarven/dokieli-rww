@@ -135,7 +135,7 @@
 
   \item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the W3C Semantic Web Activity~\cite{ref-4} charter.
 
-  \item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5, ref-6, ref-7}.
+  \item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5,ref-6,ref-7}.
 \end{description}
   
                         
@@ -200,28 +200,28 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 \par Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.
 
                                     
-\par Figure 1 depicts the contrast between typical centralised and decentralised architectures.
+\par Figure ~\ref{fig:centralised-decentralised-architectures} depicts the contrast between typical centralised and decentralised architectures.
 
-                                    
-                                        
-                                        Typical centralised and decentralised architectures
-                                    
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{media/images/centralised-decentralised-architectures}
+  \caption{Entities and relations within dokieli’s architecture}
+  \label{fig:centralised-decentralised-architectures}
+\end{figure}
 
-                                    
 \par dokieli as a client-side application can be \empty deployed on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the default UI of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.
 
                                     
-\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \empty Linked Data Notifications~\cite{ref-9} (W3C Proposed Recommendation~\cite{ref-10}), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
+\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \empty Linked Data Notifications~\cite{ref-9} (W3C Proposed Recommendation~\cite{ref-10}), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure ~\ref{fig:dokieli-architecture-relations} depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
 
-                                    
-                                        
-                                        Entities and relations within dokieli’s architecture
-                                    
-
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{media/images/dokieli-architecture-relations}
+  \caption{Typical centralised and decentralised architectures}
+  \label{fig:dokieli-architecture-relations}
+\end{figure}
                                     
 \par dokieli is {\em self-replicating}, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button.
-                                
-                            
 
                             
                                 \subsection{Creating documents}
@@ -350,20 +350,19 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
                                     
 \par Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information, available at https://dokie.li/
 
-                                    
-                                    
-                                        
-                                            
-                                        
-                                        \empty Video of dokieli Web Annotation
-                                    
-
-                                    
-                                        
-                                            
-                                        
-                                        \empty Video of dokieli Share
-                                    
+\begin{figure}
+  \begin{minipage}[b]{.49\textwidth}
+    \includegraphics[width=\textwidth]{media/images/dokieli-annotation}
+    \caption{dokieli Web Annotation}
+    \label{fig:dokieli-annotation}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{.49\textwidth}
+    \includegraphics[width=\textwidth]{media/images/dokieli-share}
+    \caption{dokieli Share}
+    \label{fig:dokieli-share}
+  \end{minipage}
+\end{figure}
                                     
 
                                     
@@ -376,25 +375,22 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
                                     
 \par Social Sharing: A key aspect of the Social Web is sharing with others.
                                     After (optionally) authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered from the user’s WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains Activity Streams 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
-                                    
 
-                                    
-                                    
-                                        
-                                            
-                                        
-                                        \empty Video of semantic inline citations
-                                    
+\begin{figure}
+  \begin{minipage}[b]{.49\textwidth}
+    \includegraphics[width=\textwidth]{media/images/dokieli-citation}
+    \caption{Semantic inline citations in dokieli}
+    \label{fig:dokieli-citation}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{.49\textwidth}
+    \includegraphics[width=\textwidth]{media/images/dokieli-sparqlines}
+    \caption{Sparqlines interaction in dokieli}
+    \label{fig:dokieli-sparqlines}
+  \end{minipage}
+\end{figure}
 
-                                    
-                                        
-                                            
-                                        
-                                        \empty Video of Sparqlines interaction in dokieli
-                                    
-                                    
 
-                                    
 \par Inline Citations: Rich semantic links can also be established between dokieli documents themselves.
                                     The author selects a text fragment and inserts the URL of the document to be linked to as well as a semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) from the CiTO and schema.org ontologies. dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference. If the linked document advertises a standard LDN Inbox, a notification of the citation is sent as well, thus allowing bi-directional linking.
                                     
