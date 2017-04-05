@@ -46,7 +46,7 @@
 \maketitle
 
 \begin{abstract}
-  While the Web was designed as a decentralised environment, individual authors still lack the ability to conveniently author and publish documents, and to engage in social interactions with documents of others in a truly decentralised fashion. We present \empty dokieli, a fully decentralised, browser-based authoring and annotation platform with built-in support for social interactions, through which people retain the ownership of and sovereignty over their data. The resulting “living” documents are interoperable and independent of dokieli since they follow standards and best practices, such as HTML+RDFa for a fine-grained semantic structure, Linked Data Platform for personal data storage, and Linked Data Notifications for updates. This article describes dokieli’s architecture and implementation, demonstrating advanced document authoring and interaction without a single point of control. Such an environment provides the right technological conditions for independent publication of scientific articles, news, and other works that benefit from diverse voices and open interactions. To experience the described features please open this document in your Web browser under its canonical URI: {\tt \href{http://csarven.ca/dokieli-rww}{http://csarven.ca/dokieli-rww}}.
+  While the Web was designed as a decentralised environment, individual authors still lack the ability to conveniently author and publish documents, and to engage in social interactions with documents of others in a truly decentralised fashion. We present \textit{dokieli}, a fully decentralised, browser-based authoring and annotation platform with built-in support for social interactions, through which people retain the ownership of and sovereignty over their data. The resulting “living” documents are interoperable and independent of dokieli since they follow standards and best practices, such as HTML+RDFa for a fine-grained semantic structure, Linked Data Platform for personal data storage, and Linked Data Notifications for updates. This article describes dokieli’s architecture and implementation, demonstrating advanced document authoring and interaction without a single point of control. Such an environment provides the right technological conditions for independent publication of scientific articles, news, and other works that benefit from diverse voices and open interactions. To experience the described features please open this document in your Web browser under its canonical URI: {\tt \href{http://csarven.ca/dokieli-rww}{http://csarven.ca/dokieli-rww}}.
   \keywords{Decentralisation, Human-computer interaction, Linked Data, Semantic publishing, Social machine, Social web}
 \end{abstract}
 
@@ -125,15 +125,15 @@
                             
 
 \begin{description}
-  \item[Data storage independent of service providers] Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The Industrial Data Space~\cite{ref-1} initiative calls this ``data sovereignty''.
+  \item[Data storage independent of service providers] Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The \textit{Industrial Data Space}~\cite{ref-1} initiative calls this ``data sovereignty''.
 
-  \item[Interoperability] By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a {\em vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in Socially-aware Cloud Storage~\cite{ref-2}.
+  \item[Interoperability] By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a \textit{vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in \textit{Socially-aware Cloud Storage}~\cite{ref-2}.
 
-  \item[Separation of concerns] A {\em progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in Progressive Enhancement and the Future of Web Design~\cite{ref-3}).
+  \item[Separation of concerns] A \textit{progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in \textit{Progressive Enhancement and the Future of Web Design}~\cite{ref-3}).
 
   \item[Accessibility] To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).
 
-  \item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the W3C Semantic Web Activity~\cite{ref-4} charter.
+  \item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the \textit{W3C Semantic Web Activity}~\cite{ref-4} charter.
 
   \item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5,ref-6,ref-7}.
 \end{description}
@@ -148,18 +148,18 @@
                         
                             
 \par
-User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
+\textit{User Interfaces for Semantic Authoring of Textual Content}~\cite{ref-8} gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
 
                             
 \par 
-                                Centralised authoring and annotation platforms:
-                                \empty Google Docs, \empty Medium, and \empty Authorea are examples of Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.
+                                \textbf{Centralised authoring and annotation platforms}:
+                                \textit{Google Docs}, \textit{Medium}, and \textit{Authorea} are examples of Web applications for collaborative creation and publication of content which require account creation and data storage with respective centralised services. They allow multiple participants to annotate and hold discussions around the primary content; users must access their accounts to be notified of updates to conversations, and data from both the main content and related discussion is confined to the service which was used to create it.
 
-                                \empty WordPress is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others’ articles, however they are typically under the hosting site’s database.
+                                \textit{WordPress} is a free and open-source platform for article publication which can be self-hosted on a server controlled by the user. Visitors may sign-in with their WordPress accounts to leave comments on others’ articles, however they are typically under the hosting site’s database.
 
-                                \empty Hypothesis makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.
+                                \textit{Hypothesis} makes it possible for users to leave annotations on different types of documents on the Web using a browser plugin or via a proxy. Annotations may be private or public, and can be threaded to form conversations around a piece of content. Despite allowing the attachment of annotations to resources hosted anywhere, they depend on centralised account creation and storage for the annotations themselves. Hypothesis is open source, with an API that uses Web Annotations data model, and may be self-hosted, but currently it is not possible to federate between different instances.
 
-                                \empty Pundit is a set of tools that allow web annotation with highlights, comments and semantic annotations. It is similar to hypothes.is in its architecture and deployment, i.e., annotations made through the pundit client require it to be saved on its corresponding annotations server.
+                                \textit{Pundit} is a set of tools that allow web annotation with highlights, comments and semantic annotations. It is similar to hypothes.is in its architecture and deployment, i.e., annotations made through the pundit client require it to be saved on its corresponding annotations server.
 
 
 
@@ -168,14 +168,14 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                             
 \par 
-                                Decentralised authoring and annotation systems:
-                                Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. \empty LibreOffice Online, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document’s interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.
+                                \textbf{Decentralised authoring and annotation systems}:
+                                Some authoring and publishing systems already go into a decentralised direction. However, they only realize a relatively small subset of the principles outlined in the last section. \textit{LibreOffice Online}, for example, allows collaborative editing of office documents (e.g., Writer) from the Web browser. Content can be stored under different CMSs in the cloud. The document’s interface consists of image tiles which are sent from the server and rendered in the browser. However, it hardly provides accessibility, rich interlinking and annotations or separations of concerns.
 
-                                The \empty Smallest Federated Wiki pages to be forked and maintain personal copies.
+                                The \textit{Smallest Federated Wiki} pages to be forked and maintain personal copies.
 
                                 
 
-                                \empty Amaya is a desktop Web editor application (to create and update documents) as well as a lightweight browser that was (1993) developed by W3C to provide a framework to test its technologies.
+                                \textit{Amaya} is a desktop Web editor application (to create and update documents) as well as a lightweight browser that was (1993) developed by W3C to provide a framework to test its technologies.
                             
 
                             
@@ -212,7 +212,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 \par dokieli as a client-side application can be \empty deployed on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the default UI of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.
 
                                     
-\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \empty Linked Data Notifications~\cite{ref-9} (W3C Proposed Recommendation~\cite{ref-10}), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure ~\ref{fig:dokieli-architecture-relations} depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
+\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \textit{Linked Data Notifications}~\cite{ref-9} (\textit{W3C Proposed Recommendation}~\cite{ref-10}), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure ~\ref{fig:dokieli-architecture-relations} depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
 
 \begin{figure}
   \centering
@@ -221,7 +221,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
   \label{fig:dokieli-architecture-relations}
 \end{figure}
                                     
-\par dokieli is {\em self-replicating}, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button.
+\par dokieli is \textit{self-replicating}, in that the reader of a dokieli document can spawn an instance — either a copy or a brand new empty document — into their own storage space at the click of a button.
 
                             
                                 \subsection{Creating documents}
@@ -229,14 +229,14 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par Documents use HTML5 Polyglot Markup~\cite{ref-11} to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article’s text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML {\tt <script>} elements.
+\par Documents use HTML5 \textit{Polyglot Markup}~\cite{ref-11} to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article’s text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML {\tt <script>} elements.
                                     
 
                                     
 \par The appearance of documents is determined with CSS3. Different stylesheets can be applied to the same HTML structure so that a document can be presented flexibly, in the most appropriate way for a particular circumstance. Stylesheets can be switched from either dokieli’s menu or through Web browser with native controls, for example from a two-column layout required by an academic journal to a design in keeping with the author’s blog.
 
                                     
-\par When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu {\em export} function (or the browser’s {\em save as}).
+\par When JavaScript is enabled, dokieli provides a rich editing interface which includes visual and structural formatting of text as well as embedding machine-readable semantics, media, dynamic citations, and inclusion of statistical charts from live endpoints. An external personal data store, or even internet connection, are not needed at this stage as modifications to a document made in the browser this way can be persisted to a local filesystem using the dokieli menu \textit{export} function (or the browser’s \textit{save as}).
                                 
                             
 
@@ -246,7 +246,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par Documents can be retrieved from Web servers with a single HTTP GET request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent’s abilities.
+\par Documents can be retrieved from Web servers with a single {\tt HTTP GET} request, by either a browser (for human-readable HTML) or script (machine-readable RDF). Through the use of progressive enhancement, document contents are available in text-only browsers, and further functionality of CSS and JavaScript are layered on according to the user agent’s abilities.
 
                                     
 \par dokieli’s approach to marking human-visible content in RDFa makes it possible to further decouple itself, the application that produced the data, from the data itself, facilitating potential reuse of the data by other applications. A dokieli document can be parsed into a graph, and users can use any other RDF-aware application with the data that was generated by dokieli. Thereby, dokieli can effectively remove itself as a dependency when it comes to data consumption and reuse.
@@ -255,7 +255,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 \par dokieli is able to authenticate users via WebID-TLS if they provide a WebID. This enables further functionality: the user can use dokieli to access protected resources and write to non-public data storage containers if their WebID is authorised to do so. For authenticated users leaving annotations on other documents dokieli fetches their name and display picture from their online profile if available, to display alongside their comment. 
 
                                     
-\par dokieli uses the following vocabularies as standard: \empty schema.org to describe the general-purpose relations about the document as well as profiles, the \empty SPAR Ontologies for scholarly articles and referencing, \empty Web Annotations for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), \empty LDP for personal storage management, \empty WebAccessControl/\empty ACL for access control, \empty LDN Inbox and \empty ActivityStreams for social notifications, \empty Creative Commons for rights and licensing, \empty PROV Ontology for provenance, and the \empty RDF Data Cube vocabulary to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli’s UI.
+\par dokieli uses the following vocabularies as standard: \textit{schema.org} to describe the general-purpose relations about the document as well as profiles, the \textit{SPAR Ontologies} for scholarly articles and referencing, \textit{Web Annotations} for annotations (with motivations e.g., replying, bookmarking, commenting, assessments), \textit{LDP} for personal storage management, \textit{WebAccessControl}/\textit{ACL} for access control, \textit{LDN Inbox} and \textit{ActivityStreams} for social notifications, \textit{Creative Commons} for rights and licensing, \textit{PROV Ontology} for provenance, and the \textit{RDF Data Cube vocabulary} to consume multi-dimensional data from SPARQL endpoints. Authors can optionally include other vocabularies to mark up specific concepts through dokieli’s UI.
                                 
                             
 
@@ -268,7 +268,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 \par Documents can of course be published on ordinary Web servers, as ordinary Web pages. The next layer of enhancement is for authors who wish to edit documents on a Web server directly rather than locally; they can make use of dokieli’s write operations. This uses JavaScript, and moves the burden of processing user input from servers (i.e., offering HTML forms and processing of the form submission) to the client.  In essence, the expectation is that dokieli should be a ``smart client''.
                                     
                                     
-\par dokieli implements the \empty Linked Data Platform (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implement the server portion of the protocol can be used to store and edit dokieli documents directly. An {\tt HTTP PUT} request to a URL is used to create a {\em new} document, to clone an existing one with {\em save as}, to {\em save} changes, and so that readers of a document can create their own document in {\em reply}. All of these operations are available through the dokieli menu.
+\par dokieli implements the \textit{Linked Data Platform} (LDP) protocol for creating, updating and deleting documents. As such, personal data stores or servers which implement the server portion of the protocol can be used to store and edit dokieli documents directly. An {\tt HTTP PUT} request to a URL is used to create a \textit{new} document, to clone an existing one with \textit{save as}, to \textit{save} changes, and so that readers of a document can create their own document in \textit{reply}. All of these operations are available through the dokieli menu.
                                 
                             
 
@@ -293,10 +293,10 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par When readers interact with a document, the author is notified by means of the \empty Linked Data Notifications (LDN) protocol. A notification, composed of the data from the interaction or annotation, is sent to the {\em inbox} advertised by the document or arbitrary parts, thereof. This inbox may be on the same server as the document itself, or may be elsewhere. dokieli subsequently reads this inbox to display interactions and annotations on the document.
+\par When readers interact with a document, the author is notified by means of the \textit{Linked Data Notifications} (LDN) protocol. A notification, composed of the data from the interaction or annotation, is sent to the \textit{inbox} advertised by the document or arbitrary parts, thereof. This inbox may be on the same server as the document itself, or may be elsewhere. dokieli subsequently reads this inbox to display interactions and annotations on the document.
 
                                     
-\par As the {\em author} of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, {\em without} needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.
+\par As the \textit{author} of the document has control of the inbox, they can remove notifications for interactions they find inappropriate, \textit{without} needing to worry about their inability to access the original source of the interaction. Conversely, annotators do not lose control or authority over their contributions, even if the object of their interaction wishes to disassociate itself. Each contributor retains their own respective rights over the entities they create on the Web.
                                 
                             
                         
@@ -308,7 +308,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                         
                             
-\par dokieli is open source: \empty https://github.com/linkeddata/dokieli and available to try at \empty https://dokie.li/ (or at any instance on the Web, see \empty Adoption).
+\par dokieli is open source: \url{https://github.com/linkeddata/dokieli} and available to try at \url{https://dokie.li/} (or at any instance on the Web, see \empty Adoption).
 
                             
                                 \subsection{Components}
@@ -316,10 +316,10 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par dokieli’s components include data (for structure and semantics), stylesheets (for presentation) and scripts (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are {\em self-descriptive} to increase their reuse, and contain relations to related external resources to foster {\em follow-your-nose} type of exploration.
+\par dokieli’s components include data (for structure and semantics), stylesheets (for presentation) and scripts (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are \textit{self-descriptive} to increase their reuse, and contain relations to related external resources to foster \textit{follow-your-nose} type of exploration.
 
                                     
-\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\empty MediumEditor) in its {\em authoring environment}; features to {\em fetch and display statistical data} from SPARQL endpoints (Sparqlines~\cite{ref-12}); retrieval of profile information, as well as means to {\em sign in} with \empty WebID Authentication over TLS~\cite{ref-13}; functionality for write-operations, which includes checking {\em authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \empty Web Annotations and \empty Linked Data Notifications; and fetching information from remote articles when adding a citation.
+\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\empty MediumEditor) in its \textit{authoring environment}; features to \textit{fetch and display statistical data} from SPARQL endpoints (\textit{Sparqlines}~\cite{ref-12}); retrieval of profile information, as well as means to \textit{sign in} with \textit{WebID Authentication over TLS}~\cite{ref-13}; functionality for write-operations, which includes checking \textit{authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \textit{Web Annotations} and \textit{Linked Data Notifications}; and fetching information from remote articles when adding a citation.
 
                                     
 \par The scope of dokieli includes documents and the interactions around them. The creation and maintenance of user profiles, personal storage spaces, and access control rules are not managed by dokieli; since they are all standard mechanisms, users are expected to be able to accomplish this using other specialised applications.
@@ -332,7 +332,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par dokieli employs two complementary deployment approaches: {\em single-page application} and {\em Web browser extension}.
+\par dokieli employs two complementary deployment approaches: \textit{single-page application} and \textit{Web browser extension}.
 
                                     
 \par dokieli’s presentational and behavioural code layers can be included in Web pages in order to trigger them as active single-page applications. It is a smart client that allows different kinds of articles e.g., academic, blog posts, news, to be authored and annotated from within Web browsers, without necessarily having them deployed from a server, i.e., it can be used offline or on localhost. dokieli internally handles its content and well-formed structural and semantic representation based on user’s interactivity. Articles, profiles and their contact information, notifications, annotations with different motivations, for instance, can be read and written ubiquitously to any Web space with standard LDP and access control mechanisms.
@@ -348,7 +348,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information, available at https://dokie.li/
+\par Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information, available at \url{https://dokie.li/}
 
 \begin{figure}
   \begin{minipage}[b]{.49\textwidth}
@@ -369,7 +369,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 \par Annotations: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
-                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to Web Annotation Protocol~\cite{ref-15}), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
+                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to \textit{Web Annotation Protocol}~\cite{ref-15}), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
                                     
 
                                     
@@ -406,8 +406,8 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
 
                                 
                                     
-\par The W3C Working Group Note Embedding Web Annotations~\cite{ref-16} in HTML includes examples from dokieli’s use of the Web Annotation data Model~\cite{ref-14} and Vocabulary~\cite{ref-17} with motivations for example for ``Lightweight, decentralised Annotation Tools''.
-                                    The \empty Linked Data Notifications specifications use dokieli’s HTML+RDFa template, and the \empty Editor’s Draft showcase dokieli as a consumer of LDN and Web Annotations. The LDN \empty tests suite also uses dokieli’s templates and stylesheets.
+\par The W3C Working Group Note \textit{Embedding Web Annotations}~\cite{ref-16} in HTML includes examples from dokieli’s use of the Web Annotation data \textit{Model}~\cite{ref-14} and \textit{Vocabulary}~\cite{ref-17} with motivations for example for ``Lightweight, decentralised Annotation Tools''.
+                                    The \textit{Linked Data Notifications} specifications use dokieli’s HTML+RDFa template, and the \empty Editor’s Draft showcase dokieli as a consumer of LDN and Web Annotations. The LDN \empty tests suite also uses dokieli’s templates and stylesheets.
 
                                     
 \par The academic workshop \empty SemStats series use dokieli in its Website templates, including the call for contributions. \empty CEUR-WS.org, an ``Online Proceedings for Scientific Conferences and Workshops'' offers the tooling \empty ceur-make to help organisers generate proceedings using dokieli’s HTML+RDFa template, e.g., \empty SemStats 2016.
@@ -465,7 +465,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
                                 Different Web applications can incorporate any of dokieli’s functions
                                 and implement the principles to varying extents.
                                 Since the data is loosely coupled to the application,
-                                we avoid the {\em walled garden} problem
+                                we avoid the \textit{walled garden} problem
                                 of many current social platforms today.
                             
                             
@@ -500,7 +500,7 @@ User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an 
                             
 
                             
-\par We invite you to try dokieli yourself right now! Annotate this article at http://csarven.ca/dokieli-rww, or spawn a new or a copy that you can edit yourself.
+\par We invite you to try dokieli yourself right now! Annotate this article at \url{http://csarven.ca/dokieli-rww}, or spawn a new or a copy that you can edit yourself.
                         
                     
 
@@ -529,4 +529,3 @@ Special thanks to our colleagues at \empty MIT/\empty W3C; \empty Nicola Greco, 
 \end{thebibliography}
 
 \end{document}
-  
