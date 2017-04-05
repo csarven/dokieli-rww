@@ -124,9 +124,19 @@
                                 on decentralisation, and Web development best practices.
                             
 
-                            \begin{description}
-  \item[Data storage independent of service providers] Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The \empty Industrial Data Space initiative calls this ``data sovereignty''.\item[Interoperability] By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a {\em vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in \empty Socially-aware Cloud Storage.\item[Separation of concerns] A {\em progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in \empty Progressive Enhancement and the Future of Web Design).\item[Accessibility] To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).\item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the \empty W3C Semantic Web Activity charter.\item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity [\empty Weaving a Web of Trust, \empty Trust Management for the Semantic Web, \empty Trust Networks on the Semantic Web].
-    \end{description}
+\begin{description}
+  \item[Data storage independent of service providers] Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The Industrial Data Space~\cite{ref-1} initiative calls this ``data sovereignty''.
+
+  \item[Interoperability] By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a {\em vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in Socially-aware Cloud Storage~\cite{ref-2}.
+
+  \item[Separation of concerns] A {\em progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in Progressive Enhancement and the Future of Web Design~\cite{ref-3}).
+
+  \item[Accessibility] To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).
+
+  \item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the W3C Semantic Web Activity~\cite{ref-4} charter.
+
+  \item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5, ref-6, ref-7}.
+\end{description}
   
                         
                     
@@ -137,7 +147,8 @@
 
                         
                             
-\par \empty User Interfaces for Semantic Authoring of Textual Content gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
+\par
+User Interfaces for Semantic Authoring of Textual Content~\cite{ref-8} gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
 
                             
 \par 
@@ -200,7 +211,7 @@
 \par dokieli as a client-side application can be \empty deployed on a single-page or through a browser extension, which can consume and interact with Linked Data anywhere on the Web. We consider an HTML document with embedded JavaScript as the default UI of a document. It is independent from specific server-side software, proprietary APIs or the requirement to have an account.
 
                                     
-\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \empty Linked Data Notifications (\empty W3C Proposed Recommendation), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
+\par On the other hand, if desired and available, users can participate using their own profiles (WebIDs) located anywhere on the Web, and get to store and make their annotations in their own personal storage, as well as assign access controls to documents. Similarly, a decentralised communications protocol, \empty Linked Data Notifications~\cite{ref-9} (W3C Proposed Recommendation~\cite{ref-10}), is used get past the limits of centralisation by enabling communication to happen across independent servers. Figure 2 depicts relations between the kinds of entities which underlay dokieli’s architecture, where nodes are under different domains and authority.
 
                                     
                                         
@@ -218,8 +229,7 @@
 
                                 
                                     
-\par Documents use HTML5 \empty Polyglot Markup to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. 
-                                    Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article’s text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML {\tt <script>} elements.
+\par Documents use HTML5 Polyglot Markup~\cite{ref-11} to ensure that when served as (X)HTML respectively, they can be processed as either HTML or XML, which is useful in XML ecosystems and toolchains. Semantics is embedded directly into human-visible prose using RDFa. The machine-readable data is thus kept in context, reusing the article’s text as literal object values, and avoiding data duplication or data ‘islands’, which can occur when other RDF serialisations are included within HTML {\tt <script>} elements.
                                     
 
                                     
@@ -309,7 +319,7 @@
 \par dokieli’s components include data (for structure and semantics), stylesheets (for presentation) and scripts (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are {\em self-descriptive} to increase their reuse, and contain relations to related external resources to foster {\em follow-your-nose} type of exploration.
 
                                     
-\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\empty MediumEditor) in its {\em authoring environment}; features to {\em fetch and display statistical data} from SPARQL endpoints (\empty Sparqlines); retrieval of profile information, as well as means to {\em sign in} with \empty WebID Authentication over TLS; functionality for write-operations, which includes checking {\em authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \empty Web Annotations and \empty Linked Data Notifications; and fetching information from remote articles when adding a citation.
+\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\empty MediumEditor) in its {\em authoring environment}; features to {\em fetch and display statistical data} from SPARQL endpoints (Sparqlines~\cite{ref-12}); retrieval of profile information, as well as means to {\em sign in} with \empty WebID Authentication over TLS~\cite{ref-13}; functionality for write-operations, which includes checking {\em authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \empty Web Annotations and \empty Linked Data Notifications; and fetching information from remote articles when adding a citation.
 
                                     
 \par The scope of dokieli includes documents and the interactions around them. The creation and maintenance of user profiles, personal storage spaces, and access control rules are not managed by dokieli; since they are all standard mechanisms, users are expected to be able to accomplish this using other specialised applications.
@@ -360,7 +370,7 @@
 \par Annotations: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
-                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to \empty Web Annotation Protocol), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
+                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to Web Annotation Protocol~\cite{ref-15}), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
                                     
 
                                     
@@ -400,7 +410,7 @@
 
                                 
                                     
-\par The W3C Working Group Note \empty Embedding Web Annotations in HTML includes examples from dokieli’s use of the Web Annotation data \empty Model and \empty Vocabulary with motivations for example for ``Lightweight, decentralised Annotation Tools''.
+\par The W3C Working Group Note Embedding Web Annotations~\cite{ref-16} in HTML includes examples from dokieli’s use of the Web Annotation data Model~\cite{ref-14} and Vocabulary~\cite{ref-17} with motivations for example for ``Lightweight, decentralised Annotation Tools''.
                                     The \empty Linked Data Notifications specifications use dokieli’s HTML+RDFa template, and the \empty Editor’s Draft showcase dokieli as a consumer of LDN and Web Annotations. The LDN \empty tests suite also uses dokieli’s templates and stylesheets.
 
                                     
@@ -501,20 +511,26 @@
                     
 \paragraph{Acknowledgements:}
 Special thanks to our colleagues at \empty MIT/\empty W3C; \empty Nicola Greco, \empty Dmitri Zagidulin, \empty Andrei Sambra, \empty Sandro Hawke, as well as \empty Henry Story and \empty Melvin Carvalho for their contributions. We are also thankful to collaborate with colleagues at \empty QCRI. This research was supported in part by \empty Qatar Computing Research Institute, \empty HBKU through the \empty Crosscloud project from 2015-10 to 2016-09. \empty Kingsley Idehen and \empty OpenLink Software for their support and contributions to the browser extension. Last but not least, the contributors to the dokieli code, issues, and discussion.
-                        
-                    
 
-                    
-                        
-                        
-                            \begin{enumerate}
-  \item Otto, B., Auer, S., et al: Industrial Data Space, TR, 2016, \empty https://www.researchgate.net/publication/299536747\_Industrial\_Data\_Space\_Digital\_Souvereignity\_Over\_Data\item Berners-Lee, T.: Socially-aware Cloud Storage, 2009, \empty https://www.w3.org/DesignIssues/CloudStorage.html\item Champeon, S.: Progressive Enhancement and the Future of Web Design, 2003, \empty http://hesketh.com/publications/progressive\_enhancement\_and\_the\_future\_of\_web\_design.html\item Koivunen, M-R., Eric Miller, E.: W3C Semantic Web Activity, 2001, \empty https://www.w3.org/2001/12/semweb-fin/w3csw\item Golbeck, J.: Weaving a Web of Trust, Science Magazine, Vol. 321, 2008, \empty https://pdfs.semanticscholar.org/5e37/daf945094ea9c9df127e06b05282e03e39bd.pdf\item Richardson, M., Agrawal, R., Domingos, P.: Trust Management for the Semantic Web, ISWC 2003, \empty https://link.springer.com/content/pdf/10.1007\%2F978-3-540-39718-2\_23.pdf\item Jennifer Golbeck, J.: Parsia, B., Hendler, J.: Trust Networks on the Semantic Web, Volume 2782 of the book series LNCS, 2003, \empty http://sir-lab.usc.edu/cs586/20151readings/w13-1.pdf\item Khalili, A., Auer, S.: User interfaces for semantic authoring of textual content: A systematic literature review, Web Semantics, Volume 22, pages 1–18 (2013), \empty http://svn.aksw.org/papers/2011/JWS\_SemanticContentAuthoring/public.pdf\item Capadisli, S., Guy, A., Lange, C., Auer, S., Deiu, A., Berners-Lee, T.: Linked Data Notifications: a resource-centric communication protocol, ESWC Linked Data, 2017, \empty http://csarven.ca/linked-data-notifications\item Capadisli, S., Guy, A.: Linked Data Notifications, W3C Proposed Recommendation, 2017, \empty https://www.w3.org/TR/ldn/\item Graff, E., Silli, L.: Polyglot Markup: A robust profile of the HTML5 vocabulary, W3C Working Group Note, 2015, \empty https://www.w3.org/TR/html-polyglot/\item Capadisli, S.: Sparqlines: SPARQL to Sparkline, ISWC SemStats, 2016, \empty http://csarven.ca/sparqlines-sparql-to-sparkline\item Story, H., Corlosquet, S., Sambra, A.: WebID Authentication over TLS, W3C Editor’s Draft, 2014\empty https://www.w3.org/2005/Incubator/webid/spec/tls/\item Sanderson, R., Ciccarese, P., Young, B.: Web Annotation Data Model, W3C Recommendation, 2017, \empty https://www.w3.org/TR/annotation-model/\item Sanderson, R.: Web Annotation Protocol, W3C Recommendation, 2017, \empty https://www.w3.org/TR/annotation-protocol/\item Cole, T., Capadisli, S., Young, B., Herman, I.: Embedding Web Annotations in HTML, W3C Working Group Note, 2017, \empty https://www.w3.org/TR/annotation-html/\item Sanderson, R., Ciccarese, P., Young, B.: Web Annotation Vocabulary, W3C Recommendation, 2017, \empty https://www.w3.org/TR/annotation-vocab/
-    \end{enumerate}
-  
-                        
-                    
-                
-            
-        
+\begin{thebibliography}{99}
+  \bibitem{ref-1} Otto, B., Auer, S., et al: Industrial Data Space, TR, 2016, \url{https://www.researchgate.net/publication/299536747\_Industrial\_Data\_Space\_Digital\_Souvereignity\_Over\_Data}
+  \bibitem{ref-2} Berners-Lee, T.: Socially-aware Cloud Storage, 2009, \url{https://www.w3.org/DesignIssues/CloudStorage.html}
+  \bibitem{ref-3} Champeon, S.: Progressive Enhancement and the Future of Web Design, 2003, \url{http://hesketh.com/publications/progressive\_enhancement\_and\_the\_future\_of\_web\_design.html}
+  \bibitem{ref-4} Koivunen, M-R., Eric Miller, E.: W3C Semantic Web Activity, 2001, \url{https://www.w3.org/2001/12/semweb-fin/w3csw}
+  \bibitem{ref-5} Golbeck, J.: Weaving a Web of Trust, Science Magazine, Vol. 321, 2008, \url{https://pdfs.semanticscholar.org/5e37/daf945094ea9c9df127e06b05282e03e39bd.pdf}
+  \bibitem{ref-6} Richardson, M., Agrawal, R., Domingos, P.: Trust Management for the Semantic Web, ISWC 2003, \url{https://link.springer.com/content/pdf/10.1007\%2F978-3-540-39718-2\_23.pdf}
+  \bibitem{ref-7} Jennifer Golbeck, J.: Parsia, B., Hendler, J.: Trust Networks on the Semantic Web, Volume 2782 of the book series LNCS, 2003, \url{http://sir-lab.usc.edu/cs586/20151readings/w13-1.pdf}
+  \bibitem{ref-8} Khalili, A., Auer, S.: User interfaces for semantic authoring of textual content: A systematic literature review, Web Semantics, Volume 22, pages 1–18 (2013), \url{http://svn.aksw.org/papers/2011/JWS\_SemanticContentAuthoring/public.pdf}
+  \bibitem{ref-9} Capadisli, S., Guy, A., Lange, C., Auer, S., Deiu, A., Berners-Lee, T.: Linked Data Notifications: a resource-centric communication protocol, ESWC Linked Data, 2017, \url{http://csarven.ca/linked-data-notifications}
+  \bibitem{ref-10} Capadisli, S., Guy, A.: Linked Data Notifications, W3C Proposed Recommendation, 2017, \url{https://www.w3.org/TR/ldn/}
+  \bibitem{ref-11} Graff, E., Silli, L.: Polyglot Markup: A robust profile of the HTML5 vocabulary, W3C Working Group Note, 2015, \url{https://www.w3.org/TR/html-polyglot/}
+  \bibitem{ref-12} Capadisli, S.: Sparqlines: SPARQL to Sparkline, ISWC SemStats, 2016, \url{http://csarven.ca/sparqlines-sparql-to-sparkline}
+  \bibitem{ref-13} Story, H., Corlosquet, S., Sambra, A.: WebID Authentication over TLS, W3C Editor’s Draft, 2014\url{https://www.w3.org/2005/Incubator/webid/spec/tls/}
+  \bibitem{ref-14} Sanderson, R., Ciccarese, P., Young, B.: Web Annotation Data Model, W3C Recommendation, 2017, \url{https://www.w3.org/TR/annotation-model/}
+  \bibitem{ref-15} Sanderson, R.: Web Annotation Protocol, W3C Recommendation, 2017, \url{https://www.w3.org/TR/annotation-protocol/}
+  \bibitem{ref-16} Cole, T., Capadisli, S., Young, B., Herman, I.: Embedding Web Annotations in HTML, W3C Working Group Note, 2017, \url{https://www.w3.org/TR/annotation-html/}
+  \bibitem{ref-17} Sanderson, R., Ciccarese, P., Young, B.: Web Annotation Vocabulary, W3C Recommendation, 2017, \url{https://www.w3.org/TR/annotation-vocab/}
+\end{thebibliography}
+
 \end{document}
   
