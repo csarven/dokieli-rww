@@ -54,101 +54,38 @@
 \section{Introduction}
 \label{introduction}
 
-\par
-                                While the Web was originally conceived as a decentralised platform
-                                where every organisation and individual can participate,
-                                it became increasingly centralised
-                                with \empty less than 1\% of the servers serving more than 99\% of the content.
-                                The main reason for this is rooted in technology:
-                                it is currently much easier and more efficient to author, manage, publish,
-                                and search large amounts of similarly structured content using a centralised platform.
-                                Blogger, YouTube and Facebook, for example,
-                                are centralised authoring, publishing, and search platforms
-                                for blog posts, videos or social network content respectively.
-                            
-                            
-\par 
-                                However, independence of centralised platforms is a necessity
-                                for ownership of published ideas,
-                                and to establish a relation of trust.
-                                For example, Facebook has been accused of
-                                \empty bias,
-                                \empty false information,
-                                and \empty censorship—but
-                                rather than blaming this on any particular platform,
-                                we identify it as an unavoidable result of centralisation.
-                                After all,
-                                there is a continued tension between unrestricted publication rights on the one hand,
-                                and a guarantee of balanced, verified information on the other.
-                                In a fully decentralised setting, each source is filterless
-                                and responsible for its own quality and reputation,
-                                while others are free to selectively (dis-)trust certain sources
-                                using any mechanism they desire.
-                            
-                            
-\par 
-                                Decentralised authoring, publication, and annotation
-                                furthermore have the potential to impact areas
-                                in which centralisation currently determines the pace of evolution.
-                                Scientific publishing, for instance,
-                                is often bound to centralised review and dissemination processes.
-                                Instead, rigorous scientific discourse could be realised
-                                with an open, decentralised environment for the annotation of manuscripts,
-                                which has the potential to engage more people sooner.
-                                Trust then no longer stems from a finite process with limited transparency,
-                                but is rather continuously assessed by repeated independent validation.
-                                Publication thereby becomes the starting point rather than the end point.
-                            
-                            
-\par 
-                                If we want to strengthen the decentralised nature of the Web again,
-                                we need to develop technologies to simplify the decentralised authoring, management,
-                                exploration, and search of Web content.
-                            
+\par While the Web was originally conceived as a decentralised platform where every organisation and individual can participate, it became increasingly centralised with \empty less than 1\% of the servers serving more than 99\% of the content. The main reason for this is rooted in technology: it is currently much easier and more efficient to author, manage, publish, and search large amounts of similarly structured content using a centralised platform. Blogger, YouTube and Facebook, for example, are centralised authoring, publishing, and search platforms for blog posts, videos or social network content respectively.
 
-                            
+\par However, independence of centralised platforms is a necessity for ownership of published ideas, and to establish a relation of trust. For example, Facebook has been accused of bias, false information, and censorship—but rather than blaming this on any particular platform, we identify it as an unavoidable result of centralisation. After all, there is a continued tension between unrestricted publication rights on the one hand, and a guarantee of balanced, verified information on the other. In a fully decentralised setting, each source is filterless and responsible for its own quality and reputation, while others are free to selectively (dis-)trust certain sources using any mechanism they desire.
+
+\par Decentralised authoring, publication, and annotation furthermore have the potential to impact areas in which centralisation currently determines the pace of evolution. Scientific publishing, for instance, is often bound to centralised review and dissemination processes. Instead, rigorous scientific discourse could be realised with an open, decentralised environment for the annotation of manuscripts, which has the potential to engage more people sooner. Trust then no longer stems from a finite process with limited transparency, but is rather continuously assessed by repeated independent validation. Publication thereby becomes the starting point rather than the end point.
+
+\par If we want to strengthen the decentralised nature of the Web again, we need to develop technologies to simplify the decentralised authoring, management, exploration, and search of Web content.
+
 \par In this article we present the principles and architecture for a fully distributed authoring and publishing system in Sections 2 and 4 respectively. We describe the dokieli implementation of this architecture as well as an overview on its current adoption in Section 5 before we conclude with an outlook on challenges and future work in Section 6.
-                        
-                    
 
-                    
-                        \section{Principles}
-  \label{principles}
+\section{Principles}
+\label{principles}
 
-                        
-                            
-\par 
-                                This describes the principles against which
-                                decentralised approaches for authoring, annotation and notifications
-                                should be designed. These principles are derived from current literature
-                                on decentralisation, and Web development best practices.
-                            
+\par This describes the principles against which decentralised approaches for authoring, annotation and notifications should be designed. These principles are derived from current literature on decentralisation, and Web development best practices.
 
-\begin{description}
-  \item[Data storage independent of service providers] Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The \textit{Industrial Data Space}~\cite{ref-1} initiative calls this ``data sovereignty''.
+\par \textbf{Data storage independent of service providers}: Users should have a choice in where they store their data and full control over it e.g. with regard to who is allowed to access it. The \textit{Industrial Data Space}~\cite{ref-1} initiative calls this ``data sovereignty''.
 
-  \item[Interoperability] By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a \textit{vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in \textit{Socially-aware Cloud Storage}~\cite{ref-2}.
+\par \textbf{Interoperability}: By allowing the application logic to be decoupled from the data, users can switch between applications and personal data storage servers, thereby avoiding a \textit{vendor lock-in}. To achieve maximum interoperability, applications should conform to well-defined Web standards and protocols (rather than properietary software implementations). Dangers of data silos and some example standards to use to decentralise are given in \textit{Socially-aware Cloud Storage}~\cite{ref-2}.
 
-  \item[Separation of concerns] A \textit{progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in \textit{Progressive Enhancement and the Future of Web Design}~\cite{ref-3}).
+\par \textbf{Separation of concerns}: A \textit{progressive enhancement} strategy to connect the structural, presentational, and behavioural layers allows content and base functionality to be accessible through different media and devices (as described in \textit{Progressive Enhancement and the Future of Web Design}~\cite{ref-3}).
 
-  \item[Accessibility] To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).
+\par \textbf{Accessibility}: To lower the barrier for entry for all forms of participation, enhanced functionality should be accessible to users based on the capabilities of their user-agents, storage availability, network access or personal preferences (we consider this to be self-evident, and there are a plethora of Web best practices in this area).
 
-  \item[Freedom of expression] Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the \textit{W3C Semantic Web Activity}~\cite{ref-4} charter.
+\par \textbf{Freedom of expression}: Because there are no central authorities, we must assume applications follow the open-world principle, where ``any author can say anything about anything''. Identifying everything using [de]referenceable IRIs allows any distributed authoring or annotation application to reference and link to previously published content (this overlaps with Principles 1, 3 and 4 in the \textit{W3C Semantic Web Activity}~\cite{ref-4} charter.
 
-  \item[Web of Trust] The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5,ref-6,ref-7}.
-\end{description}
-  
-                        
-                    
+\par \textbf{Web of Trust}: The Web as a collaborative medium makes it possible for people to take responsibility (or be accountable) for their contributions. It should be possible for people to publish, share, and annotate information while ensuring their provenance, authenticity and integrity ~\cite{ref-5,ref-6,ref-7}.
 
-                    
-                        \section{Related Work}
-  \label{related-work}
 
-                        
-                            
-\par
-\textit{User Interfaces for Semantic Authoring of Textual Content}~\cite{ref-8} gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
+\section{Related Work}
+\label{related-work}
+                          
+\par \textit{User Interfaces for Semantic Authoring of Textual Content}~\cite{ref-8} gives an overview on relevant related work. A range of quality attributes such as collaboration, interoperability, and scalability, while relevant to our work, we also consider systems and tools on dimensions based on the principles that we have outlined.
 
                             
 \par 
@@ -197,10 +134,7 @@
 
                                 
                                     
-\par Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly.
-
-                                    
-\par Figure ~\ref{fig:centralised-decentralised-architectures} depicts the contrast between typical centralised and decentralised architectures.
+\par Decentralised read-write environments make it possible for different actors (e.g., authors, reviewers) to have their own personal online storages where they can: manage their data; have socially-aware access controls on the data (e.g., who gets to see and update what); send notifications based on their interactions; and permit different applications to operate on the data, including moving the data from one server to another seamlessly. Figure ~\ref{fig:centralised-decentralised-architectures} depicts the contrast between typical centralised and decentralised architectures.
 
 \begin{figure}
   \centering
@@ -319,7 +253,7 @@
 \par dokieli’s components include data (for structure and semantics), stylesheets (for presentation) and scripts (for interaction). All data (articles, annotations, notifications) are represented in HTML and RDF with vocabularies expressing the underlying content, resources are \textit{self-descriptive} to increase their reuse, and contain relations to related external resources to foster \textit{follow-your-nose} type of exploration.
 
                                     
-\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\empty MediumEditor) in its \textit{authoring environment}; features to \textit{fetch and display statistical data} from SPARQL endpoints (\textit{Sparqlines}~\cite{ref-12}); retrieval of profile information, as well as means to \textit{sign in} with \textit{WebID Authentication over TLS}~\cite{ref-13}; functionality for write-operations, which includes checking \textit{authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \textit{Web Annotations} and \textit{Linked Data Notifications}; and fetching information from remote articles when adding a citation.
+\par Several stylesheets provide alternative views for consumption (e.g., stylesheets for different media: screens, print, slideshow). dokieli’s JavaScript includes: a library for editing (\textit{MediumEditor}) in its \textit{authoring environment}; features to \textit{fetch and display statistical data} from SPARQL endpoints (\textit{Sparqlines}~\cite{ref-12}); retrieval of profile information, as well as means to \textit{sign in} with \textit{WebID Authentication over TLS}~\cite{ref-13}; functionality for write-operations, which includes checking \textit{authorisation} against access-control level settings on the server with the authenticated user’s WebID and personal certificate; creation and consumption of \textit{Web Annotations} and \textit{Linked Data Notifications}; and fetching information from remote articles when adding a citation.
 
                                     
 \par The scope of dokieli includes documents and the interactions around them. The creation and maintenance of user profiles, personal storage spaces, and access control rules are not managed by dokieli; since they are all standard mechanisms, users are expected to be able to accomplish this using other specialised applications.
@@ -348,7 +282,7 @@
 
                                 
                                     
-\par Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information, available at \url{https://dokie.li/}
+\par Screencasts for the following use-cases showcase dokieli’s social features where users interact by creating and sharing information are at \url{https://dokie.li/}.
 
 \begin{figure}
   \begin{minipage}[b]{.49\textwidth}
@@ -366,14 +300,14 @@
                                     
 
                                     
-\par Annotations: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
+\par \textbf{Annotations}: A core feature to facilitate collaboration is the possibility to annotate arbitrary parts of a Web document.
                                     Users can select an entity or a span of text of interest, a context menu is presented to input their annotations along with the choice to select a license for their contribution.
                                     If the user is signed-in with their WebID, and provided they have a personal storage space, dokieli discovers this through their online profile and saves the annotations to that location.
-                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and where its retrievable location is, with accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to \textit{Web Annotation Protocol}~\cite{ref-15}), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can still use this option to engage with the article.
+                                    Once the annotation is submitted by the user, dokieli proceeds with three operations: 1) the annotation is requested to be saved at the user’s personal storage, and if it is access controlled, the user will be prompted to authenticate themselves against that server, before the annotation is saved and is assigned its own URL, 2) if the article or any identifiable statement or segment has its own inbox, dokieli sends a notification to the inbox indicating that an annotation was made and with its retrievable location, and accompanying metadata like who created it, date, its license etc., 3) the annotation is fetched from its canonical location, and integrated into the article e.g., in marginalia. If the article has a reference to a public annotation service (a writeable space adhering to \textit{Web Annotation Protocol}~\cite{ref-15}), the user has the option to send a copy of the annotation there as well. In cases where the user does not want to have the canonical copy of the annotation on their server, or if a user does not have write access to a storage, they can use this option to engage with the article.
                                     
 
                                     
-\par Social Sharing: A key aspect of the Social Web is sharing with others.
+\par \textbf{Social Sharing}: A key aspect of the Social Web is sharing with others.
                                     After (optionally) authenticating with a WebID, dokieli documents can be shared with contacts, which are discovered from the user’s WebID profile. Contacts whose profiles advertise an LDN Inbox will receive a notification of the share. The notification contains Activity Streams 2.0 vocabulary terms, and recipients can use any LDN-compatible application to view the notification, without needing to have ever used dokieli before.
 
 \begin{figure}
@@ -391,12 +325,12 @@
 \end{figure}
 
 
-\par Inline Citations: Rich semantic links can also be established between dokieli documents themselves.
+\par \textbf{Inline Citations}: Rich semantic links can also be established between dokieli documents themselves.
                                     The author selects a text fragment and inserts the URL of the document to be linked to as well as a semantic link type (e.g. “agrees with”, “confirms”, “cites as evidence”) from the CiTO and schema.org ontologies. dokieli automatically retrieves metadata (e.g. title, authors) from the linked document and adds a proper scientific endnote reference. If the linked document advertises a standard LDN Inbox, a notification of the citation is sent as well, thus allowing bi-directional linking.
                                     
 
                                     
-\par Statistical Data and Diagrams: Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.
+\par \textbf{Statistical Data and Diagrams}: Embedding dynamically generated diagrams and charts is possible: after selecting text, the dokieli context menu offers results of a search across registered SPARQL endpoints for the keywords in the selected text, and presents a list of available data series to visualise. The result is an inline sparkline diagram.
                                 
                             
 
@@ -410,12 +344,12 @@
                                     The \textit{Linked Data Notifications} specifications use dokieli’s HTML+RDFa template, and the \empty Editor’s Draft showcase dokieli as a consumer of LDN and Web Annotations. The LDN \empty tests suite also uses dokieli’s templates and stylesheets.
 
                                     
-\par The academic workshop \empty SemStats series use dokieli in its Website templates, including the call for contributions. \empty CEUR-WS.org, an ``Online Proceedings for Scientific Conferences and Workshops'' offers the tooling \empty ceur-make to help organisers generate proceedings using dokieli’s HTML+RDFa template, e.g., \empty SemStats 2016.
-                                    We list a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its \empty examples in the wild. The conference series: WWW, (e.g., \empty LDOW and \empty WOW), \empty ISWC, and \empty ESWC propose dokieli as one tooling in which authors can use to make their contributions to the calls with.
+\par The academic workshop SemStats series use dokieli in its Website templates, including the call for contributions. CEUR-WS.org, an ``Online Proceedings for Scientific Conferences and Workshops'' offers the tooling ceur-make to help organisers generate proceedings using dokieli’s HTML+RDFa template.
+                                    We list a community (of academics) who self-publish their articles and thesis using dokieli with different stylesheets and derived scripts under its examples in the wild. The conference series: WWW e.g., LDOW, WOW, ISWC, and ESWC propose dokieli as one tooling in which authors can use to for their contributions.
 
                                     
-\par The \empty Linked Research website uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
-                                    \empty csarven.ca uses dokieli in full, where some articles (like this article) offer pointers to a public annotation service in which users may wish to use for their annotations. Articles also dynamically embed annotations from personal storage spaces.
+\par \url{https://linkedresearch.org/} uses dokieli in its templates on the site as well as workshop proposals and call for contributions.
+                                    \url{http://csarven.ca/} uses dokieli in full, where some articles (like this article) offer pointers to a public annotation service in which users may wish to use for their annotations. Articles also dynamically embed annotations from personal storage spaces.
                                 
                             
                         
@@ -492,17 +426,11 @@
                                 or where more development is required.
                                 Real-time collaborative editing
                                 is often realised with centralised communication
-                                (even though some peer to peer alternatives exist).
+                                (even though some p2p alternatives exist).
                                 Services like top-down annotations or automated entity marking
                                 can improve the discoverability of a publication,
                                 yet the question of how to offer these
-                                without being tied to certain servers needs to be still solved.
-                            
-
-                            
-\par We invite you to try dokieli yourself right now! Annotate this article at \url{http://csarven.ca/dokieli-rww}, or spawn a new or a copy that you can edit yourself.
-                        
-                    
+                                without being tied to certain servers needs to be still solved. We invite you to try dokieli yourself. Annotate this article or spawn a new or a copy that you can edit yourself at \url{http://csarven.ca/dokieli-rww}.
 
                     
 \paragraph{Acknowledgements:}
